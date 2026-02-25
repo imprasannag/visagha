@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Visagha Gourmet — Premium Millet Foods by Dr. R. Saraswathi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --dg:#1C3D1E;--mg:#2C5F2D;--sg:#6B9A47;--sgl:#A8C47A;
+      --go:#C8953A;--gol:#E8B86D;--cr:#FAF6EE;--ww:#FFFEF9;
+      --td:#0E1E0F;--tm:#4A5E4B;--tl:#7A8E7B;
+      --bdr:rgba(44,95,45,0.12);--s1:0 2px 12px rgba(28,61,30,0.08);
+      --s2:0 8px 40px rgba(28,61,30,0.13);--s3:0 24px 80px rgba(28,61,30,0.2);
+      --red:#e74c3c;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--td);overflow-x:hidden}
+    img{max-width:100%}
+
+    /* ====== MARQUEE ====== */
+    .marquee-bar{background:var(--dg);padding:0.5rem 0;overflow:hidden;position:relative;z-index:999}
+    .marquee-track{display:flex;white-space:nowrap;animation:mScroll 48s linear infinite;width:max-content}
+    .marquee-track:hover{animation-play-state:paused}
+    .mitem{display:inline-flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.8);font-size:0.76rem;font-weight:500;padding:0 1.8rem}
+    .mitem i{color:var(--gol);font-size:0.7rem}
+    .msep{color:var(--go);opacity:0.4;padding:0 0.2rem}
+    @keyframes mScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ====== HEADER ====== */
+    header{position:sticky;top:0;width:100%;z-index:1000;background:rgba(250,246,238,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--bdr)}
+    nav{max-width:1300px;margin:0 auto;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:0.75rem}
+    .logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0}
+    .logo-em{width:42px;height:42px;min-width:42px;background:linear-gradient(135deg,var(--dg),var(--sg));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:white;box-shadow:0 4px 14px rgba(28,61,30,0.3);transition:all 0.4s ease}
+    .logo:hover .logo-em{transform:rotate(-8deg) scale(1.1)}
+    .logo-text strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--dg);line-height:1.1;white-space:nowrap}
+    .logo-text small{font-size:0.58rem;letter-spacing:2px;color:var(--tl);text-transform:uppercase;white-space:nowrap}
+    .nav-links{display:flex;gap:1.3rem;list-style:none;align-items:center}
+    .nav-links a{font-size:0.84rem;font-weight:500;color:var(--tm);text-decoration:none;white-space:nowrap;position:relative;padding-bottom:3px}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--sg),var(--go));border-radius:2px;transition:width 0.3s}
+    .nav-links a:hover{color:var(--mg)}
+    .nav-links a:hover::after{width:100%}
+    .nav-right{display:flex;gap:0.5rem;align-items:center;flex-shrink:0}
+
+    /* Desktop nav buttons */
+    .admin-btn{background:var(--go);color:white;border:none;padding:0.5rem 0.9rem;border-radius:50px;cursor:pointer;font-size:0.81rem;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:0.4rem;box-shadow:0 4px 14px rgba(200,149,58,0.3);transition:all 0.3s ease;white-space:nowrap}
+    .admin-btn:hover{background:#b07828;transform:translateY(-2px)}
+    .cart-btn{position:relative;background:var(--mg);color:white;border:none;padding:0.5rem 1rem;border-radius:50px;cursor:pointer;font-size:0.84rem;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:0.4rem;box-shadow:0 4px 14px rgba(44,95,45,0.3);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);white-space:nowrap}
+    .cart-btn:hover{background:var(--dg);transform:translateY(-2px)}
+    .cart-count{background:var(--go);color:white;min-width:20px;height:20px;border-radius:50%;font-size:0.64rem;display:flex;align-items:center;justify-content:center;font-weight:700;padding:0 3px;animation:cPulse 2s ease infinite}
+    @keyframes cPulse{0%,100%{box-shadow:0 0 0 0 rgba(200,149,58,0.5)}60%{box-shadow:0 0 0 6px rgba(200,149,58,0)}}
+    .mob-menu{display:none;cursor:pointer;font-size:1.2rem;color:var(--mg);background:none;border:none;padding:0.35rem;line-height:1}
+
+    /* ====== MOBILE NAV ====== */
+    .mob-nav-panel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(250,246,238,0.98);z-index:1500;flex-direction:column;padding:1.5rem;backdrop-filter:blur(20px)}
+    .mob-nav-panel.open{display:flex;animation:fadeIn 0.2s ease}
+    .mob-nav-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+    .mob-nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--dg);font-weight:700}
+    .mob-nav-close{background:none;border:none;font-size:1.4rem;color:var(--mg);cursor:pointer;padding:0.3rem;display:flex;align-items:center;justify-content:center;width:36px;height:36px}
+    .mob-nav-links{display:flex;flex-direction:column;gap:0;flex:1;justify-content:center}
+    .mob-nav-links a{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--dg);text-decoration:none;display:flex;align-items:center;gap:0.7rem;padding:0.7rem 0;border-bottom:1px solid var(--bdr);transition:color 0.2s}
+    .mob-nav-links a i{font-size:0.95rem;color:var(--sg);width:22px;text-align:center}
+    .mob-nav-links a:last-child{border-bottom:none}
+    .mob-nav-links a:hover{color:var(--mg)}
+    .mob-nav-actions{display:flex;gap:0.5rem;margin-top:2rem}
+    .mob-nav-actions button{flex:1;padding:0.75rem;border-radius:50px;border:none;font-size:0.85rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.4rem}
+    .mna-admin{background:var(--go);color:white}
+    .mna-cart{background:var(--mg);color:white}
+    .mob-nav-foot{font-size:0.72rem;color:var(--tl);text-align:center;margin-top:1rem}
+
+    /* ====== HERO ====== */
+    .hero{min-height:88vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1300px;margin:0 auto;padding:4rem 2rem;gap:4rem}
+    .hero-left{animation:sLeft 0.9s cubic-bezier(0.34,1.2,0.64,1) both}
+    .hero-right{animation:sRight 0.9s cubic-bezier(0.34,1.2,0.64,1) 0.15s both}
+    .eyebrow{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(200,149,58,0.12);color:var(--go);padding:0.35rem 0.9rem;border-radius:50px;font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(200,149,58,0.25);margin-bottom:1.2rem}
+    .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.3rem,4.5vw,5rem);font-weight:700;line-height:1.05;color:var(--dg)}
+    .hero h1 em{font-style:italic;color:var(--go)}
+    .hero-sub{font-size:0.95rem;color:var(--tl);margin:1.3rem 0;line-height:1.8;max-width:480px}
+    .founder-pill{display:inline-flex;align-items:center;gap:0.65rem;background:white;border:1px solid var(--bdr);border-radius:50px;padding:0.4rem 1rem 0.4rem 0.4rem;box-shadow:var(--s1);margin:1.2rem 0;transition:all 0.3s ease;cursor:default}
+    .founder-pill:hover{box-shadow:var(--s2);transform:translateY(-2px)}
+    .fp-av{width:36px;height:36px;min-width:36px;border-radius:50%;background:linear-gradient(135deg,var(--go),var(--gol));display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:white}
+    .fp-txt strong{display:block;font-size:0.84rem;font-weight:700;color:var(--td)}
+    .fp-txt span{font-size:0.7rem;color:var(--tl)}
+    .fssai-tag{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(44,95,45,0.09);color:var(--mg);padding:0.2rem 0.65rem;border-radius:6px;font-size:0.67rem;font-weight:700}
+    .hero-actions{display:flex;gap:0.9rem;flex-wrap:wrap;margin-top:1.6rem}
+    .btn-solid{background:var(--mg);color:white;padding:0.8rem 1.7rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:0.86rem;display:inline-flex;align-items:center;gap:0.4rem;box-shadow:0 6px 22px rgba(44,95,45,0.3);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1)}
+    .btn-solid:hover{background:var(--dg);transform:translateY(-3px)}
+    .btn-outline{border:2px solid var(--mg);color:var(--mg);padding:0.8rem 1.7rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:0.86rem;display:inline-flex;align-items:center;gap:0.4rem;transition:all 0.3s ease}
+    .btn-outline:hover{background:var(--mg);color:white;transform:translateY(-2px)}
+    .hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+    .him-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:440px}
+    .him-card{border-radius:18px;overflow:hidden;box-shadow:var(--s2);aspect-ratio:1;position:relative;transition:all 0.5s cubic-bezier(0.34,1.3,0.64,1)}
+    .him-card:hover{transform:scale(1.06) rotate(-1.5deg);box-shadow:var(--s3);z-index:10}
+    .him-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease}
+    .him-card:hover img{transform:scale(1.12)}
+    .him-ov{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(28,61,30,0.75));padding:0.9rem 0.65rem 0.65rem;color:white;font-size:0.68rem;font-weight:600}
+    .fbadge{position:absolute;background:white;border-radius:12px;padding:0.5rem 0.85rem;box-shadow:var(--s2);display:flex;align-items:center;gap:0.4rem;font-size:0.74rem;font-weight:600;color:var(--td);border:1px solid var(--bdr);animation:fBadge 4s ease-in-out infinite}
+    .fbadge i{color:var(--mg)}
+    .fb1{top:4%;left:-6%;animation-delay:0s}
+    .fb2{bottom:8%;right:-5%;animation-delay:1.8s}
+    @keyframes fBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+    /* ====== TRUST STRIP ====== */
+    .trust-strip{background:white;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:1.3rem 1.5rem}
+    .trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem}
+    .trust-item{display:flex;align-items:center;gap:0.65rem;padding:0.65rem 0.85rem;border-radius:12px;transition:all 0.3s ease;cursor:default}
+    .trust-item:hover{background:rgba(44,95,45,0.05);transform:translateY(-3px)}
+    .trust-icon{width:40px;height:40px;min-width:40px;border-radius:10px;background:linear-gradient(135deg,rgba(107,154,71,0.13),rgba(200,149,58,0.12));display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--mg);transition:all 0.3s ease}
+    .trust-item:hover .trust-icon{background:linear-gradient(135deg,var(--mg),var(--sg));color:white}
+    .trust-label strong{display:block;font-size:0.84rem;font-weight:700;color:var(--td)}
+    .trust-label span{font-size:0.71rem;color:var(--tl)}
+
+    /* ====== ABOUT / FOUNDER ====== */
+    .about-section{background:var(--dg);padding:5rem 2rem;position:relative;overflow:hidden}
+    .about-section::before{content:'';position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(107,154,71,0.1) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+    .about-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center;position:relative;z-index:1}
+    .about-img{position:relative}
+    .about-img-main{width:100%;border-radius:24px;overflow:hidden;box-shadow:var(--s3);aspect-ratio:3/4}
+    .about-img-main img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease}
+    .about-img-main:hover img{transform:scale(1.04)}
+    .astat{position:absolute;bottom:-1.5rem;right:-1.5rem;background:linear-gradient(135deg,var(--go),var(--gol));padding:1.2rem;border-radius:18px;text-align:center;box-shadow:0 12px 36px rgba(200,149,58,0.35);color:white}
+    .astat strong{display:block;font-family:'Cormorant Garamond',serif;font-size:2.6rem;line-height:1}
+    .astat span{font-size:0.66rem;letter-spacing:1px;opacity:0.9}
+    .about-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.8rem);line-height:1.1;margin-bottom:1.4rem;color:white}
+    .about-text h2 em{color:var(--gol);font-style:italic}
+    .founder-hl{display:flex;align-items:flex-start;gap:1.2rem;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:1.3rem 1.6rem;margin-bottom:1.3rem;transition:all 0.3s ease}
+    .founder-hl:hover{background:rgba(255,255,255,0.1)}
+    .fhl-av{width:62px;height:62px;min-width:62px;border-radius:50%;background:linear-gradient(135deg,var(--go),var(--gol));display:flex;align-items:center;justify-content:center;font-size:1.55rem;color:white;box-shadow:0 6px 18px rgba(200,149,58,0.4)}
+    .fhl-info h3{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:700;color:white;margin-bottom:0.1rem}
+    .fhl-info .deg{font-size:0.76rem;color:rgba(255,255,255,0.6);margin-bottom:0.4rem}
+    .fhl-info .role{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(200,149,58,0.22);color:var(--gol);padding:0.2rem 0.65rem;border-radius:50px;font-size:0.7rem;font-weight:700}
+    .creds{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.6rem}
+    .cred{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(107,154,71,0.16);color:var(--sgl);border:1px solid rgba(107,154,71,0.25);padding:0.2rem 0.65rem;border-radius:7px;font-size:0.7rem;font-weight:600}
+    .fquote{border-left:3px solid var(--go);padding-left:1rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:rgba(255,255,255,0.76);line-height:1.6;margin:1.3rem 0}
+    .about-text p{color:rgba(255,255,255,0.68);line-height:1.85;margin-bottom:0.85rem;font-size:0.91rem}
+    .pills{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.6rem}
+    .pill{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:0.38rem 0.9rem;border-radius:50px;font-size:0.76rem;font-weight:500;transition:all 0.3s ease;cursor:default}
+    .pill:hover{background:rgba(255,255,255,0.16);transform:translateY(-2px)}
+    .view-founder-btn{display:inline-flex;align-items:center;gap:0.4rem;background:linear-gradient(135deg,var(--go),var(--gol));color:white;border:none;padding:0.8rem 1.7rem;border-radius:50px;font-size:0.86rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;box-shadow:0 6px 22px rgba(200,149,58,0.38);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);margin-top:1.6rem}
+    .view-founder-btn:hover{transform:translateY(-3px) scale(1.04)}
+
+    /* ====== WHY MILLET ====== */
+    .why-section{padding:5rem 2rem;background:var(--ww)}
+    .why-inner{max-width:1300px;margin:0 auto}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.8rem}
+    .why-card{background:white;border-radius:20px;padding:1.8rem;border:1px solid var(--bdr);box-shadow:var(--s1);transition:all 0.4s cubic-bezier(0.34,1.3,0.64,1);position:relative;overflow:hidden}
+    .why-card:hover{transform:translateY(-9px);box-shadow:var(--s3)}
+    .wcnum{font-family:'Cormorant Garamond',serif;font-size:3.6rem;font-weight:700;color:rgba(44,95,45,0.07);position:absolute;top:0.2rem;right:0.9rem;line-height:1}
+    .wicon{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,rgba(107,154,71,0.13),rgba(200,149,58,0.08));display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--mg);margin-bottom:1rem;transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1)}
+    .why-card:hover .wicon{background:linear-gradient(135deg,var(--mg),var(--sg));color:white;transform:scale(1.1) rotate(-6deg)}
+    .why-card h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--td);margin-bottom:0.4rem}
+    .why-card p{font-size:0.8rem;color:var(--tl);line-height:1.7}
+
+    /* ====== PRODUCTS ====== */
+    .products-section{max-width:1300px;margin:0 auto;padding:5rem 2rem}
+    .sec-eye{text-align:center;margin-bottom:3rem}
+    .sec-eye h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,3.1rem);color:var(--dg);margin:0.5rem 0}
+    .sec-eye p{color:var(--tl);font-size:0.91rem}
+    .divider{width:50px;height:3px;background:linear-gradient(90deg,var(--sg),var(--go));border-radius:2px;margin:0.85rem auto}
+    .cat-lbl{display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem}
+    .cat-line{flex:1;height:1px;background:var(--bdr)}
+    .cat-tag{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--mg);white-space:nowrap}
+    .pcat{margin-bottom:4.5rem}
+    .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.3rem}
+    .pcard{background:white;border-radius:20px;overflow:hidden;cursor:pointer;box-shadow:var(--s1);border:1px solid var(--bdr);transition:all 0.45s cubic-bezier(0.34,1.3,0.64,1);position:relative}
+    .pcard:hover{transform:translateY(-9px) scale(1.015);box-shadow:var(--s3)}
+    .pimg{width:100%;aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--cr)}
+    .pimg img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease}
+    .pcard:hover .pimg img{transform:scale(1.1)}
+    .ptag{position:absolute;top:0.8rem;left:0.8rem;background:var(--go);color:white;font-size:0.64rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.25rem 0.7rem;border-radius:50px}
+    .pprice-tag{position:absolute;top:0.8rem;right:0.8rem;background:rgba(28,61,30,0.85);color:white;font-size:0.73rem;font-weight:700;padding:0.25rem 0.7rem;border-radius:50px;backdrop-filter:blur(4px)}
+    .poverlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,61,30,0.75) 0%,transparent 50%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.2rem}
+    .pcard:hover .poverlay{opacity:1}
+    .povbtn{background:white;color:var(--dg);padding:0.42rem 1.3rem;border-radius:50px;font-size:0.76rem;font-weight:700;transform:translateY(10px);transition:transform 0.3s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
+    .pcard:hover .povbtn{transform:translateY(0)}
+    .pbody{padding:1.1rem 1.3rem 0.65rem}
+    .pname{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:700;color:var(--td);margin-bottom:0.22rem}
+    .pdesc{font-size:0.77rem;color:var(--tl);line-height:1.5}
+    .pfoot{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.3rem;border-top:1px solid var(--bdr);margin-top:0.6rem}
+    .pfoot-price{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:700;color:var(--mg)}
+    .qcart{width:32px;height:32px;border-radius:50%;background:var(--mg);color:white;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.78rem;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1)}
+    .qcart:hover{background:var(--dg);transform:scale(1.2) rotate(90deg)}
+
+    /* ====== TESTIMONIALS ====== */
+    .testi-section{background:var(--cr);padding:5rem 2rem;border-top:1px solid var(--bdr)}
+    .testi-inner{max-width:1200px;margin:0 auto}
+    .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.8rem}
+    .tcard{background:white;border-radius:20px;padding:1.8rem;border:1px solid var(--bdr);box-shadow:var(--s1);transition:all 0.4s ease;position:relative;overflow:hidden}
+    .tcard::before{content:'"';position:absolute;top:-0.4rem;right:1rem;font-family:'Cormorant Garamond',serif;font-size:5.5rem;color:rgba(107,154,71,0.08);line-height:1;pointer-events:none}
+    .tcard:hover{transform:translateY(-7px);box-shadow:var(--s2)}
+    .tstars{color:var(--go);font-size:0.81rem;margin-bottom:0.65rem;letter-spacing:2px}
+    .ttext{font-size:0.86rem;color:var(--tm);line-height:1.75;font-style:italic;margin-bottom:1.1rem}
+    .tauthor{display:flex;align-items:center;gap:0.65rem}
+    .tav{width:36px;height:36px;min-width:36px;border-radius:50%;background:linear-gradient(135deg,var(--sg),var(--sgl));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.86rem}
+    .tname strong{display:block;font-size:0.81rem;font-weight:700;color:var(--td)}
+    .tname span{font-size:0.71rem;color:var(--tl)}
+
+    /* ====== CERT MARQUEE ====== */
+    .cert-section{background:var(--dg);padding:3rem 2rem}
+    .cert-inner{max-width:1200px;margin:0 auto}
+    .cert-heading{text-align:center;margin-bottom:1.6rem}
+    .cert-heading h3{font-family:'Cormorant Garamond',serif;font-size:1.65rem;color:white;margin-bottom:0.2rem}
+    .cert-heading p{color:rgba(255,255,255,0.48);font-size:0.8rem}
+    .cert-mq{overflow:hidden}
+    .cert-track{display:flex;gap:1.3rem;animation:cScroll 42s linear infinite;width:max-content}
+    .cert-track:hover{animation-play-state:paused}
+    .citem{flex-shrink:0;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:13px;padding:0.9rem 1.4rem;display:flex;align-items:center;gap:0.65rem;color:rgba(255,255,255,0.8);font-size:0.8rem;font-weight:600;white-space:nowrap}
+    .citem i{font-size:1rem;color:var(--gol)}
+    @keyframes cScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* ====== ABOUT US ====== */
+    .aboutus-section{padding:5rem 2rem;background:var(--ww)}
+    .aboutus-inner{max-width:1300px;margin:0 auto}
+    .au-top{text-align:center;margin-bottom:3.5rem}
+    .au-top h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,3rem);color:var(--dg);margin:0.5rem 0}
+    .au-top h2 em{color:var(--go);font-style:italic}
+    .au-lead{max-width:700px;margin:0 auto;color:var(--tl);font-size:0.95rem;line-height:1.8}
+    .au-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:start;margin-bottom:3rem}
+    .au-story{display:flex;flex-direction:column;gap:1.4rem}
+    .au-story-block{background:white;border-radius:16px;padding:1.5rem;border:1px solid var(--bdr);box-shadow:var(--s1);transition:all 0.3s ease}
+    .au-story-block:hover{transform:translateY(-4px);box-shadow:var(--s2)}
+    .au-icon{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,rgba(44,95,45,0.11),rgba(44,95,45,0.04));display:flex;align-items:center;justify-content:center;font-size:1.05rem;color:var(--mg);margin-bottom:0.75rem}
+    .au-story-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--dg);margin-bottom:0.45rem}
+    .au-story-block p{font-size:0.83rem;color:var(--tl);line-height:1.75}
+    .au-right{display:flex;flex-direction:column;gap:1.4rem}
+    .au-values-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+    .au-val-card{background:white;border-radius:14px;padding:1.2rem;border:1px solid var(--bdr);box-shadow:var(--s1);transition:all 0.3s ease}
+    .au-val-card:hover{transform:translateY(-4px);box-shadow:var(--s2)}
+    .av-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,rgba(44,95,45,0.11),rgba(44,95,45,0.04));display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--mg);margin-bottom:0.6rem}
+    .au-val-card h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--td);margin-bottom:0.28rem}
+    .au-val-card p{font-size:0.74rem;color:var(--tl);line-height:1.6}
+    .au-company-card{background:var(--dg);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;gap:0.9rem}
+    .acc-row{display:flex;align-items:flex-start;gap:0.85rem}
+    .acc-row i{font-size:0.95rem;color:var(--gol);margin-top:0.1rem;flex-shrink:0;width:17px}
+    .acc-row div strong{display:block;font-size:0.84rem;font-weight:700;color:white;margin-bottom:0.06rem}
+    .acc-row div span{font-size:0.73rem;color:rgba(255,255,255,0.52)}
+    .au-stats{display:flex;align-items:center;justify-content:center;gap:0;background:white;border-radius:18px;padding:1.8rem;border:1px solid var(--bdr);box-shadow:var(--s1);flex-wrap:wrap}
+    .au-stat{text-align:center;padding:0.5rem 1.5rem;flex:1;min-width:110px}
+    .au-stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--mg);line-height:1}
+    .au-stat-lbl{font-size:0.73rem;color:var(--tl);margin-top:0.2rem}
+    .au-stat-div{width:1px;height:44px;background:var(--bdr);flex-shrink:0}
+
+    /* ====== CONTACT ====== */
+    .contact-section{padding:5rem 2rem;background:var(--ww)}
+    .contact-inner{max-width:1100px;margin:0 auto}
+    .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem;margin-top:2.8rem}
+    .ccard{background:white;border-radius:20px;padding:1.8rem;text-align:center;box-shadow:var(--s1);border:1px solid var(--bdr);transition:all 0.4s cubic-bezier(0.34,1.3,0.64,1)}
+    .ccard:hover{transform:translateY(-7px);box-shadow:var(--s2)}
+    .cicon{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--mg),var(--sg));display:flex;align-items:center;justify-content:center;margin:0 auto 0.85rem;color:white;font-size:1.1rem;transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 14px rgba(44,95,45,0.22)}
+    .ccard:hover .cicon{transform:scale(1.15) rotate(-8deg)}
+    .ccard h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dg);margin-bottom:0.38rem}
+    .ccard a,.ccard p{color:var(--tm);font-size:0.82rem;text-decoration:none;display:block;line-height:1.7}
+    .ccard a:hover{color:var(--mg)}
+    .fssai-card{grid-column:1/-1;background:linear-gradient(135deg,var(--dg),var(--mg));border:none}
+    .fssai-card .cicon{background:rgba(255,255,255,0.12)}
+    .fssai-card h4,.fssai-card p{color:white}
+    .fssai-num{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:700;letter-spacing:2px;color:var(--gol)}
+
+    /* ====== CART DRAWER ====== */
+    .cart-drawer{position:fixed;right:-460px;top:0;width:460px;max-width:100vw;height:100vh;background:white;z-index:3000;box-shadow:-20px 0 70px rgba(28,61,30,0.14);transition:right 0.45s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column}
+    .cart-drawer.open{right:0}
+    .cart-ov{position:fixed;inset:0;background:rgba(0,0,0,0.42);z-index:2999;display:none}
+    .cart-ov.open{display:block}
+    .cart-hdr{padding:1.3rem 1.6rem;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;background:var(--dg);flex-shrink:0}
+    .cart-hdr h3{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:white}
+    .cart-hdr-sub{font-size:0.73rem;color:rgba(255,255,255,0.52)}
+    .ccart{width:33px;height:33px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);background:none;cursor:pointer;font-size:0.88rem;color:white;display:flex;align-items:center;justify-content:center;transition:all 0.3s}
+    .ccart:hover{background:rgba(255,255,255,0.14);transform:rotate(90deg)}
+    .cart-items{flex:1;overflow-y:auto;padding:1.1rem 1.6rem}
+    .cempty{text-align:center;padding:3rem 0;color:var(--tl)}
+    .cempty i{font-size:2.2rem;display:block;margin-bottom:0.9rem;opacity:0.3}
+    .cempty p{font-size:0.88rem;margin-bottom:0.8rem}
+    .cempty a{display:inline-block;background:var(--mg);color:white;padding:0.55rem 1.3rem;border-radius:50px;text-decoration:none;font-size:0.81rem;font-weight:600}
+    .ci{display:flex;gap:0.85rem;padding:0.9rem 0;border-bottom:1px solid var(--bdr);align-items:flex-start}
+    .ci-img{width:68px;height:68px;min-width:68px;border-radius:12px;overflow:hidden;background:var(--cr)}
+    .ci-img img{width:100%;height:100%;object-fit:cover}
+    .ci-info{flex:1;min-width:0}
+    .ci-name{font-weight:700;font-size:0.86rem;color:var(--td)}
+    .ci-cat{font-size:0.7rem;color:var(--tl);margin-bottom:0.35rem}
+    .ci-price{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--mg)}
+    .ci-qty{display:flex;align-items:center;gap:0.45rem;margin-top:0.45rem}
+    .ci-qty button{width:25px;height:25px;border-radius:50%;border:1.5px solid var(--bdr);background:white;cursor:pointer;font-size:0.82rem;color:var(--td);display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-weight:700}
+    .ci-qty button:hover{background:var(--mg);color:white;border-color:var(--mg)}
+    .ci-qty span{font-weight:700;font-size:0.88rem;min-width:18px;text-align:center}
+    .ci-rm{background:none;border:none;cursor:pointer;color:#e74c3c;font-size:0.7rem;padding:0.18rem 0;display:flex;align-items:center;gap:0.28rem;margin-top:0.28rem}
+    .cart-foot{padding:1.1rem 1.6rem;border-top:1px solid var(--bdr);background:var(--cr);flex-shrink:0}
+    .cart-subtotal{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem}
+    .cart-subtotal span{font-size:0.8rem;color:var(--tl)}
+    .cart-subtotal strong{font-size:0.85rem;font-weight:700;color:var(--td)}
+    .cart-total-row{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-top:1px solid var(--bdr);margin-bottom:0.9rem}
+    .cart-total-row span{font-size:0.88rem;font-weight:700;color:var(--td)}
+    .cart-total-row strong{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--dg)}
+    .checkout-btn{width:100%;background:linear-gradient(135deg,var(--dg),var(--mg));color:white;border:none;padding:0.9rem;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.55rem;font-family:'DM Sans',sans-serif;transition:all 0.3s ease;box-shadow:0 6px 22px rgba(44,95,45,0.28)}
+    .checkout-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(44,95,45,0.38)}
+    .cart-wa-btn{width:100%;background:rgba(37,211,102,0.09);border:1.5px solid #25D366;color:#1a9e50;padding:0.7rem;border-radius:12px;font-size:0.83rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.45rem;font-family:'DM Sans',sans-serif;transition:all 0.3s ease;margin-top:0.55rem}
+    .cart-wa-btn:hover{background:#25D366;color:white}
+
+    /* ====================================================
+       CHECKOUT MODAL — COMPLETELY REDESIGNED
+    ======================================================= */
+    .checkout-overlay{position:fixed;inset:0;z-index:4500;background:rgba(10,22,11,0.85);backdrop-filter:blur(16px);display:none;align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto}
+    .checkout-overlay.open{display:flex;animation:fadeIn 0.25s ease}
+    .checkout-modal{background:white;border-radius:24px;width:100%;max-width:900px;box-shadow:0 40px 120px rgba(0,0,0,0.35);overflow:hidden;position:relative;margin:auto}
+    .co-close{position:absolute;top:1rem;right:1rem;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);border:1.5px solid rgba(255,255,255,0.25);color:white;cursor:pointer;font-size:0.88rem;display:flex;align-items:center;justify-content:center;z-index:10;transition:all 0.3s}
+    .co-close:hover{background:rgba(255,255,255,0.32);transform:rotate(90deg)}
+
+    /* Stepper */
+    .co-stepper{background:var(--dg);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:center}
+    .co-step{display:flex;align-items:center;gap:0.5rem}
+    .co-step-num{width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.45);display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0;transition:all 0.3s}
+    .co-step.active .co-step-num{background:var(--go);border-color:var(--go);color:white;box-shadow:0 0 0 5px rgba(200,149,58,0.2)}
+    .co-step.done .co-step-num{background:var(--sg);border-color:var(--sg);color:white}
+    .co-step-label{font-size:0.76rem;font-weight:600;color:rgba(255,255,255,0.38);white-space:nowrap;transition:color 0.3s}
+    .co-step.active .co-step-label,.co-step.done .co-step-label{color:rgba(255,255,255,0.85)}
+    .co-step-line{flex:1;max-width:70px;height:2px;background:rgba(255,255,255,0.1);margin:0 0.6rem;border-radius:2px;transition:background 0.3s}
+    .co-step-line.done{background:var(--sg)}
+
+    .co-body{padding:2rem 2.5rem}
+    .co-panel{display:none}
+    .co-panel.active{display:block;animation:fadeIn 0.28s ease}
+    .co-title{font-family:'Cormorant Garamond',serif;font-size:1.75rem;color:var(--dg);margin-bottom:0.28rem}
+    .co-sub{color:var(--tl);font-size:0.83rem;margin-bottom:1.6rem}
+
+    /* Checkout layout */
+    .co-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:1.8rem;align-items:start}
+
+    /* ---- IMPROVED FORM SECTIONS ---- */
+    .co-section{background:var(--cr);border-radius:14px;padding:1.2rem 1.4rem;border:1px solid var(--bdr);margin-bottom:1.1rem}
+    .co-section-title{font-size:0.85rem;font-weight:700;color:var(--td);margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem}
+    .co-section-title i{color:var(--mg);font-size:0.9rem;width:16px;text-align:center}
+
+    /* The key fix: NO asterisk, use a "Required" pill badge */
+    .co-field{margin-bottom:0.9rem}
+    .co-field:last-child{margin-bottom:0}
+    .co-field-label{font-size:0.73rem;font-weight:700;color:var(--tm);letter-spacing:0.4px;text-transform:uppercase;margin-bottom:0.35rem;display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap}
+    .co-field-label i{color:var(--sg);font-size:0.68rem;width:13px;text-align:center}
+    .req-tag{background:var(--go);color:white;font-size:0.58rem;font-weight:800;padding:1px 5px 1px 4px;border-radius:4px;letter-spacing:0.3px;flex-shrink:0}
+    .opt-tag{background:rgba(122,142,123,0.15);color:var(--tl);font-size:0.58rem;font-weight:700;padding:1px 5px 1px 4px;border-radius:4px;letter-spacing:0.3px;flex-shrink:0}
+    .co-input{width:100%;padding:0.78rem 0.95rem;border:1.5px solid var(--bdr);border-radius:10px;font-size:0.87rem;font-family:'DM Sans',sans-serif;color:var(--td);background:white;outline:none;transition:border-color 0.2s,box-shadow 0.2s;-webkit-appearance:none;appearance:none}
+    .co-input:focus{border-color:var(--sg);box-shadow:0 0 0 3px rgba(107,154,71,0.1)}
+    .co-input.err{border-color:var(--red);box-shadow:0 0 0 3px rgba(231,76,60,0.1)}
+    .co-input::placeholder{color:rgba(122,142,123,0.6)}
+    .field-hint-txt{font-size:0.68rem;color:var(--tl);margin-top:0.25rem;display:flex;align-items:center;gap:0.2rem}
+    .field-hint-txt i{font-size:0.62rem;flex-shrink:0}
+    .co-2col{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
+
+    /* Order summary box */
+    .co-summary-box{background:var(--cr);border-radius:16px;padding:1.3rem;border:1px solid var(--bdr);position:sticky;top:1rem}
+    .co-sum-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dg);margin-bottom:0.9rem;display:flex;align-items:center;gap:0.38rem}
+    .co-sum-item{display:flex;justify-content:space-between;align-items:flex-start;padding:0.45rem 0;border-bottom:1px solid var(--bdr);font-size:0.8rem;gap:0.5rem}
+    .co-sum-item .sname{color:var(--td);font-weight:600;flex:1}
+    .co-sum-item .sqty{color:var(--tl);font-size:0.7rem}
+    .co-sum-item .sprice{color:var(--mg);font-weight:700;flex-shrink:0}
+    .co-sum-total{display:flex;justify-content:space-between;align-items:center;margin-top:0.9rem;padding-top:0.75rem;border-top:2px solid var(--bdr)}
+    .co-sum-total span{font-size:0.86rem;font-weight:700;color:var(--td)}
+    .co-sum-total strong{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--dg)}
+    .co-trust{margin-top:0.75rem;padding:0.65rem;background:rgba(44,95,45,0.05);border-radius:8px;font-size:0.7rem;color:var(--tl);display:flex;align-items:flex-start;gap:0.38rem}
+    .co-trust i{color:var(--mg);margin-top:1px;flex-shrink:0}
+
+    /* Checkout buttons */
+    .co-btn{width:100%;background:linear-gradient(135deg,var(--dg),var(--mg));color:white;border:none;padding:0.9rem;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-family:'DM Sans',sans-serif;transition:all 0.3s ease;box-shadow:0 6px 22px rgba(44,95,45,0.28);margin-top:1rem}
+    .co-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(44,95,45,0.38)}
+    .co-btn-back{width:100%;background:none;border:1.5px solid var(--bdr);color:var(--tl);padding:0.7rem;border-radius:12px;font-size:0.83rem;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:0.55rem;display:flex;align-items:center;justify-content:center;gap:0.38rem;transition:all 0.2s}
+    .co-btn-back:hover{border-color:var(--sg);color:var(--mg)}
+
+    /* ---- PAYMENT STEP ---- */
+    .pay-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:1.8rem;align-items:start}
+    .pay-qr-box{text-align:center;background:var(--cr);border-radius:16px;padding:1.6rem 1.4rem;border:1px solid var(--bdr)}
+    .pay-qr-label{font-size:0.7rem;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.9rem}
+    .pay-qr-img{width:170px;height:170px;border-radius:12px;border:3px solid var(--mg);padding:5px;background:white;margin:0 auto 0.9rem;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .pay-qr-img img{width:100%;height:100%;border-radius:7px}
+    .pay-amount-big{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:700;color:var(--dg);margin:0.3rem 0 0.2rem}
+    .pay-amount-lbl{font-size:0.74rem;color:var(--tl);margin-bottom:0.9rem}
+    .pay-divider-txt{font-size:0.72rem;color:var(--tl);margin:0.7rem 0 0.4rem;font-weight:600;display:flex;align-items:center;gap:0.35rem}
+    .pay-divider-txt::before,.pay-divider-txt::after{content:'';flex:1;height:1px;background:var(--bdr)}
+    .pay-upi-id-box{background:white;border:1.5px dashed var(--sg);border-radius:9px;padding:0.55rem 0.9rem;font-family:monospace;font-size:0.78rem;color:var(--dg);cursor:pointer;display:flex;align-items:center;gap:0.38rem;transition:all 0.2s;word-break:break-all}
+    .pay-upi-id-box:hover{background:rgba(107,154,71,0.05);border-style:solid}
+    .pay-upi-id-box i{color:var(--mg);flex-shrink:0}
+    .pay-upi-hint{font-size:0.67rem;color:var(--tl);margin-top:0.3rem;text-align:center}
+    .pay-apps{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-top:0.9rem}
+    .pay-app{display:flex;flex-direction:column;align-items:center;gap:0.25rem;padding:0.45rem 0.75rem;border-radius:9px;background:white;border:1px solid var(--bdr);font-size:0.64rem;font-weight:700;color:var(--tm);cursor:pointer;transition:all 0.2s}
+    .pay-app:hover{transform:translateY(-2px);box-shadow:var(--s1)}
+    .pay-app-icon{font-size:1.3rem}
+
+    /* UTR / Transaction section — key fix: clear label, no asterisk */
+    .pay-right{display:flex;flex-direction:column;gap:1rem}
+    .pay-steps-box{background:var(--cr);border-radius:14px;padding:1.1rem;border:1px solid var(--bdr)}
+    .pay-steps-title{font-size:0.78rem;font-weight:700;color:var(--td);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.3rem}
+    .pay-step{display:flex;align-items:flex-start;gap:0.65rem;padding:0.5rem 0}
+    .pay-step:not(:last-child){border-bottom:1px solid var(--bdr)}
+    .pay-step-num{width:22px;height:22px;min-width:22px;border-radius:50%;background:var(--mg);color:white;font-size:0.68rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+    .pay-step p{font-size:0.79rem;color:var(--tm);line-height:1.5}
+    .pay-step p strong{color:var(--td)}
+
+    /* UTR field — clear and prominent */
+    .utr-field-wrap{background:#fffbf3;border:2px solid rgba(200,149,58,0.3);border-radius:14px;padding:1.1rem 1.2rem}
+    .utr-field-title{font-size:0.8rem;font-weight:800;color:var(--td);margin-bottom:0.65rem;display:flex;align-items:center;gap:0.4rem}
+    .utr-field-title i{color:var(--go)}
+    .utr-field-title .req-tag{background:var(--go)}
+    .utr-input{width:100%;padding:0.85rem 1rem;border:2px solid rgba(200,149,58,0.25);border-radius:10px;font-size:0.95rem;font-family:monospace;color:var(--td);background:white;outline:none;transition:border-color 0.2s,box-shadow 0.2s;letter-spacing:2px}
+    .utr-input:focus{border-color:var(--go);box-shadow:0 0 0 4px rgba(200,149,58,0.12)}
+    .utr-input.err{border-color:var(--red);box-shadow:0 0 0 4px rgba(231,76,60,0.1)}
+    .utr-hint{font-size:0.7rem;color:var(--tl);margin-top:0.4rem;display:flex;align-items:flex-start;gap:0.3rem;line-height:1.5}
+    .utr-hint i{color:var(--go);flex-shrink:0;margin-top:1px}
+    .pay-confirm-btn{width:100%;background:linear-gradient(135deg,#1a9e50,#25D366);color:white;border:none;padding:0.95rem;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-family:'DM Sans',sans-serif;transition:all 0.3s ease;box-shadow:0 6px 22px rgba(37,211,102,0.28)}
+    .pay-confirm-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,211,102,0.38)}
+
+    /* ---- SUCCESS STEP ---- */
+    .success-anim{text-align:center;padding:2.5rem 1.5rem}
+    .success-icon{width:85px;height:85px;border-radius:50%;background:linear-gradient(135deg,#25D366,#1a9e50);display:flex;align-items:center;justify-content:center;font-size:2.3rem;color:white;margin:0 auto 1.3rem;box-shadow:0 12px 36px rgba(37,211,102,0.32);animation:successPop 0.5s cubic-bezier(0.34,1.56,0.64,1) both}
+    @keyframes successPop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+    .success-title{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--dg);margin-bottom:0.45rem}
+    .success-sub{color:var(--tl);font-size:0.87rem;line-height:1.7;max-width:460px;margin:0 auto 1.2rem}
+    .order-id-badge{background:var(--cr);border:1.5px solid var(--bdr);border-radius:11px;padding:0.7rem 1.3rem;display:inline-block;font-family:monospace;font-size:0.9rem;color:var(--dg);margin-bottom:1.2rem;letter-spacing:1px}
+    .order-id-badge strong{color:var(--mg)}
+    .whatsapp-sent-note{background:rgba(37,211,102,0.07);border:1px solid rgba(37,211,102,0.2);border-radius:11px;padding:0.9rem 1.2rem;text-align:left;margin-bottom:1.2rem;display:flex;gap:0.7rem;align-items:flex-start;max-width:460px;margin-left:auto;margin-right:auto}
+    .whatsapp-sent-note i{color:#25D366;font-size:1.05rem;margin-top:2px;flex-shrink:0}
+    .whatsapp-sent-note p{font-size:0.8rem;color:var(--tm);line-height:1.6}
+    .success-actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+    .suc-wa-btn,.suc-close-btn{border:none;padding:0.75rem 1.5rem;border-radius:50px;font-size:0.84rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:0.42rem;font-family:'DM Sans',sans-serif;transition:all 0.3s;text-decoration:none}
+    .suc-wa-btn{background:#25D366;color:white}
+    .suc-wa-btn:hover{background:#1ebe5d;transform:translateY(-2px)}
+    .suc-close-btn{background:var(--mg);color:white}
+    .suc-close-btn:hover{background:var(--dg);transform:translateY(-2px)}
+
+    /* ====================================================
+       ADMIN PASSWORD GATE
+    ======================================================= */
+    .pwd-overlay{position:fixed;inset:0;z-index:6000;background:rgba(14,30,15,0.92);backdrop-filter:blur(18px);display:none;align-items:center;justify-content:center;padding:1rem}
+    .pwd-overlay.open{display:flex;animation:fadeIn 0.2s ease}
+    .pwd-box{background:white;border-radius:24px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.4)}
+    .pwd-top{background:linear-gradient(135deg,var(--dg),var(--mg));padding:2.2rem 2rem 1.8rem;text-align:center}
+    .pwd-lock-icon{width:60px;height:60px;border-radius:18px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:white;margin:0 auto 1rem}
+    .pwd-top h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:white;margin-bottom:0.2rem}
+    .pwd-top p{color:rgba(255,255,255,0.55);font-size:0.8rem}
+    .pwd-body{padding:1.8rem}
+    .pwd-label{font-size:0.76rem;font-weight:700;color:var(--tm);letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:0.45rem}
+    .pwd-input-wrap{position:relative;margin-bottom:0.45rem}
+    .pwd-input{width:100%;padding:0.82rem 2.8rem 0.82rem 1rem;border:1.5px solid var(--bdr);border-radius:11px;font-size:0.96rem;font-family:'DM Sans',sans-serif;color:var(--td);letter-spacing:3px;outline:none;transition:border-color 0.2s;background:var(--cr)}
+    .pwd-input:focus{border-color:var(--sg)}
+    .pwd-eye{position:absolute;right:0.9rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--tl);font-size:0.95rem}
+    .pwd-error{font-size:0.76rem;color:#e74c3c;min-height:1.1rem;margin-bottom:0.7rem;display:none;align-items:center;gap:0.28rem}
+    .pwd-error.show{display:flex}
+    .pwd-attempts{font-size:0.7rem;color:var(--tl);text-align:center;margin-bottom:0.7rem;min-height:1rem}
+    .pwd-submit{width:100%;background:linear-gradient(135deg,var(--mg),var(--sg));color:white;border:none;padding:0.9rem;border-radius:11px;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:0.45rem;transition:all 0.3s;box-shadow:0 6px 22px rgba(44,95,45,0.28)}
+    .pwd-submit:hover{transform:translateY(-2px)}
+    .pwd-submit:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+    .pwd-cancel{width:100%;background:none;border:none;color:var(--tl);font-size:0.8rem;cursor:pointer;padding:0.65rem;font-family:'DM Sans',sans-serif;margin-top:0.45rem;transition:color 0.2s}
+    .pwd-cancel:hover{color:var(--mg)}
+
+    /* ====================================================
+       ADMIN PANEL — PHOTO UPLOAD FULLY FIXED
+    ======================================================= */
+    .admin-overlay{position:fixed;inset:0;z-index:5000;background:rgba(14,30,15,0.8);backdrop-filter:blur(12px);display:none;align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto}
+    .admin-overlay.open{display:flex;animation:fadeIn 0.2s ease}
+    .admin-panel{background:white;border-radius:24px;max-width:860px;width:100%;box-shadow:0 40px 100px rgba(0,0,0,0.3);margin:auto}
+    .admin-hdr{background:linear-gradient(135deg,var(--dg),var(--mg));padding:1.8rem 2rem;border-radius:24px 24px 0 0;display:flex;align-items:center;justify-content:space-between}
+    .admin-hdr h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;color:white;display:flex;align-items:center;gap:0.45rem}
+    .admin-hdr p{color:rgba(255,255,255,0.55);font-size:0.8rem;margin-top:0.12rem}
+    .admin-close{width:36px;height:36px;min-width:36px;border-radius:50%;background:rgba(255,255,255,0.14);border:none;color:white;cursor:pointer;font-size:0.95rem;display:flex;align-items:center;justify-content:center;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)}
+    .admin-close:hover{background:rgba(255,255,255,0.28);transform:rotate(90deg)}
+    .admin-body{padding:2rem}
+    .admin-tabs{display:flex;gap:0.45rem;margin-bottom:1.8rem;background:var(--cr);padding:0.38rem;border-radius:11px}
+    .atab{flex:1;padding:0.6rem;border:none;border-radius:8px;font-size:0.81rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;color:var(--tl);background:transparent;transition:all 0.22s;display:flex;align-items:center;justify-content:center;gap:0.3rem}
+    .atab.active{background:white;color:var(--mg);box-shadow:var(--s1)}
+    .tab-panel{display:none}
+    .tab-panel.active{display:block}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem}
+    .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.1rem}
+    .form-group label{font-size:0.76rem;font-weight:700;color:var(--tm);letter-spacing:0.4px;text-transform:uppercase}
+    .form-group input,.form-group select,.form-group textarea{padding:0.72rem 0.95rem;border:1.5px solid var(--bdr);border-radius:10px;font-size:0.84rem;font-family:'DM Sans',sans-serif;color:var(--td);background:white;transition:border-color 0.2s;outline:none}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--sg);box-shadow:0 0 0 3px rgba(107,154,71,0.1)}
+    .form-group textarea{resize:vertical;min-height:76px;line-height:1.5}
+    .ben-list{display:flex;flex-direction:column;gap:0.45rem;margin-top:0.45rem}
+    .ben-item{display:flex;gap:0.45rem;align-items:center}
+    .ben-item input{flex:1}
+    .ben-rm{background:none;border:none;color:#e74c3c;cursor:pointer;font-size:0.88rem;padding:0.28rem;border-radius:5px;transition:background 0.2s;flex-shrink:0}
+    .ben-rm:hover{background:rgba(231,76,60,0.1)}
+    .add-ben-btn{background:none;border:1.5px dashed var(--bdr);color:var(--tl);padding:0.55rem;border-radius:9px;cursor:pointer;font-size:0.78rem;font-family:'DM Sans',sans-serif;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:0.38rem;margin-top:0.45rem;width:100%}
+    .add-ben-btn:hover{border-color:var(--sg);color:var(--mg);background:rgba(107,154,71,0.04)}
+    .nutr-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem}
+
+    /* ---- PHOTO UPLOAD REDESIGN ---- */
+    .photo-upload-section{margin-bottom:1.1rem}
+    .photo-upload-section > label{font-size:0.76rem;font-weight:700;color:var(--tm);letter-spacing:0.4px;text-transform:uppercase;display:block;margin-bottom:0.5rem}
+    .photo-input-hidden{display:none}
+
+    /* Drop zone (shown when no image) */
+    .photo-dropzone{width:100%;height:140px;border:2px dashed var(--bdr);border-radius:12px;background:var(--cr);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.45rem;color:var(--tl);font-size:0.79rem;transition:all 0.2s;position:relative}
+    .photo-dropzone:hover,.photo-dropzone.drag-over{border-color:var(--sg);background:rgba(107,154,71,0.04);color:var(--mg)}
+    .photo-dropzone i{font-size:1.7rem}
+    .photo-dropzone span{font-weight:600}
+    .photo-dropzone .sub{font-size:0.68rem;color:var(--tl);text-align:center}
+
+    /* Preview state (shown after image selected) */
+    .photo-preview-wrap{display:none;flex-direction:column;gap:0}
+    .photo-preview-wrap.show{display:flex}
+    .photo-preview-img-box{position:relative;border-radius:12px;overflow:hidden;border:1.5px solid var(--bdr)}
+    .photo-preview-img{width:100%;height:140px;object-fit:cover;display:block}
+    /* Desktop: hover overlay */
+    .photo-hover-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.48);display:flex;align-items:center;justify-content:center;gap:0.7rem;opacity:0;transition:opacity 0.2s}
+    .photo-preview-img-box:hover .photo-hover-overlay{opacity:1}
+    .photo-ov-btn{padding:0.4rem 0.85rem;border-radius:8px;border:none;font-size:0.73rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:0.28rem}
+    .photo-ov-btn.change-btn{background:white;color:var(--dg)}
+    .photo-ov-btn.change-btn:hover{background:var(--cr)}
+    .photo-ov-btn.remove-btn{background:var(--red);color:white}
+    .photo-ov-btn.remove-btn:hover{background:#c0392b}
+    /* Mobile: always-visible action bar */
+    .photo-action-bar{display:flex;gap:0.5rem;padding:0.5rem 0 0}
+    .photo-action-btn{flex:1;padding:0.5rem;border-radius:8px;border:1.5px solid var(--bdr);background:white;color:var(--tm);cursor:pointer;font-size:0.74rem;font-weight:600;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:0.28rem;transition:all 0.18s}
+    .photo-action-btn:hover{border-color:var(--sg);color:var(--mg)}
+    .photo-action-btn.del{border-color:rgba(231,76,60,0.28);color:var(--red)}
+    .photo-action-btn.del:hover{background:rgba(231,76,60,0.07);border-color:var(--red)}
+
+    /* On desktop: hide action bar (use hover overlay), on mobile: show it */
+    @media(min-width:768px){
+      .photo-action-bar{display:none}
+    }
+
+    .submit-btn{width:100%;background:linear-gradient(135deg,var(--mg),var(--sg));color:white;border:none;padding:0.9rem;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:0.45rem;transition:all 0.3s ease;box-shadow:0 6px 22px rgba(44,95,45,0.28);margin-top:0.45rem}
+    .submit-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(44,95,45,0.38)}
+    .admin-prod-list{display:flex;flex-direction:column;gap:0.7rem}
+    .admin-pitem{display:flex;align-items:center;gap:0.9rem;padding:0.85rem;border-radius:11px;border:1px solid var(--bdr);background:var(--cr);transition:all 0.2s}
+    .admin-pitem:hover{background:white;box-shadow:var(--s1)}
+    .api-img{width:52px;height:52px;min-width:52px;border-radius:8px;object-fit:cover;background:var(--bdr)}
+    .api-info{flex:1;min-width:0}
+    .api-name{font-weight:700;font-size:0.86rem;color:var(--td)}
+    .api-cat{font-size:0.7rem;color:var(--tl)}
+    .api-tag-badge{font-size:0.64rem;font-weight:700;background:rgba(200,149,58,0.12);color:var(--go);padding:0.16rem 0.52rem;border-radius:50px;border:1px solid rgba(200,149,58,0.2)}
+    .api-price-badge{font-size:0.7rem;font-weight:700;background:rgba(44,95,45,0.09);color:var(--mg);padding:0.16rem 0.52rem;border-radius:50px;margin-left:0.28rem}
+    .api-actions{display:flex;gap:0.42rem;flex-shrink:0}
+    .del-btn{background:none;border:1.5px solid rgba(231,76,60,0.28);color:#e74c3c;padding:0.36rem 0.7rem;border-radius:7px;font-size:0.73rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;display:flex;align-items:center;gap:0.28rem}
+    .del-btn:hover{background:rgba(231,76,60,0.07)}
+    .search-admin{padding:0.68rem 0.95rem;border:1.5px solid var(--bdr);border-radius:10px;font-size:0.84rem;font-family:'DM Sans',sans-serif;color:var(--td);width:100%;margin-bottom:1.1rem;outline:none}
+    .search-admin:focus{border-color:var(--sg)}
+    .admin-empty{text-align:center;padding:2rem;color:var(--tl);font-size:0.86rem}
+    .admin-empty i{font-size:1.9rem;display:block;margin-bottom:0.45rem;opacity:0.38}
+    .cat-filter{display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.9rem}
+    .cf-btn{padding:0.38rem 0.85rem;border-radius:50px;border:1.5px solid var(--bdr);background:none;font-size:0.74rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;color:var(--tl);transition:all 0.2s}
+    .cf-btn.active{background:var(--mg);color:white;border-color:var(--mg)}
+    .success-flash{background:rgba(44,95,45,0.07);border:1px solid rgba(44,95,45,0.18);color:var(--mg);padding:0.75rem 1rem;border-radius:10px;font-size:0.82rem;font-weight:600;display:none;align-items:center;gap:0.45rem;margin-bottom:0.9rem}
+    .success-flash.show{display:flex}
+
+    /* ====== PRODUCT MODAL ====== */
+    .modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(14,30,15,0.75);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:1rem}
+    .modal-overlay.open{display:flex;animation:fadeIn 0.2s ease}
+    .modal{background:white;border-radius:28px;max-width:900px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:var(--s3);position:relative}
+    .mgrid{display:grid;grid-template-columns:1fr 1fr}
+    .mimg{border-radius:28px 0 0 28px;overflow:hidden;position:sticky;top:0;height:500px}
+    .mimg img{width:100%;height:100%;object-fit:cover}
+    .mcont{padding:2.2rem 1.8rem}
+    .mclose{position:absolute;top:1.2rem;right:1.2rem;width:35px;height:35px;border-radius:50%;background:white;border:none;cursor:pointer;font-size:0.9rem;color:var(--tm);box-shadow:var(--s1);z-index:10;display:flex;align-items:center;justify-content:center;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)}
+    .mclose:hover{background:var(--mg);color:white;transform:rotate(90deg)}
+    .mbadge{display:inline-block;background:rgba(200,149,58,0.11);color:var(--go);padding:0.26rem 0.7rem;border-radius:50px;font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.65rem}
+    .mtitle{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--dg);line-height:1.1;margin-bottom:0.65rem}
+    .mtagline{font-style:italic;color:var(--go);font-size:0.86rem;margin-bottom:1rem;border-left:3px solid var(--go);padding-left:0.8rem}
+    .mdesc{color:var(--tm);line-height:1.8;font-size:0.84rem;margin-bottom:1.1rem}
+    .mbh4{font-size:0.76rem;font-weight:700;color:var(--dg);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem}
+    .blist{display:flex;flex-direction:column;gap:0.38rem;margin-bottom:1.1rem}
+    .bitem{display:flex;align-items:flex-start;gap:0.45rem;font-size:0.8rem;color:var(--tm)}
+    .bicon{color:var(--sg);margin-top:2px;flex-shrink:0}
+    .ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin-top:0.5rem;margin-bottom:1.1rem}
+    .nitem{background:var(--cr);border-radius:10px;padding:0.6rem;text-align:center}
+    .nval{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--mg)}
+    .nlbl{font-size:0.63rem;color:var(--tl)}
+    .mprice-row{display:flex;align-items:center;justify-content:space-between;background:var(--cr);border-radius:11px;padding:0.75rem 0.95rem;margin-bottom:0.9rem;border:1px solid var(--bdr)}
+    .mprice-lbl{font-size:0.76rem;color:var(--tl)}
+    .mprice-val{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:var(--dg)}
+    .mactions{display:flex;flex-direction:column;gap:0.6rem;margin-top:0.9rem}
+    .maddcart{background:var(--dg);color:white;border:none;padding:0.85rem;border-radius:11px;font-size:0.86rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.42rem;font-family:'DM Sans',sans-serif;transition:all 0.3s}
+    .maddcart:hover{background:var(--mg);transform:translateY(-2px)}
+    .mbuynow{background:linear-gradient(135deg,var(--go),var(--gol));color:white;border:none;padding:0.85rem;border-radius:11px;font-size:0.86rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.42rem;font-family:'DM Sans',sans-serif;transition:all 0.3s;box-shadow:0 4px 14px rgba(200,149,58,0.28)}
+    .mbuynow:hover{transform:translateY(-2px)}
+    .mwa{background:#f0faf3;color:#1a9e50;border:1.5px solid rgba(37,211,102,0.28);padding:0.72rem;border-radius:11px;font-size:0.8rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.42rem;font-family:'DM Sans',sans-serif;text-decoration:none;transition:all 0.3s}
+    .mwa:hover{background:#25D366;color:white;border-color:#25D366}
+
+    /* ====== FOUNDER PAGE ====== */
+    .founder-page{display:none;position:fixed;inset:0;z-index:4000;background:var(--cr);overflow-y:auto}
+    .founder-page.open{display:block;animation:fadeIn 0.3s ease}
+    .fp-header{background:var(--dg);padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;gap:0.5rem}
+    .fp-back{background:rgba(255,255,255,0.14);color:white;border:none;padding:0.55rem 1.1rem;border-radius:50px;cursor:pointer;font-size:0.83rem;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:0.42rem;transition:all 0.3s;flex-shrink:0}
+    .fp-back:hover{background:rgba(255,255,255,0.24)}
+    .fp-header h2{font-family:'Cormorant Garamond',serif;color:white;font-size:1.3rem;text-align:center;flex:1}
+    .fp-body{max-width:1100px;margin:0 auto;padding:3.5rem 2rem}
+    .fp-hero{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:center;margin-bottom:4rem}
+    .fp-photo-wrap{position:relative}
+    .fp-photo{width:100%;border-radius:22px;overflow:hidden;aspect-ratio:3/4;box-shadow:var(--s3)}
+    .fp-photo img{width:100%;height:100%;object-fit:cover}
+    .fp-photo-badge{position:absolute;bottom:-1.3rem;right:-1.3rem;background:linear-gradient(135deg,var(--go),var(--gol));padding:1.2rem;border-radius:18px;text-align:center;box-shadow:0 12px 36px rgba(200,149,58,0.32);color:white}
+    .fp-photo-badge strong{display:block;font-family:'Cormorant Garamond',serif;font-size:2.3rem;line-height:1}
+    .fp-photo-badge span{font-size:0.65rem;letter-spacing:1px;opacity:0.9}
+    .fp-info h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,3.3rem);color:var(--dg);margin-bottom:0.45rem;line-height:1.1}
+    .fp-info h1 em{color:var(--go);font-style:italic}
+    .fp-deg{font-size:0.88rem;color:var(--tl);margin-bottom:1.3rem}
+    .fp-creds-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.3rem}
+    .fp-cred{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(44,95,45,0.08);color:var(--mg);border:1px solid rgba(44,95,45,0.16);padding:0.28rem 0.75rem;border-radius:7px;font-size:0.74rem;font-weight:600}
+    .fp-quote{border-left:4px solid var(--go);padding:0.9rem 1.2rem;background:rgba(200,149,58,0.05);border-radius:0 11px 11px 0;margin-bottom:1.3rem}
+    .fp-quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--dg);line-height:1.6;margin-bottom:0.45rem}
+    .fp-quote cite{font-size:0.73rem;color:var(--tl)}
+    .fp-bio p{color:var(--tm);line-height:1.85;font-size:0.91rem;margin-bottom:0.9rem}
+    .fp-milestones{margin-top:3.5rem}
+    .fp-milestones h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--dg);margin-bottom:1.8rem;text-align:center}
+    .milestones-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+    .milestone-card{background:white;border-radius:16px;padding:1.6rem 1.1rem;text-align:center;border:1px solid var(--bdr);box-shadow:var(--s1);transition:all 0.3s ease}
+    .milestone-card:hover{transform:translateY(-5px);box-shadow:var(--s2)}
+    .ms-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--go);line-height:1}
+    .ms-label{font-size:0.76rem;color:var(--tl);margin-top:0.28rem}
+    .fp-vision{background:var(--dg);border-radius:22px;padding:2.8rem;margin-top:2.8rem;text-align:center}
+    .fp-vision h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:white;margin-bottom:0.9rem}
+    .fp-vision p{color:rgba(255,255,255,0.68);line-height:1.8;max-width:680px;margin:0 auto}
+
+    /* ====== TOAST ====== */
+    .toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(120px);background:var(--dg);color:white;padding:0.78rem 1.5rem;border-radius:50px;font-size:0.83rem;font-weight:600;box-shadow:var(--s2);z-index:9999;display:flex;align-items:center;gap:0.4rem;transition:transform 0.45s cubic-bezier(0.34,1.56,0.64,1);white-space:nowrap;max-width:calc(100vw - 2rem)}
+    .toast.show{transform:translateX(-50%) translateY(0)}
+
+    /* ====== FOOTER ====== */
+    footer{background:var(--dg);color:white;padding:3rem 1.5rem 1.8rem;text-align:center}
+    .foot-inner{max-width:1100px;margin:0 auto}
+    .foot-logo{font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:0.2rem}
+    .foot-tag{color:rgba(255,255,255,0.5);font-style:italic;margin-bottom:1.6rem;font-size:0.9rem}
+    .foot-links{display:flex;gap:1.6rem;justify-content:center;margin-bottom:1.8rem;flex-wrap:wrap}
+    .foot-links a{color:rgba(255,255,255,0.55);font-size:0.81rem;text-decoration:none;transition:color 0.2s}
+    .foot-links a:hover{color:white}
+    .foot-bot{border-top:1px solid rgba(255,255,255,0.09);padding-top:1.3rem;margin-top:0.9rem;font-size:0.74rem;color:rgba(255,255,255,0.35)}
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes sLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes sRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes mUp{from{opacity:0;transform:translateY(40px) scale(0.94)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+    .rev{opacity:0;transform:translateY(28px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
+    .rev.vis{opacity:1;transform:translateY(0)}
+    .revl{opacity:0;transform:translateX(-28px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
+    .revl.vis{opacity:1;transform:translateX(0)}
+    .revr{opacity:0;transform:translateX(28px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
+    .revr.vis{opacity:1;transform:translateX(0)}
+
+    /* ====================================================
+       RESPONSIVE — COMPREHENSIVE MOBILE FIXES
+    ======================================================= */
+
+    /* Tablet: 901–1100 */
+    @media(max-width:1100px){
+      .hero{gap:2.5rem;padding:3rem 1.5rem}
+      .about-inner{gap:3rem}
+      .au-grid{gap:2rem}
+    }
+
+    /* ---- 900px breakpoint ---- */
+    @media(max-width:900px){
+      /* Header: hide desktop nav, show mobile menu */
+      .nav-links{display:none}
+      .mob-menu{display:flex;align-items:center;justify-content:center}
+      .logo-text{display:none}
+      nav{padding:0.7rem 1.2rem}
+      .logo-em{width:40px;height:40px;min-width:40px;font-size:1rem}
+
+      /* Keep admin + cart as icon-only circles */
+      .admin-btn span,.cart-btn span:not(.cart-count){display:none}
+      .admin-btn,.cart-btn{width:42px;height:42px;min-width:42px;padding:0;justify-content:center;border-radius:50%;font-size:1rem}
+      .cart-btn{padding:0}
+      .cart-count{position:static;margin-left:0}
+
+      /* Hero: single column */
+      .hero{grid-template-columns:1fr;min-height:auto;padding:2.5rem 1.5rem;gap:0}
+      .hero-right{display:none}
+
+      /* Grids → 2 col */
+      .trust-inner{grid-template-columns:1fr 1fr;gap:0.5rem}
+      .about-inner{grid-template-columns:1fr}
+      .about-img{display:none}
+      .why-grid{grid-template-columns:1fr 1fr}
+      .tgrid{grid-template-columns:1fr 1fr}
+      .au-grid{grid-template-columns:1fr}
+      .co-layout{grid-template-columns:1fr}
+      .pay-layout{grid-template-columns:1fr}
+      .mgrid{grid-template-columns:1fr}
+      .mimg{border-radius:28px 28px 0 0;height:230px;position:relative}
+      .fp-hero{grid-template-columns:1fr;gap:2rem}
+      .fp-photo-wrap{max-width:320px;margin:0 auto}
+      .milestones-grid{grid-template-columns:1fr 1fr}
+      .form-row{grid-template-columns:1fr}
+      .nutr-row{grid-template-columns:1fr 1fr}
+      .co-2col{grid-template-columns:1fr}
+    }
+
+    /* ---- 700px breakpoint ---- */
+    @media(max-width:700px){
+      .pgrid{grid-template-columns:1fr 1fr}
+      .trust-inner{grid-template-columns:1fr}
+      .tgrid{grid-template-columns:1fr}
+      .why-grid{grid-template-columns:1fr}
+      .cart-drawer{width:100vw;right:-100vw}
+      .au-values-grid{grid-template-columns:1fr 1fr}
+      .co-body{padding:1.4rem 1.2rem}
+      .admin-body{padding:1.4rem 1.2rem}
+      .admin-hdr{padding:1.4rem 1.5rem}
+      /* Always show photo action bar on mobile */
+      .photo-action-bar{display:flex !important}
+      .photo-hover-overlay{display:none}
+    }
+
+    /* ---- 540px breakpoint ---- */
+    @media(max-width:540px){
+      nav{padding:0.6rem 0.9rem;gap:0.4rem}
+      .logo-em{width:38px;height:38px;min-width:38px;font-size:0.9rem}
+      .admin-btn,.cart-btn{width:40px;height:40px;min-width:40px;font-size:0.95rem}
+      .mob-menu{font-size:1.1rem}
+      .hero{padding:2rem 1.1rem}
+      .hero h1{font-size:clamp(2rem,8vw,3rem)}
+      .hero-sub{font-size:0.88rem}
+      .hero-actions{gap:0.7rem}
+      .btn-solid,.btn-outline{padding:0.7rem 1.2rem;font-size:0.82rem}
+      .about-section,.why-section,.products-section,.testi-section,.cert-section,.aboutus-section,.contact-section{padding:3.5rem 1.2rem}
+      .trust-strip{padding:1rem 1.1rem}
+      .pgrid{grid-template-columns:1fr 1fr;gap:0.9rem}
+      .co-stepper{padding:1.1rem 0.9rem}
+      .co-step-label{display:none}
+      .co-step-line{max-width:35px;margin:0 0.35rem}
+      .co-step-num{width:28px;height:28px;min-width:28px;font-size:0.72rem}
+      .co-body{padding:1.2rem 1rem}
+      .co-title{font-size:1.5rem}
+      .admin-body{padding:1.2rem 1rem}
+      .admin-hdr{padding:1.2rem 1.2rem}
+      .admin-hdr h2{font-size:1.4rem}
+      .fp-body{padding:2.5rem 1.1rem}
+      .au-stats{padding:1.4rem 0.5rem}
+      .au-stat{padding:0.4rem 0.8rem;min-width:80px}
+      .au-stat-num{font-size:1.65rem}
+      .au-values-grid{grid-template-columns:1fr}
+    }
+
+    /* ---- 400px breakpoint ---- */
+    @media(max-width:400px){
+      nav{padding:0.5rem 0.7rem;gap:0.3rem}
+      .logo-em{width:36px;height:36px;min-width:36px;font-size:0.85rem;border-radius:10px}
+      .admin-btn,.cart-btn{width:38px;height:38px;min-width:38px;font-size:0.88rem}
+      .mob-menu{font-size:1rem}
+      .co-step-label{display:none}
+      .pgrid{grid-template-columns:1fr}
+      .co-2col{grid-template-columns:1fr}
+      .success-actions{flex-direction:column;align-items:stretch}
+      .suc-wa-btn,.suc-close-btn{justify-content:center}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ======== MARQUEE ======== -->
+<div class="marquee-bar"><div class="marquee-track" id="mqTrack"></div></div>
+
+<!-- ======== HEADER ======== -->
+<header>
+  <nav>
+    <a class="logo" href="#home">
+      <div class="logo-em"><i class="fas fa-leaf"></i></div>
+      <div class="logo-text">
+        <strong>Visagha Gourmet</strong>
+        <small>Foods &amp; Traders Pvt. Ltd.</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">Founder</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why">Why Millet</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="admin-btn" onclick="openAdmin()"><i class="fas fa-shield-halved"></i> <span>Admin</span></button>
+      <button class="cart-btn" onclick="openCart()">
+        <i class="fas fa-bag-shopping"></i>
+        <span>Cart</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="mob-menu" onclick="openMobNav()"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ======== MOBILE NAV ======== -->
+<div class="mob-nav-panel" id="mobNav">
+  <div class="mob-nav-top">
+    <div class="mob-nav-logo">Visagha Gourmet</div>
+    <button class="mob-nav-close" onclick="closeMobNav()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="mob-nav-links">
+    <a href="#home" onclick="closeMobNav()"><i class="fas fa-home"></i> Home</a>
+    <a href="#about" onclick="closeMobNav()"><i class="fas fa-user-md"></i> Founder</a>
+    <a href="#products" onclick="closeMobNav()"><i class="fas fa-seedling"></i> Products</a>
+    <a href="#why" onclick="closeMobNav()"><i class="fas fa-wheat-awn"></i> Why Millet</a>
+    <a href="#contact" onclick="closeMobNav()"><i class="fas fa-phone"></i> Contact</a>
+  </div>
+  <div class="mob-nav-actions">
+    <button class="mna-admin" onclick="closeMobNav();openAdmin()"><i class="fas fa-shield-halved"></i> Admin</button>
+    <button class="mna-cart" onclick="closeMobNav();openCart()"><i class="fas fa-bag-shopping"></i> Cart (<span id="mobCartCount">0</span>)</button>
+  </div>
+  <div class="mob-nav-foot">© 2026 Visagha Gourmet Foods and Traders Pvt. Ltd.</div>
+</div>
+
+<!-- ======== HERO ======== -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="eyebrow"><i class="fas fa-certificate"></i> FSSAI Certified · Science-Backed</div>
+    <h1>Nourish with<br><em>Ancient Grains</em>,<br>Modern Science</h1>
+    <p class="hero-sub">Premium millet-based nutrition, crafted under the guidance of <strong>Dr. R. Saraswathi</strong> — blending the wisdom of India's superfoods with cutting-edge nutritional science.</p>
+    <div class="founder-pill">
+      <div class="fp-av"><i class="fas fa-user-md"></i></div>
+      <div class="fp-txt">
+        <strong>Dr. R. Saraswathi, Ph.D.</strong>
+        <span>Founder · Food Scientist &amp; Nutritionist</span>
+      </div>
+    </div>
+    <div style="margin:-0.7rem 0 1.1rem">
+      <div class="fssai-tag"><i class="fas fa-shield-check"></i> FSSAI Reg. No. 22425113000168</div>
+    </div>
+    <div class="hero-actions">
+      <a href="#products" class="btn-solid"><i class="fas fa-seedling"></i> Explore Products</a>
+      <a href="#contact" class="btn-outline"><i class="fas fa-phone"></i> Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-right hero-visual">
+    <div class="him-grid">
+      <div class="him-card"><img src="Millet Musli.jpeg" onerror="this.src='https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=400&q=80'" alt="Millet Musli"><div class="him-ov">Millet Musli</div></div>
+      <div class="him-card"><img src="Nutri Vita Malt.jpeg" onerror="this.src='https://images.unsplash.com/photo-1571167366136-b57e02dbc7ea?w=400&q=80'" alt="Nutri Vita Malt"><div class="him-ov">Nutri Vita Malt</div></div>
+      <div class="him-card"><img src="Millet Cookies.jpeg" onerror="this.src='https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80'" alt="Millet Cookies"><div class="him-ov">Millet Cookies</div></div>
+      <div class="him-card"><img src="Herbal Infusion Tea.jpeg" onerror="this.src='https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=400&q=80'" alt="Herbal Tea"><div class="him-ov">Herbal Teas</div></div>
+    </div>
+    <div class="fbadge fb1"><i class="fas fa-leaf"></i> 100% Natural</div>
+    <div class="fbadge fb2"><i class="fas fa-award"></i> Dr. Approved</div>
+  </div>
+</section>
+
+<!-- ======== TRUST STRIP ======== -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item rev"><div class="trust-icon"><i class="fas fa-flask"></i></div><div class="trust-label"><strong>Lab Tested</strong><span>Every batch quality-checked</span></div></div>
+    <div class="trust-item rev" style="transition-delay:0.1s"><div class="trust-icon"><i class="fas fa-seedling"></i></div><div class="trust-label"><strong>No Preservatives</strong><span>100% natural ingredients</span></div></div>
+    <div class="trust-item rev" style="transition-delay:0.2s"><div class="trust-icon"><i class="fas fa-heart-pulse"></i></div><div class="trust-label"><strong>Nutritionist-Crafted</strong><span>By Dr. R. Saraswathi, Ph.D.</span></div></div>
+    <div class="trust-item rev" style="transition-delay:0.3s"><div class="trust-icon"><i class="fas fa-truck"></i></div><div class="trust-label"><strong>Ships Pan India</strong><span>Direct from Madurai</span></div></div>
+  </div>
+</div>
+
+<!-- ======== ABOUT / FOUNDER ======== -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-img revl">
+      <div class="about-img-main"><img src="logo.png" onerror="this.src='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=700&q=80'" alt="Dr. R. Saraswathi"></div>
+      <div class="astat"><strong>20+</strong><span>Years of<br>Research</span></div>
+    </div>
+    <div class="about-text revr">
+      <div class="eyebrow"><i class="fas fa-award"></i> Founder &amp; Visionary</div>
+      <h2>Meet <em>Dr. R. Saraswathi</em> —<br>The Heart of Visagha</h2>
+      <div class="founder-hl">
+        <div class="fhl-av"><i class="fas fa-user-md"></i></div>
+        <div class="fhl-info">
+          <h3>Dr. R. Saraswathi</h3>
+          <p class="deg">M.Sc. · M.Phil. · Ph.D. (Food Science &amp; Nutrition)</p>
+          <span class="role"><i class="fas fa-star"></i> Founder &amp; Chief Food Scientist</span>
+          <div class="creds">
+            <span class="cred"><i class="fas fa-microscope"></i> Food Scientist</span>
+            <span class="cred"><i class="fas fa-apple-whole"></i> Nutritionist</span>
+            <span class="cred"><i class="fas fa-certificate"></i> FSSAI Licensed</span>
+          </div>
+        </div>
+      </div>
+      <p>Driven by a deep passion for India's ancient millet grains and a mission to combat modern lifestyle diseases through food, <strong>Dr. R. Saraswathi</strong> founded Visagha Gourmet Foods and Traders Pvt. Ltd.</p>
+      <p>Under her personal supervision, each formulation is designed for optimal nutritional bioavailability — ensuring your body absorbs the maximum possible benefit from every ingredient.</p>
+      <div class="fquote">"Nutrition is not just about eating; it's about eating right. Millets are not a trend — they are India's timeless answer to modern lifestyle diseases."<div style="margin-top:0.4rem;font-size:0.75rem;color:rgba(255,255,255,0.42);font-style:normal">— Dr. R. Saraswathi, Founder</div></div>
+      <div class="pills">
+        <span class="pill">🌾 100% Natural</span>
+        <span class="pill">🧪 Science-Formulated</span>
+        <span class="pill">✅ FSSAI Certified</span>
+        <span class="pill">🌿 Preservative-Free</span>
+        <span class="pill">💪 Nutrient-Dense</span>
+      </div>
+      <button class="view-founder-btn" onclick="openFounderPage()"><i class="fas fa-user-graduate"></i> Read Full Story</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======== WHY MILLET ======== -->
+<section class="why-section" id="why">
+  <div class="why-inner">
+    <div class="sec-eye rev">
+      <div class="eyebrow" style="display:inline-flex"><i class="fas fa-wheat-awn"></i> Why Millets</div>
+      <h2>Nature's Most Perfect Grain</h2>
+      <div class="divider"></div>
+      <p>Millets nourished civilizations for 10,000 years. Modern science agrees.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rev"><div class="wcnum">01</div><div class="wicon"><i class="fas fa-bolt"></i></div><h4>Sustained Energy</h4><p>Complex carbohydrates digest slowly — stable blood sugar, steady energy, no crash.</p></div>
+      <div class="why-card rev" style="transition-delay:0.1s"><div class="wcnum">02</div><div class="wicon"><i class="fas fa-heart"></i></div><h4>Heart Health</h4><p>Rich in magnesium, potassium and antioxidants that reduce blood pressure and lower LDL cholesterol.</p></div>
+      <div class="why-card rev" style="transition-delay:0.2s"><div class="wcnum">03</div><div class="wicon"><i class="fas fa-shield-virus"></i></div><h4>Immune Boost</h4><p>Packed with zinc, iron, B-vitamins and polyphenols that strengthen immunity and fight oxidative stress.</p></div>
+      <div class="why-card rev" style="transition-delay:0.3s"><div class="wcnum">04</div><div class="wicon"><i class="fas fa-droplet"></i></div><h4>Diabetes Friendly</h4><p>Low glycemic index (GI 52–68) makes millets ideal for managing blood sugar levels naturally.</p></div>
+      <div class="why-card rev" style="transition-delay:0.4s"><div class="wcnum">05</div><div class="wicon"><i class="fas fa-seedling"></i></div><h4>Gut Health</h4><p>High prebiotic fiber feeds beneficial gut bacteria, supports digestion and reduces bloating.</p></div>
+      <div class="why-card rev" style="transition-delay:0.5s"><div class="wcnum">06</div><div class="wicon"><i class="fas fa-leaf"></i></div><h4>Eco-Friendly</h4><p>Millets require 70% less water than rice and wheat, and regenerate soil health naturally.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PRODUCTS ======== -->
+<section class="products-section" id="products">
+  <div class="sec-eye rev">
+    <div class="eyebrow" style="display:inline-flex"><i class="fas fa-bowl-food"></i> Our Range</div>
+    <h2>Crafted for Every Moment</h2>
+    <div class="divider"></div>
+    <p>From sunrise to midnight snack — wholesome millet nutrition in every form</p>
+  </div>
+  <div class="pcat">
+    <div class="cat-lbl"><div class="cat-line"></div><div class="cat-tag"><i class="fas fa-seedling" style="color:var(--sg);margin-right:0.5rem"></i>Nutribar Range</div><div class="cat-line"></div></div>
+    <div class="pgrid" id="nGrid"></div>
+  </div>
+  <div class="pcat">
+    <div class="cat-lbl"><div class="cat-line"></div><div class="cat-tag"><i class="fas fa-droplet" style="color:var(--sg);margin-right:0.5rem"></i>Functional &amp; Specialty Range</div><div class="cat-line"></div></div>
+    <div class="pgrid" id="fGrid"></div>
+  </div>
+  <div id="customCatWrap"></div>
+</section>
+
+<!-- ======== ABOUT US ======== -->
+<section class="aboutus-section" id="aboutus">
+  <div class="aboutus-inner">
+    <div class="au-top rev">
+      <div class="eyebrow" style="display:inline-flex"><i class="fas fa-building"></i> About Visagha Gourmet</div>
+      <h2>Who We Are &amp; <em>Why We Exist</em></h2>
+      <div class="divider"></div>
+      <p class="au-lead">Born in Madurai, built on science, driven by a mission — Visagha Gourmet Foods and Traders Pvt. Ltd. exists to bring India's ancient millet heritage back to every plate, in forms that fit modern life.</p>
+    </div>
+    <div class="au-grid">
+      <div class="au-story revl">
+        <div class="au-story-block"><div class="au-icon"><i class="fas fa-seedling"></i></div><h3>Our Story</h3><p>Founded by <strong>Dr. R. Saraswathi</strong> — a food scientist with 20+ years of millet research. After witnessing the rise of diabetes and lifestyle disorders, she turned research into accessible everyday nutrition.</p></div>
+        <div class="au-story-block"><div class="au-icon"><i class="fas fa-bullseye"></i></div><h3>Our Mission</h3><p>To make science-backed, millet-based nutrition accessible to every Indian household — from toddlers to seniors — without ever compromising on taste, purity, or integrity.</p></div>
+        <div class="au-story-block"><div class="au-icon" style="background:linear-gradient(135deg,rgba(200,149,58,0.14),rgba(200,149,58,0.05));color:var(--go)"><i class="fas fa-eye"></i></div><h3>Our Vision</h3><p>A future where every Indian home has a millet product on its shelf — where ancient grain wisdom and modern science build healthier generations.</p></div>
+      </div>
+      <div class="au-right revr">
+        <div class="au-values-grid">
+          <div class="au-val-card"><div class="av-icon"><i class="fas fa-flask"></i></div><h4>Science-First</h4><p>Every formulation is grounded in clinical nutrition research and lab-tested.</p></div>
+          <div class="au-val-card"><div class="av-icon" style="color:var(--go)"><i class="fas fa-leaf"></i></div><h4>100% Natural</h4><p>No artificial preservatives, colors, or flavors — ever.</p></div>
+          <div class="au-val-card"><div class="av-icon" style="color:var(--sg)"><i class="fas fa-heart"></i></div><h4>Family First</h4><p>Safe for children 3+, suitable for seniors, loved by everyone.</p></div>
+          <div class="au-val-card"><div class="av-icon" style="color:var(--dg)"><i class="fas fa-certificate"></i></div><h4>FSSAI Certified</h4><p>Licensed under FSSAI Reg. 22425113000168. Every product meets the highest standards.</p></div>
+          <div class="au-val-card"><div class="av-icon" style="color:var(--go)"><i class="fas fa-truck"></i></div><h4>Pan India</h4><p>We ship directly from Madurai, Tamil Nadu to doorsteps across India.</p></div>
+          <div class="au-val-card"><div class="av-icon"><i class="fas fa-globe"></i></div><h4>Eco Conscious</h4><p>Millets need 70% less water than rice and wheat.</p></div>
+        </div>
+        <div class="au-company-card">
+          <div class="acc-row"><i class="fas fa-building"></i><div><strong>Visagha Gourmet Foods and Traders Pvt. Ltd.</strong><span>Registered Private Limited Company</span></div></div>
+          <div class="acc-row"><i class="fas fa-location-dot"></i><div><strong>Madurai, Tamil Nadu — 625018</strong><span>Plot No. 25/7, S.V.D. Garden, 2nd Street, Kovilpappakudi</span></div></div>
+          <div class="acc-row"><i class="fas fa-certificate"></i><div><strong>FSSAI Reg. No. 22425113000168</strong><span>Licensed Food Business Operator</span></div></div>
+          <div class="acc-row"><i class="fas fa-user-md"></i><div><strong>Founded by Dr. R. Saraswathi, Ph.D.</strong><span>M.Sc · M.Phil · Ph.D — Food Science &amp; Nutrition</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="au-stats rev">
+      <div class="au-stat"><div class="au-stat-num">20+</div><div class="au-stat-lbl">Years of Research</div></div>
+      <div class="au-stat-div"></div>
+      <div class="au-stat"><div class="au-stat-num">12+</div><div class="au-stat-lbl">Unique Products</div></div>
+      <div class="au-stat-div"></div>
+      <div class="au-stat"><div class="au-stat-num">1000+</div><div class="au-stat-lbl">Happy Customers</div></div>
+      <div class="au-stat-div"></div>
+      <div class="au-stat"><div class="au-stat-num">100%</div><div class="au-stat-lbl">Natural Ingredients</div></div>
+      <div class="au-stat-div"></div>
+      <div class="au-stat"><div class="au-stat-num">Pan India</div><div class="au-stat-lbl">Delivery Available</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TESTIMONIALS ======== -->
+<section class="testi-section" id="testimonials">
+  <div class="testi-inner">
+    <div class="sec-eye rev">
+      <div class="eyebrow" style="display:inline-flex"><i class="fas fa-heart"></i> Happy Customers</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4vw,2.9rem);color:var(--dg);margin:0.5rem 0">What People Are Saying</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="tgrid">
+      <div class="tcard rev"><div class="tstars">★★★★★</div><p class="ttext">The Nutri Vita Malt has transformed my mornings. My kids love it and I know it's packed with real nutrition!</p><div class="tauthor"><div class="tav">P</div><div class="tname"><strong>Priya Rajan</strong><span>Coimbatore, TN</span></div></div></div>
+      <div class="tcard rev" style="transition-delay:0.12s"><div class="tstars">★★★★★</div><p class="ttext">As a diabetic, I was searching for snacks I can enjoy. The Millet Mixture is crispy, flavorful and my post-meal sugar readings are much more stable.</p><div class="tauthor"><div class="tav">S</div><div class="tname"><strong>Suresh Annamalai</strong><span>Madurai, TN</span></div></div></div>
+      <div class="tcard rev" style="transition-delay:0.24s"><div class="tstars">★★★★★</div><p class="ttext">Dr. Saraswathi's ABC Malt is exceptional — my hemoglobin levels improved within 6 weeks. This is functional medicine in a cup!</p><div class="tauthor"><div class="tav">M</div><div class="tname"><strong>Meenakshi Devi</strong><span>Chennai, TN</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CERT MARQUEE ======== -->
+<div class="cert-section">
+  <div class="cert-inner">
+    <div class="cert-heading"><h3>Our Commitments &amp; Credentials</h3><p>Every promise, backed by science and certification</p></div>
+    <div class="cert-mq"><div class="cert-track" id="certTrack"></div></div>
+  </div>
+</div>
+
+<!-- ======== CONTACT ======== -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="sec-eye rev">
+      <div class="eyebrow" style="display:inline-flex"><i class="fas fa-envelope"></i> Get In Touch</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4vw,2.9rem);color:var(--dg);margin:0.5rem 0">Order or Enquire</h2>
+      <div class="divider"></div>
+      <p style="color:var(--tl)">Reach us via phone, WhatsApp or email — happy to help!</p>
+    </div>
+    <div class="cgrid">
+      <div class="ccard rev"><div class="cicon"><i class="fas fa-phone"></i></div><h4>Phone Orders</h4><a href="tel:9791525864">97915 25864</a><a href="tel:8300183971">83001 83971</a></div>
+      <div class="ccard rev" style="transition-delay:0.1s"><div class="cicon"><i class="fab fa-whatsapp"></i></div><h4>WhatsApp</h4><a href="https://wa.me/919791525864" target="_blank">Chat on WhatsApp →</a><a href="https://wa.me/918300183971" target="_blank">83001 83971</a></div>
+      <div class="ccard rev" style="transition-delay:0.2s"><div class="cicon"><i class="fas fa-envelope"></i></div><h4>Email Us</h4><a href="mailto:visaghafoods@gmail.com">visaghafoods@gmail.com</a></div>
+      <div class="ccard rev" style="transition-delay:0.3s"><div class="cicon"><i class="fas fa-location-dot"></i></div><h4>Visit Us</h4><p>Plot No. 25/7, S.V.D. Garden<br>2nd Street, Kovilpappakudi<br>Madurai — 625018</p></div>
+      <div class="ccard fssai-card rev"><div class="cicon"><i class="fas fa-certificate"></i></div><h4>FSSAI Registration</h4><p class="fssai-num">22425113000168</p><p>Licensed Food Business Operator · Tamil Nadu</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">Visagha Gourmet</div>
+    <p class="foot-tag">"Rooted in Tradition, Made For Tomorrow"</p>
+    <div class="foot-links">
+      <a href="#home">Home</a><a href="#about">Founder</a><a href="#products">Products</a><a href="#why">Why Millet</a><a href="#contact">Contact</a>
+    </div>
+    <div class="foot-bot">
+      <p>© 2026 Visagha Gourmet Foods and Traders Private Limited · Madurai, Tamil Nadu</p>
+      <p style="margin-top:0.28rem;opacity:0.6">Secure payments powered by UPI · All transactions are encrypted</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== FOUNDER PAGE ======== -->
+<div class="founder-page" id="founderPage">
+  <div class="fp-header">
+    <button class="fp-back" onclick="closeFounderPage()"><i class="fas fa-arrow-left"></i> Back</button>
+    <h2>Dr. R. Saraswathi — Founder</h2>
+    <div style="width:80px"></div>
+  </div>
+  <div class="fp-body">
+    <div class="fp-hero">
+      <div class="fp-photo-wrap">
+        <div class="fp-photo"><img src="logo.png" onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80'" alt="Dr. R. Saraswathi"></div>
+        <div class="fp-photo-badge"><strong>Ph.D</strong><span>Food Science &amp;<br>Nutrition</span></div>
+      </div>
+      <div class="fp-info">
+        <div class="eyebrow"><i class="fas fa-award"></i> Founder &amp; Chief Scientist</div>
+        <h1>Dr. R. <em>Saraswathi</em></h1>
+        <p class="fp-deg">M.Sc. · M.Phil. · Ph.D. (Food Science &amp; Nutrition) · FSSAI Licensed</p>
+        <div class="fp-creds-row">
+          <span class="fp-cred"><i class="fas fa-microscope"></i> Food Scientist</span>
+          <span class="fp-cred"><i class="fas fa-apple-whole"></i> Nutritionist</span>
+          <span class="fp-cred"><i class="fas fa-certificate"></i> FSSAI Licensed</span>
+          <span class="fp-cred"><i class="fas fa-seedling"></i> Millet Specialist</span>
+        </div>
+        <div class="fp-quote"><p>"Nutrition is not just about eating; it's about eating right. Millets are India's timeless answer to modern lifestyle diseases."</p><cite>— Dr. R. Saraswathi, Founder, Visagha Gourmet</cite></div>
+        <div class="fp-bio">
+          <p>Dr. R. Saraswathi holds a Ph.D. in Food Science and Nutrition and has dedicated over two decades to researching the therapeutic potential of India's indigenous grains — particularly millets.</p>
+          <p>Recognizing that modern India was drifting from its nutritional roots, she founded <strong>Visagha Gourmet Foods and Traders Pvt. Ltd.</strong> with a singular mission: to make scientifically formulated, millet-based nutrition accessible to every Indian household.</p>
+          <p>Today, Visagha Gourmet is FSSAI licensed (Reg. No. 22425113000168) and ships across India from Madurai, Tamil Nadu.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fp-milestones">
+      <h3>A Journey of Purpose &amp; Impact</h3>
+      <div class="milestones-grid">
+        <div class="milestone-card"><div class="ms-num">20+</div><div class="ms-label">Years of Research</div></div>
+        <div class="milestone-card"><div class="ms-num">12+</div><div class="ms-label">Product Formulations</div></div>
+        <div class="milestone-card"><div class="ms-num">1000+</div><div class="ms-label">Happy Customers</div></div>
+        <div class="milestone-card"><div class="ms-num">100%</div><div class="ms-label">Natural Ingredients</div></div>
+      </div>
+    </div>
+    <div class="fp-vision"><h3>The Vision Behind Visagha</h3><p>Every product at Visagha Gourmet is born from Dr. Saraswathi's conviction: that India's ancient millet heritage holds the answers to modern health challenges. Visagha exists not just to sell food — but to restore health, one millet grain at a time.</p></div>
+  </div>
+</div>
+
+<!-- ======== PRODUCT MODAL ======== -->
+<div class="modal-overlay" id="mOverlay" onclick="handleOvClick(event)">
+  <div class="modal" id="mBox">
+    <button class="mclose" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="mgrid">
+      <div class="mimg"><img id="mImg" src="" alt=""></div>
+      <div class="mcont">
+        <div class="mbadge" id="mBadge"></div>
+        <h2 class="mtitle" id="mTitle"></h2>
+        <div class="mtagline" id="mTagline"></div>
+        <p class="mdesc" id="mDesc"></p>
+        <div class="mbh4">Key Benefits</div>
+        <div class="blist" id="mBenefits"></div>
+        <div class="mbh4">Nutritional Highlights</div>
+        <div class="ngrid" id="mNutr"></div>
+        <div class="mprice-row"><span class="mprice-lbl">Price</span><span class="mprice-val" id="mPrice">Contact for price</span></div>
+        <div class="mactions">
+          <button class="mbuynow" id="mBuyNow"><i class="fas fa-bolt"></i> Buy Now</button>
+          <button class="maddcart" id="mAddCart"><i class="fas fa-bag-shopping"></i> Add to Cart</button>
+          <a class="mwa" id="mWA" href="#" target="_blank"><i class="fab fa-whatsapp"></i> Enquire on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== CART DRAWER ======== -->
+<div class="cart-ov" id="cartOv" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-hdr">
+    <div><h3>Your Cart</h3><div class="cart-hdr-sub">Review before checkout</div></div>
+    <button class="ccart" onclick="closeCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cempty"><i class="fas fa-bag-shopping"></i><p>Your cart is empty</p><a href="#products" onclick="closeCart()">Browse Products</a></div>
+  </div>
+  <div class="cart-foot" id="cartFoot" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+    <div class="cart-subtotal"><span>Delivery</span><strong style="color:var(--sg)">Calculated on order</strong></div>
+    <div class="cart-total-row"><span>Estimated Total</span><strong id="cartTotal">₹0</strong></div>
+    <button class="checkout-btn" onclick="startCheckout()"><i class="fas fa-lock"></i> Secure Checkout</button>
+    <button class="cart-wa-btn" onclick="orderAllWA()"><i class="fab fa-whatsapp"></i> Enquire via WhatsApp instead</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     CHECKOUT MODAL — FULLY REDESIGNED FORM
+=============================================================== -->
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout-modal">
+    <button class="co-close" onclick="closeCheckout()"><i class="fas fa-times"></i></button>
+
+    <!-- Stepper -->
+    <div class="co-stepper">
+      <div class="co-step active" id="step1indicator">
+        <div class="co-step-num">1</div>
+        <div class="co-step-label">Your Details</div>
+      </div>
+      <div class="co-step-line" id="line1"></div>
+      <div class="co-step" id="step2indicator">
+        <div class="co-step-num">2</div>
+        <div class="co-step-label">Payment</div>
+      </div>
+      <div class="co-step-line" id="line2"></div>
+      <div class="co-step" id="step3indicator">
+        <div class="co-step-num"><i class="fas fa-check" style="font-size:0.62rem"></i></div>
+        <div class="co-step-label">Confirmed</div>
+      </div>
+    </div>
+
+    <div class="co-body">
+
+      <!-- ===== STEP 1: CUSTOMER DETAILS ===== -->
+      <div class="co-panel active" id="coStep1">
+        <div class="co-layout">
+
+          <!-- LEFT: FORM -->
+          <div>
+            <h2 class="co-title">Delivery Information</h2>
+            <p class="co-sub">Fill in your details to proceed with your order 📦</p>
+
+            <!-- Personal Details -->
+            <div class="co-section">
+              <div class="co-section-title"><i class="fas fa-user"></i>Personal Details</div>
+
+              <div class="co-2col">
+                <div class="co-field">
+                  <div class="co-field-label">
+                    <i class="fas fa-id-card"></i>Full Name
+                    <span class="req-tag">Required</span>
+                  </div>
+                  <input type="text" class="co-input" id="coName" placeholder="Your complete full name" autocomplete="name">
+                  <div class="field-hint-txt"><i class="fas fa-circle-info"></i> As per delivery label</div>
+                </div>
+                <div class="co-field">
+                  <div class="co-field-label">
+                    <i class="fas fa-envelope"></i>Email
+                    <span class="opt-tag">Optional</span>
+                  </div>
+                  <input type="email" class="co-input" id="coEmail" placeholder="your@email.com" autocomplete="email">
+                  <div class="field-hint-txt"><i class="fas fa-circle-info"></i> For order receipts</div>
+                </div>
+              </div>
+
+              <div class="co-2col">
+                <div class="co-field">
+                  <div class="co-field-label">
+                    <i class="fas fa-phone"></i>Phone Number
+                    <span class="req-tag">Required</span>
+                  </div>
+                  <input type="tel" class="co-input" id="coPhone" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel">
+                  <div class="field-hint-txt"><i class="fas fa-circle-info"></i> For delivery coordination</div>
+                </div>
+                <div class="co-field">
+                  <div class="co-field-label">
+                    <i class="fab fa-whatsapp"></i>WhatsApp Number
+                    <span class="req-tag">Required</span>
+                  </div>
+                  <input type="tel" class="co-input" id="coWA" placeholder="10-digit WhatsApp number" maxlength="10">
+                  <div class="field-hint-txt"><i class="fas fa-circle-info"></i> Order confirmations &amp; tracking</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Delivery Address -->
+            <div class="co-section">
+              <div class="co-section-title"><i class="fas fa-map-location-dot"></i>Delivery Address</div>
+
+              <div class="co-field">
+                <div class="co-field-label">
+                  <i class="fas fa-location-dot"></i>Full Address
+                  <span class="req-tag">Required</span>
+                </div>
+                <textarea class="co-input" id="coAddr" rows="3" style="resize:vertical;min-height:72px;font-family:'DM Sans',sans-serif;line-height:1.5" placeholder="House/Flat No., Street name, Area, Landmark — be as detailed as possible"></textarea>
+                <div class="field-hint-txt"><i class="fas fa-circle-info"></i> Include all details for accurate delivery</div>
+              </div>
+
+              <div class="co-2col">
+                <div class="co-field">
+                  <div class="co-field-label">
+                    <i class="fas fa-city"></i>City / Town
+                    <span class="req-tag">Required</span>
+                  </div>
+                  <input type="text" class="co-input" id="coCity" placeholder="E.g., Madurai or Chennai" autocomplete="address-level2">
+                </div>
+                <div class="co-field">
+                  <div class="co-field-label">
+                    <i class="fas fa-map"></i>State
+                    <span class="req-tag">Required</span>
+                  </div>
+                  <select class="co-input" id="coState" style="cursor:pointer">
+                    <option value="">Select your state</option>
+                    <option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option>
+                    <option>Chhattisgarh</option><option>Delhi</option><option>Goa</option>
+                    <option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option>
+                    <option>Jharkhand</option><option>Karnataka</option><option>Kerala</option>
+                    <option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option>
+                    <option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option>
+                    <option>Odisha</option><option>Punjab</option><option>Rajasthan</option>
+                    <option>Sikkim</option><option selected>Tamil Nadu</option><option>Telangana</option>
+                    <option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="co-field" style="max-width:180px">
+                <div class="co-field-label">
+                  <i class="fas fa-mailbox"></i>PIN Code
+                  <span class="req-tag">Required</span>
+                </div>
+                <input type="text" class="co-input" id="coPIN" placeholder="6-digit PIN" maxlength="6" autocomplete="postal-code">
+              </div>
+            </div>
+
+            <!-- Special Instructions -->
+            <div class="co-section" style="margin-bottom:0">
+              <div class="co-section-title"><i class="fas fa-clipboard-list"></i>Special Instructions <span style="font-size:0.7rem;color:var(--tl);font-weight:400;text-transform:none;margin-left:2px">(Optional)</span></div>
+              <div class="co-field" style="margin-bottom:0">
+                <textarea class="co-input" id="coNotes" rows="2" style="resize:vertical;min-height:56px;font-family:'DM Sans',sans-serif;line-height:1.5" placeholder="E.g., call before delivery, handle with care, available 10AM–6PM..."></textarea>
+              </div>
+            </div>
+
+            <button class="co-btn" onclick="goToPayment()">
+              <i class="fas fa-arrow-right"></i>Continue to Payment
+            </button>
+          </div>
+
+          <!-- RIGHT: ORDER SUMMARY -->
+          <div>
+            <div class="co-summary-box" id="coSummaryBox">
+              <div class="co-sum-title"><i class="fas fa-receipt" style="color:var(--mg)"></i>Order Summary</div>
+              <div id="coSumItems"></div>
+              <div class="co-sum-total">
+                <span>Total Amount</span>
+                <strong id="coSumTotal">₹0</strong>
+              </div>
+              <div class="co-trust">
+                <i class="fas fa-lock"></i>
+                <span>
+                  <strong style="color:var(--td)">Secure Order Protection</strong><br>
+                  ✓ Verified UPI payment<br>
+                  ✓ WhatsApp order confirmation<br>
+                  ✓ Real-time delivery tracking
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STEP 2: PAYMENT ===== -->
+      <div class="co-panel" id="coStep2">
+        <h2 class="co-title">Complete Payment</h2>
+        <p class="co-sub">Scan QR or use UPI to pay securely 🔒</p>
+
+        <div class="pay-layout">
+          <!-- QR CODE BOX -->
+          <div class="pay-qr-box">
+            <div class="pay-qr-label">Scan &amp; Pay with any UPI app</div>
+            <div class="pay-qr-img"><img id="payQRImg" src="" alt="UPI QR Code"></div>
+            <div class="pay-amount-lbl">Amount to Pay</div>
+            <div class="pay-amount-big" id="payAmountBig">₹0</div>
+
+            <div class="pay-divider-txt">or enter UPI ID directly</div>
+            <div class="pay-upi-id-box" onclick="copyUPI()">
+              <i class="fas fa-copy"></i>
+              dpthecrazycuber007-3@okicici
+            </div>
+            <div class="pay-upi-hint">Tap to copy UPI ID</div>
+
+            <div class="pay-apps">
+              <div class="pay-app" onclick="openUPILink()"><div class="pay-app-icon">🟢</div>GPay</div>
+              <div class="pay-app" onclick="openUPILink()"><div class="pay-app-icon">🟣</div>PhonePe</div>
+              <div class="pay-app" onclick="openUPILink()"><div class="pay-app-icon">🔵</div>Paytm</div>
+              <div class="pay-app" onclick="openUPILink()"><div class="pay-app-icon">📱</div>Any UPI</div>
+            </div>
+          </div>
+
+          <!-- VERIFICATION BOX -->
+          <div class="pay-right">
+            <!-- How to pay steps -->
+            <div class="pay-steps-box">
+              <div class="pay-steps-title"><i class="fas fa-circle-info" style="color:var(--mg)"></i> How to complete payment:</div>
+              <div class="pay-step"><div class="pay-step-num">1</div><p>Open <strong>GPay, PhonePe, Paytm</strong> or any UPI app</p></div>
+              <div class="pay-step"><div class="pay-step-num">2</div><p>Scan QR code or enter UPI ID: <strong>dpthecrazycuber007-3@okicici</strong></p></div>
+              <div class="pay-step"><div class="pay-step-num">3</div><p>Pay exact amount: <strong id="payStepAmt">₹0</strong></p></div>
+              <div class="pay-step"><div class="pay-step-num">4</div><p>After payment, copy the <strong>12-digit UTR / Transaction Reference ID</strong> from the success screen</p></div>
+              <div class="pay-step"><div class="pay-step-num">5</div><p>Paste it in the box below and click "Confirm Payment"</p></div>
+            </div>
+
+            <!-- UTR FIELD — KEY FIX: clear, prominent, no asterisk confusion -->
+            <div class="utr-field-wrap">
+              <div class="utr-field-title">
+                <i class="fas fa-receipt"></i>
+                UTR / Transaction Reference ID
+                <span class="req-tag">Required</span>
+              </div>
+              <input type="text" class="utr-input" id="utrInput"
+                placeholder="Paste your 12-digit UTR or Transaction ID here"
+                maxlength="20">
+              <div class="utr-hint">
+                <i class="fas fa-circle-info"></i>
+                Where to find it: Open your UPI app → Transaction History → tap the payment → copy the 12-digit UTR / Reference Number shown
+              </div>
+            </div>
+
+            <!-- Payment summary -->
+            <div class="co-summary-box">
+              <div class="co-sum-title" style="font-size:0.97rem"><i class="fas fa-check-circle" style="color:var(--sg)"></i> You Are Paying For</div>
+              <div id="payOrderItems"></div>
+              <div style="display:flex;justify-content:space-between;margin-top:0.7rem;padding-top:0.7rem;border-top:1.5px solid var(--bdr);align-items:center">
+                <span style="font-size:0.84rem;font-weight:700;color:var(--td)">Total Amount</span>
+                <strong style="font-family:'Cormorant Garamond',serif;font-size:1.38rem;color:var(--mg)" id="payTotalLabel">₹0</strong>
+              </div>
+            </div>
+
+            <button class="pay-confirm-btn" onclick="confirmPayment()">
+              <i class="fab fa-whatsapp" style="font-size:1.05rem"></i>
+              Confirm Payment &amp; Place Order
+            </button>
+            <button class="co-btn-back" onclick="goToStep1()">
+              <i class="fas fa-arrow-left"></i>Back to Delivery Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STEP 3: SUCCESS ===== -->
+      <div class="co-panel" id="coStep3">
+        <div class="success-anim">
+          <div class="success-icon"><i class="fas fa-check"></i></div>
+          <h2 class="success-title">Order Placed Successfully! 🎉</h2>
+          <p class="success-sub">Thank you! Your payment is being verified and your order details are being sent to our team via WhatsApp.</p>
+          <div class="order-id-badge">Order ID: <strong id="successOrderId">VG00000000</strong></div>
+          <div class="whatsapp-sent-note">
+            <i class="fab fa-whatsapp"></i>
+            <p>Confirmation being sent to WhatsApp:<br>📱 +91 <strong id="successWANum">9876543210</strong></p>
+          </div>
+          <p style="font-size:0.83rem;color:var(--tm);line-height:1.8;margin-bottom:1.3rem">
+            ✅ Our team will verify payment and confirm dispatch within <strong>1–2 business days</strong><br>
+            📦 Real-time delivery updates will be sent to your WhatsApp
+          </p>
+          <div class="success-actions">
+            <a class="suc-wa-btn" id="successWABtn" href="#" target="_blank"><i class="fab fa-whatsapp"></i> View on WhatsApp</a>
+            <button class="suc-close-btn" onclick="closeCheckout();closeCart()"><i class="fas fa-check"></i> Done</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- .co-body -->
+  </div><!-- .checkout-modal -->
+</div><!-- .checkout-overlay -->
+
+<!-- ======== PASSWORD GATE ======== -->
+<div class="pwd-overlay" id="pwdOverlay">
+  <div class="pwd-box">
+    <div class="pwd-top">
+      <div class="pwd-lock-icon" id="pwdLockIcon"><i class="fas fa-lock"></i></div>
+      <h3>Admin Access</h3>
+      <p>Enter the password to manage products</p>
+    </div>
+    <div class="pwd-body">
+      <label class="pwd-label"><i class="fas fa-key" style="margin-right:0.3rem"></i>Password</label>
+      <div class="pwd-input-wrap">
+        <input type="password" class="pwd-input" id="pwdInput" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')checkPwd()">
+        <button class="pwd-eye" id="pwdEye" onclick="togglePwdEye()"><i class="fas fa-eye" id="pwdEyeIcon"></i></button>
+      </div>
+      <div class="pwd-error" id="pwdError"><i class="fas fa-circle-exclamation"></i> <span id="pwdErrMsg">Incorrect password.</span></div>
+      <div class="pwd-attempts" id="pwdAttempts"></div>
+      <button class="pwd-submit" id="pwdSubmit" onclick="checkPwd()"><i class="fas fa-unlock-keyhole"></i> Unlock Admin Panel</button>
+      <button class="pwd-cancel" onclick="closePwdGate()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======== ADMIN PANEL ======== -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-panel">
+    <div class="admin-hdr">
+      <div>
+        <h2><i class="fas fa-shield-halved"></i> Admin Panel</h2>
+        <p>Manage products &amp; pricing for Visagha Gourmet</p>
+      </div>
+      <button class="admin-close" onclick="closeAdmin()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-tabs">
+        <button class="atab active" onclick="switchTab('add')"><i class="fas fa-plus"></i> Add Product</button>
+        <button class="atab" onclick="switchTab('manage')"><i class="fas fa-list"></i> Manage Products</button>
+      </div>
+
+      <div class="tab-panel active" id="tabAdd">
+        <div class="success-flash" id="addSuccess"><i class="fas fa-check-circle"></i> Product added successfully!</div>
+
+        <div class="form-row">
+          <div class="form-group"><label>Product Name</label><input type="text" id="aName" placeholder="e.g. Millet Energy Bar"></div>
+          <div class="form-group"><label>Category</label>
+            <select id="aCat">
+              <option value="Nutribar Range">Nutribar Range</option>
+              <option value="Functional Range">Functional Range</option>
+              <option value="Custom">Custom Category</option>
+            </select>
+          </div>
+        </div>
+        <div id="customCatInput" style="display:none">
+          <div class="form-group"><label>Custom Category Name</label><input type="text" id="aCustomCat" placeholder="Enter category name"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Tag / Badge</label><input type="text" id="aTag" placeholder="e.g. Breakfast, Snack"></div>
+          <div class="form-group"><label>Price (₹)</label><input type="number" id="aPrice" placeholder="e.g. 299" min="0"></div>
+        </div>
+        <div class="form-group"><label>Short Tagline</label><input type="text" id="aTagline" placeholder="e.g. Guilt-free snacking, reimagined"></div>
+        <div class="form-group"><label>Description</label><textarea id="aDesc" rows="3" placeholder="Full product description..."></textarea></div>
+
+        <!-- ========================================================
+             PHOTO UPLOAD — COMPLETELY REDESIGNED
+             Works on both desktop (hover overlay) and mobile (action bar)
+        ======================================================== -->
+        <div class="photo-upload-section">
+          <label>Product Photo</label>
+
+          <!-- Hidden file input -->
+          <input type="file" class="photo-input-hidden" id="productPhotoInput" accept="image/*" onchange="handlePhotoFile(event)">
+
+          <!-- Drop zone: shown when no photo uploaded -->
+          <div class="photo-dropzone" id="photoDropzone"
+               onclick="document.getElementById('productPhotoInput').click()"
+               ondragover="ev_dragOver(event)"
+               ondragleave="ev_dragLeave(event)"
+               ondrop="ev_drop(event)">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span>Click to upload a photo</span>
+            <span class="sub">or drag &amp; drop · JPG, PNG, WEBP accepted</span>
+          </div>
+
+          <!-- Preview: shown after photo selected -->
+          <div class="photo-preview-wrap" id="photoPreviewWrap">
+            <div class="photo-preview-img-box">
+              <img class="photo-preview-img" id="photoPreviewImg" src="" alt="Product preview">
+              <!-- Desktop hover overlay -->
+              <div class="photo-hover-overlay">
+                <button class="photo-ov-btn change-btn" onclick="document.getElementById('productPhotoInput').click()"><i class="fas fa-sync-alt"></i> Change</button>
+                <button class="photo-ov-btn remove-btn" onclick="removePhoto()"><i class="fas fa-trash"></i> Remove</button>
+              </div>
+            </div>
+            <!-- Mobile always-visible action bar -->
+            <div class="photo-action-bar">
+              <button class="photo-action-btn" onclick="document.getElementById('productPhotoInput').click()"><i class="fas fa-sync-alt"></i> Change Photo</button>
+              <button class="photo-action-btn del" onclick="removePhoto()"><i class="fas fa-trash"></i> Remove</button>
+            </div>
+          </div>
+
+          <!-- Optional: paste filename -->
+          <div class="form-group" style="margin-top:0.6rem;margin-bottom:0">
+            <label style="font-size:0.68rem;text-transform:none;letter-spacing:0;color:var(--tl)">— or type/paste image filename —</label>
+            <input type="text" id="aImg" placeholder="e.g. Millet Cookies.jpeg" oninput="previewFromFilename(this.value)">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Key Benefits</label>
+          <div class="ben-list" id="benList">
+            <div class="ben-item"><input type="text" placeholder="Benefit 1"><button class="ben-rm" onclick="removeBen(this)"><i class="fas fa-times"></i></button></div>
+            <div class="ben-item"><input type="text" placeholder="Benefit 2"><button class="ben-rm" onclick="removeBen(this)"><i class="fas fa-times"></i></button></div>
+          </div>
+          <button class="add-ben-btn" onclick="addBen()"><i class="fas fa-plus"></i> Add Benefit</button>
+        </div>
+
+        <div class="form-group">
+          <label>Nutritional Highlights (3 values)</label>
+          <div class="nutr-row">
+            <div class="form-group" style="margin-bottom:0"><label>Value 1</label><input type="text" id="nv1" placeholder="18g"></div>
+            <div class="form-group" style="margin-bottom:0"><label>Label 1</label><input type="text" id="nl1" placeholder="Protein/100g"></div>
+            <div></div>
+            <div class="form-group" style="margin-bottom:0"><label>Value 2</label><input type="text" id="nv2" placeholder="6g"></div>
+            <div class="form-group" style="margin-bottom:0"><label>Label 2</label><input type="text" id="nl2" placeholder="Fiber/100g"></div>
+            <div></div>
+            <div class="form-group" style="margin-bottom:0"><label>Value 3</label><input type="text" id="nv3" placeholder="340"></div>
+            <div class="form-group" style="margin-bottom:0"><label>Label 3</label><input type="text" id="nl3" placeholder="Kcal/100g"></div>
+            <div></div>
+          </div>
+        </div>
+
+        <button class="submit-btn" onclick="submitProduct()"><i class="fas fa-plus-circle"></i> Add Product to Catalogue</button>
+      </div>
+
+      <div class="tab-panel" id="tabManage">
+        <input type="text" class="search-admin" placeholder="🔍  Search products..." oninput="renderManageList(this.value)">
+        <div class="cat-filter" id="catFilter"></div>
+        <div class="admin-prod-list" id="manageList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg">Done!</span></div>
+
+<script>
+/* =========================================================
+   CONFIGURATION
+========================================================= */
+const WA_OWNER = '918300183971';
+const UPI_ID = 'dpthecrazycuber007-3@okicici';
+const UPI_NAME = 'Visagha+Gourmet+Foods';
+const ADMIN_PWD = 'Visagha@2026';
+
+let uploadedImgDataURL = '';
+let currentCheckoutData = {};
+let currentOrderId = '';
+
+/* =========================================================
+   MARQUEE + CERT
+========================================================= */
+const mqData=[
+  {i:'fa-leaf',t:'100% Natural Ingredients'},{i:'fa-seedling',t:'No Artificial Preservatives'},
+  {i:'fa-certificate',t:'FSSAI Certified · 22425113000168'},{i:'fa-flask',t:'Lab Tested Every Batch'},
+  {i:'fa-heart-pulse',t:'By Dr. R. Saraswathi, Ph.D.'},{i:'fa-wheat-awn',t:'Ancient Millet Wisdom'},
+  {i:'fa-truck',t:'Ships Pan India from Madurai'},{i:'fa-shield-check',t:'Zero Trans Fats · Zero MSG'},
+  {i:'fa-award',t:'20+ Years Nutritional Research'},{i:'fa-bowl-food',t:'Premium Millet Products'},
+];
+function buildMQ(){
+  const d=[...mqData,...mqData];
+  document.getElementById('mqTrack').innerHTML=d.map(m=>`<span class="mitem"><i class="fas ${m.i}"></i>${m.t}</span><span class="msep">✦</span>`).join('');
+}
+const certData=[
+  {i:'fa-certificate',t:'FSSAI Licensed'},{i:'fa-flask',t:'Lab-Tested Quality'},
+  {i:'fa-leaf',t:'No Artificial Colors'},{i:'fa-seedling',t:'No Preservatives'},
+  {i:'fa-ban',t:'Zero Trans Fats'},{i:'fa-ban',t:'Zero MSG'},
+  {i:'fa-wheat-awn',t:'Whole Grain Millets'},{i:'fa-heart',t:'Diabetic Friendly'},
+  {i:'fa-shield-virus',t:'Immune Boosting'},{i:'fa-globe',t:'Eco-Friendly'},
+  {i:'fa-star',t:'Dr. Saraswathi Approved'},{i:'fa-lock',t:'Secure UPI Payments'},
+];
+function buildCert(){
+  const d=[...certData,...certData];
+  document.getElementById('certTrack').innerHTML=d.map(c=>`<div class="citem"><i class="fas ${c.i}"></i>${c.t}</div>`).join('');
+}
+
+/* =========================================================
+   PRODUCTS DATA
+========================================================= */
+const defaultProds = {
+  n:[
+    {id:'musli',name:'Millet Musli',cat:'Nutribar Range',tag:'Breakfast',price:249,img:'Millet Musli.jpeg',fbImg:'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=600&q=80',tl:"Start your mornings with ancient grain goodness",desc:'Our Millet Musli is a wholesome, crunchy breakfast crafted from finger millet, pearl millet, and foxtail millet, combined with roasted nuts, dried fruits, and natural honey. Zero refined sugars, zero artificial flavors.',ben:['Rich in dietary fiber for healthy digestion','High iron content supports energy levels','Complex carbs for sustained morning energy','Naturally gluten-sensitive friendly','Boosts immunity with zinc and B-vitamins'],nutr:[{v:'18g',l:'Protein/100g'},{v:'6g',l:'Fiber/100g'},{v:'340',l:'Kcal/100g'}]},
+    {id:'mixture',name:'Millet Mixture',cat:'Nutribar Range',tag:'Snack',price:189,img:'Millet Mixture.jpeg',fbImg:'https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=600&q=80',tl:"Guilt-free snacking, reimagined",desc:'A crispy, savory snack mix made from puffed millets, roasted legumes, and aromatic spices. Inspired by traditional Indian mixture but elevated with the nutritional power of millets.',ben:['High-protein snack for muscle nourishment','Low glycemic index — ideal for diabetics','Roasted, not fried — lower in calories','Rich in magnesium and phosphorus','Contains prebiotic fibers for gut health'],nutr:[{v:'14g',l:'Protein/100g'},{v:'5g',l:'Fiber/100g'},{v:'390',l:'Kcal/100g'}]},
+    {id:'abcmalt',name:'ABC Malt',cat:'Nutribar Range',tag:'Beverage',price:349,img:'Abc Malt.jpeg',fbImg:'https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=600&q=80',tl:"Apple, Beetroot & Carrot — nature's trio in a glass",desc:"ABC Malt combines the antioxidant power of Apple, Beetroot, and Carrot with millet malt. Supports detoxification, boosts hemoglobin, and provides sustained energy.",ben:['Beetroot boosts hemoglobin and stamina','Apple pectin supports heart health','Carrot beta-carotene for eye health','Millet base provides complex carbs','Natural detox and liver support'],nutr:[{v:'8g',l:'Protein/Serving'},{v:'4g',l:'Fiber/Serving'},{v:'180',l:'Kcal/Serving'}]},
+    {id:'nvmalt',name:'Nutri Vita Malt',cat:'Nutribar Range',tag:'Nutrition',price:449,img:'Nutri Vita Malt.jpeg',fbImg:'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&q=80',tl:"Complete nutrition in every cup",desc:'Our premium nutritional supplement drink for children, elderly, and anyone requiring enhanced nourishment. Formulated with 22+ essential nutrients.',ben:['22+ essential vitamins and minerals','Supports bone density with calcium & D3','Boosts cognitive function and memory','Ideal for growing children aged 3+','Post-illness recovery and strength building'],nutr:[{v:'22g',l:'Protein/Serving'},{v:'8g',l:'Fiber/Serving'},{v:'250',l:'Kcal/Serving'}]},
+    {id:'nutri',name:'Nutri Bar',cat:'Nutribar Range',tag:'Energy',price:149,img:'Nutri Bar.jpeg',fbImg:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',tl:"Pocket-sized millet power",desc:'A wholesome, on-the-go millet energy bar packed with roasted nuts, seeds, and natural sweeteners. Perfect for busy mornings, workouts, or afternoon slumps.',ben:['Compact energy boost on the go','Natural sweeteners only','Protein and fiber rich','No maida, no refined sugar','Great for athletes and students'],nutr:[{v:'10g',l:'Protein/Bar'},{v:'4g',l:'Fiber/Bar'},{v:'220',l:'Kcal/Bar'}]},
+    {id:'cookies',name:'Millet Cookies',cat:'Nutribar Range',tag:'Bakery',price:199,img:'Millet Cookies.jpeg',fbImg:'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80',tl:"Baked with love, loaded with nutrition",desc:'Crispy, buttery, and guilt-free — baked using finger millet and jowar flour with cold-pressed coconut oil, jaggery, and real vanilla. No maida, no refined sugar.',ben:['Zero maida — 100% millet flour base','Sweetened naturally with jaggery','Rich in calcium and iron','Cold-pressed oil — healthy fats',"Great for kids' tiffin boxes"],nutr:[{v:'8g',l:'Protein/100g'},{v:'3g',l:'Fiber/100g'},{v:'420',l:'Kcal/100g'}]}
+  ],
+  f:[
+    {id:'chocpie',name:'Millet Choco Pie',cat:'Functional Range',tag:'Dessert',price:179,img:'Millet Choco Pie.jpeg',fbImg:'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80',tl:"Chocolate joy with a millet heart",desc:'Indulge responsibly — a soft millet sponge layered with dark chocolate and a creamy millet marshmallow center.',ben:['Dark chocolate antioxidants (flavonoids)','Millet base adds protein & fiber','Natural sweeteners — no refined sugar','Portion-controlled for mindful eating','Contains healthy fats from nuts'],nutr:[{v:'6g',l:'Protein/Piece'},{v:'2g',l:'Fiber/Piece'},{v:'140',l:'Kcal/Piece'}]},
+    {id:'noodles',name:'Multi Millet Noodles',cat:'Functional Range',tag:'Instant',price:129,img:'multi-millet-noodles.jpeg',fbImg:'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80',tl:"Instant noodles, extraordinary nutrition",desc:'5-millet blend — foxtail, little, kodo, barnyard, and pearl millet. Cooks in 3 minutes with a natural herb seasoning packet. No MSG, no artificial colors.',ben:['5-millet blend for diverse micronutrients','Natural herb seasoning — zero MSG','Cooks in 3 minutes — truly instant','Good protein source vs wheat noodles','Lower glycemic impact on blood sugar'],nutr:[{v:'11g',l:'Protein/Pack'},{v:'5g',l:'Fiber/Pack'},{v:'320',l:'Kcal/Pack'}]},
+    {id:'hcandy',name:'Millet Herbal Candy',cat:'Functional Range',tag:'Wellness',price:99,img:'Millet Herbal Candy.jpeg',fbImg:'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=600&q=80',tl:"Ancient herbs, sweet wellness",desc:'A fusion of traditional herbal wisdom — tulsi, ginger, turmeric, and cinnamon with millet syrup base.',ben:['Tulsi boosts immunity and reduces stress','Ginger aids digestion and nausea','Turmeric powerful anti-inflammatory','Cinnamon balances blood sugar','Natural throat soothing properties'],nutr:[{v:'1g',l:'Protein/Candy'},{v:'0.5g',l:'Fiber/Candy'},{v:'25',l:'Kcal/Candy'}]},
+    {id:'htea',name:'Herbal Infusion Tea',cat:'Functional Range',tag:'Beverage',price:299,img:'Herbal Infusion Tea.jpeg',fbImg:'https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=600&q=80',tl:"Sip your way to wellness",desc:'12-herb blend — hibiscus, lemongrass, chamomile, moringa, and ashwagandha. Caffeine-free, supports relaxation, detox, and immune wellness.',ben:['12-herb blend for comprehensive wellness','Caffeine-free — suitable anytime','Hibiscus lowers blood pressure naturally','Ashwagandha reduces cortisol & stress',"Moringa is nature's multivitamin leaf"],nutr:[{v:'0',l:'Caffeine'},{v:'2g',l:'Fiber/Cup'},{v:'5',l:'Kcal/Cup'}]},
+    {id:'idly',name:'Instant Idiyappam',cat:'Functional Range',tag:'Traditional',price:159,img:'Instant Idiyappam.jpeg',fbImg:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80',tl:"South India's favorite, made healthier",desc:"Authentic South Indian string hoppers from a millet-rice flour blend — lighter, more nutritious, and just as delicious. Ready in 5 minutes.",ben:['Millet blend adds iron and calcium','Easier to digest than pure rice flour','Naturally gluten-lite formula','Ready in 5 minutes — no fermenting','Low calorie, high carb for sustained energy'],nutr:[{v:'5g',l:'Protein/Serving'},{v:'3g',l:'Fiber/Serving'},{v:'220',l:'Kcal/Serving'}]},
+    {id:'fcandy',name:'Millet Fruit Candy',cat:'Functional Range',tag:'Sweet',price:89,img:'Millet Fruit Candy.jpeg',fbImg:'https://images.unsplash.com/photo-1581512798671-a23f94248f5b?w=600&q=80',tl:"Real fruit sweetness, millet goodness",desc:'Made from real fruit concentrates — mango, amla, jamun, and guava — combined with a millet syrup base.',ben:['Real fruit concentrates — no artificial flavor','Amla provides 20x more Vitamin C than oranges','Jamun supports blood sugar regulation','Natural colors only — zero synthetic dyes','Great source of natural antioxidants'],nutr:[{v:'0.5g',l:'Protein/Candy'},{v:'0.5g',l:'Fiber/Candy'},{v:'30',l:'Kcal/Candy'}]}
+  ]
+};
+
+const STORAGE_KEY = 'visagha_custom_products_v3';
+let customProducts = [];
+
+function loadCP(){try{const d=localStorage.getItem(STORAGE_KEY);if(d)customProducts=JSON.parse(d);}catch(e){customProducts=[]}}
+function saveCP(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(customProducts));}catch(e){}}
+function allP(){return[...defaultProds.n,...defaultProds.f,...customProducts]}
+function findP(id){return allP().find(p=>p.id===id)}
+function getImgSrc(p){if(p.imgDataURL)return p.imgDataURL;if(p.img)return p.img;return p.fbImg||'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&q=80'}
+function fmtPrice(p){if(!p||!p.price)return 'Contact for price';return '₹'+Number(p.price).toLocaleString('en-IN')}
+
+/* =========================================================
+   RENDER PRODUCTS
+========================================================= */
+function renderG(gid,items){
+  const el=document.getElementById(gid);if(!el)return;
+  el.innerHTML=items.map(p=>`
+    <div class="pcard rev" onclick="openModal('${p.id}')">
+      <div class="pimg">
+        <img src="${getImgSrc(p)}" alt="${p.name}" loading="lazy" onerror="this.src='${p.fbImg||'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&q=80'}'">
+        <div class="ptag">${p.tag}</div>
+        ${p.price?`<div class="pprice-tag">${fmtPrice(p)}</div>`:''}
+        <div class="poverlay"><button class="povbtn" onclick="event.stopPropagation();openModal('${p.id}')">View Details</button></div>
+      </div>
+      <div class="pbody"><h3 class="pname">${p.name}</h3><p class="pdesc">${p.tl}</p></div>
+      <div class="pfoot">
+        <span class="pfoot-price">${fmtPrice(p)}</span>
+        <button class="qcart" onclick="event.stopPropagation();addCart('${p.id}')"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+  `).join('');
+  observeRev();
+}
+function renderCustomCats(){
+  const nGrid=[...defaultProds.n,...customProducts.filter(p=>p.cat==='Nutribar Range')];
+  const fGrid=[...defaultProds.f,...customProducts.filter(p=>p.cat==='Functional Range')];
+  renderG('nGrid',nGrid);renderG('fGrid',fGrid);
+  const wrap=document.getElementById('customCatWrap');if(!wrap)return;
+  const known=['Nutribar Range','Functional Range'];
+  const cats={};
+  customProducts.forEach(p=>{const c=p.cat||'Custom';if(!known.includes(c)){if(!cats[c])cats[c]=[];cats[c].push(p)}});
+  const keys=Object.keys(cats);
+  if(!keys.length){wrap.innerHTML='';return}
+  wrap.innerHTML=keys.map(cat=>`
+    <div class="pcat">
+      <div class="cat-lbl"><div class="cat-line"></div><div class="cat-tag"><i class="fas fa-star" style="color:var(--go);margin-right:0.5rem"></i>${cat}</div><div class="cat-line"></div></div>
+      <div class="pgrid" id="grid_${cat.replace(/\s+/g,'_')}"></div>
+    </div>`).join('');
+  keys.forEach(cat=>renderG('grid_'+cat.replace(/\s+/g,'_'),cats[cat]));
+}
+
+/* =========================================================
+   PRODUCT MODAL
+========================================================= */
+function openModal(id){
+  const p=findP(id);if(!p)return;
+  document.getElementById('mImg').src=getImgSrc(p);
+  document.getElementById('mImg').onerror=function(){this.src=p.fbImg||'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=700&q=80'};
+  document.getElementById('mBadge').textContent=(p.cat||'Product')+' · '+p.tag;
+  document.getElementById('mTitle').textContent=p.name;
+  document.getElementById('mTagline').textContent='✦ '+p.tl;
+  document.getElementById('mDesc').textContent=p.desc;
+  document.getElementById('mBenefits').innerHTML=(p.ben||[]).map(b=>`<div class="bitem"><i class="fas fa-check-circle bicon"></i><span>${b}</span></div>`).join('');
+  document.getElementById('mNutr').innerHTML=(p.nutr||[]).map(n=>`<div class="nitem"><div class="nval">${n.v}</div><div class="nlbl">${n.l}</div></div>`).join('');
+  document.getElementById('mPrice').textContent=fmtPrice(p);
+  const msg=encodeURIComponent(`Hello Visagha Gourmet! 🙏\n\nI'm interested in *${p.name}* (${p.tag}).\nPlease share availability and offers. Thank you!`);
+  document.getElementById('mWA').href=`https://wa.me/${WA_OWNER}?text=${msg}`;
+  document.getElementById('mAddCart').onclick=()=>{addCart(p.id);closeModal()};
+  document.getElementById('mBuyNow').onclick=()=>{if(!cart.find(c=>c.id===p.id))addCart(p.id);closeModal();setTimeout(()=>startCheckout(),100)};
+  document.getElementById('mOverlay').classList.add('open');document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('mOverlay').classList.remove('open');document.body.style.overflow=''}
+function handleOvClick(e){if(e.target===document.getElementById('mOverlay'))closeModal()}
+
+/* =========================================================
+   CART
+========================================================= */
+let cart=[];
+function addCart(id){
+  const p=findP(id);if(!p)return;
+  const ex=cart.find(c=>c.id===id);
+  if(ex)ex.qty=(ex.qty||1)+1;
+  else cart.push({...p,qty:1});
+  updateCart();showToast(`${p.name} added to cart!`);
+}
+function rmCart(id){cart=cart.filter(c=>c.id!==id);updateCart()}
+function changeQty(id,delta){
+  const item=cart.find(c=>c.id===id);if(!item)return;
+  item.qty=(item.qty||1)+delta;
+  if(item.qty<=0)rmCart(id);else updateCart();
+}
+function cartTotal(){return cart.reduce((s,i)=>s+(i.price||0)*(i.qty||1),0)}
+function updateCart(){
+  const n=cart.reduce((s,i)=>s+(i.qty||1),0);
+  document.getElementById('cartCount').textContent=n;
+  const mc=document.getElementById('mobCartCount');if(mc)mc.textContent=n;
+  const ie=document.getElementById('cartItems'),fe=document.getElementById('cartFoot');
+  if(!n){
+    ie.innerHTML='<div class="cempty"><i class="fas fa-bag-shopping"></i><p>Your cart is empty</p><a href="#products" onclick="closeCart()">Browse Products</a></div>';
+    fe.style.display='none';return;
+  }
+  fe.style.display='block';
+  const total=cartTotal();
+  document.getElementById('cartSubtotal').textContent='₹'+total.toLocaleString('en-IN');
+  document.getElementById('cartTotal').textContent='₹'+total.toLocaleString('en-IN');
+  ie.innerHTML=cart.map(p=>`
+    <div class="ci">
+      <div class="ci-img"><img src="${getImgSrc(p)}" alt="${p.name}" onerror="this.src='${p.fbImg||''}'"></div>
+      <div class="ci-info">
+        <div class="ci-name">${p.name}</div>
+        <div class="ci-cat">${p.cat||'Product'}</div>
+        <div class="ci-price">${p.price?'₹'+(p.price*(p.qty||1)).toLocaleString('en-IN'):'Contact for price'}</div>
+        <div class="ci-qty">
+          <button onclick="changeQty('${p.id}',-1)">−</button>
+          <span>${p.qty||1}</span>
+          <button onclick="changeQty('${p.id}',1)">+</button>
+        </div>
+        <button class="ci-rm" onclick="rmCart('${p.id}')"><i class="fas fa-trash-alt"></i> Remove</button>
+      </div>
+    </div>`).join('');
+}
+function openCart(){document.getElementById('cartDrawer').classList.add('open');document.getElementById('cartOv').classList.add('open');document.body.style.overflow='hidden'}
+function closeCart(){document.getElementById('cartDrawer').classList.remove('open');document.getElementById('cartOv').classList.remove('open');document.body.style.overflow=''}
+function orderAllWA(){
+  if(!cart.length)return;
+  const list=cart.map((p,i)=>`${i+1}. ${p.name} (Qty: ${p.qty||1})${p.price?' — ₹'+(p.price*(p.qty||1)).toLocaleString('en-IN'):''}`).join('\n');
+  const total=cartTotal();
+  const msg=encodeURIComponent(`Hello Visagha Gourmet! 🙏\n\n*Order Enquiry:*\n\n${list}\n\n${total>0?'*Estimated Total: ₹'+total.toLocaleString('en-IN')+'*\n\n':''}Please confirm availability and pricing. Thank you!`);
+  window.open(`https://wa.me/${WA_OWNER}?text=${msg}`,'_blank');
+}
+
+/* =========================================================
+   CHECKOUT FLOW
+========================================================= */
+function startCheckout(){
+  if(!cart.length){showToast('Cart is empty!');return}
+  closeCart();
+  currentOrderId='VG'+Date.now().toString().slice(-8).toUpperCase();
+  document.getElementById('successOrderId').textContent=currentOrderId;
+  updateCheckoutSummary();
+  goToStep(1);
+  document.getElementById('checkoutOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCheckout(){document.getElementById('checkoutOverlay').classList.remove('open');document.body.style.overflow=''}
+function goToStep(n){
+  [1,2,3].forEach(i=>{
+    document.getElementById('coStep'+i).classList.toggle('active',i===n);
+    const ind=document.getElementById('step'+i+'indicator');
+    ind.classList.remove('active','done');
+    if(i<n)ind.classList.add('done');
+    if(i===n)ind.classList.add('active');
+  });
+  [1,2].forEach(i=>document.getElementById('line'+i).classList.toggle('done',i<n));
+  const modal=document.querySelector('.checkout-modal');
+  if(modal)modal.scrollTop=0;
+}
+function updateCheckoutSummary(){
+  const total=cartTotal();
+  const items=cart.map(p=>`
+    <div class="co-sum-item">
+      <div><div class="sname">${p.name}</div><div class="sqty">Qty: ${p.qty||1}</div></div>
+      <div class="sprice">${p.price?'₹'+(p.price*(p.qty||1)).toLocaleString('en-IN'):'—'}</div>
+    </div>`).join('');
+  document.getElementById('coSumItems').innerHTML=items;
+  document.getElementById('coSumTotal').textContent='₹'+total.toLocaleString('en-IN');
+  document.getElementById('payOrderItems').innerHTML=cart.map(p=>`
+    <div style="display:flex;justify-content:space-between;padding:0.25rem 0;font-size:0.78rem;border-bottom:1px solid var(--bdr)">
+      <span style="color:var(--tm)">${p.name} ×${p.qty||1}</span>
+      <span style="font-weight:700;color:var(--mg)">${p.price?'₹'+(p.price*(p.qty||1)).toLocaleString('en-IN'):'—'}</span>
+    </div>`).join('');
+  document.getElementById('payTotalLabel').textContent='₹'+total.toLocaleString('en-IN');
+  document.getElementById('payAmountBig').textContent='₹'+total.toLocaleString('en-IN');
+  document.getElementById('payStepAmt').textContent='₹'+total.toLocaleString('en-IN');
+  const amount=total;
+  const upiLink=`upi://pay?pa=${UPI_ID}&pn=${UPI_NAME}&am=${amount}&cu=INR&tn=Order_${currentOrderId}`;
+  document.getElementById('payQRImg').src=`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(upiLink)}&size=200x200&format=png&margin=10`;
+}
+function goToPayment(){
+  const fields=[
+    ['coName',document.getElementById('coName').value.trim()],
+    ['coPhone',document.getElementById('coPhone').value.trim()],
+    ['coWA',document.getElementById('coWA').value.trim()],
+    ['coAddr',document.getElementById('coAddr').value.trim()],
+    ['coCity',document.getElementById('coCity').value.trim()],
+    ['coState',document.getElementById('coState').value],
+    ['coPIN',document.getElementById('coPIN').value.trim()],
+  ];
+  let err=false;
+  fields.forEach(([id,val])=>{const el=document.getElementById(id);if(!val){el.classList.add('err');err=true}else el.classList.remove('err')});
+  if(err){showToast('Please fill all required fields');const fe=document.querySelector('.co-input.err');if(fe)fe.scrollIntoView({behavior:'smooth',block:'center'});return}
+  const phone=document.getElementById('coPhone').value.trim();
+  const wa=document.getElementById('coWA').value.trim();
+  const pin=document.getElementById('coPIN').value.trim();
+  if(!/^\d{10}$/.test(phone)){document.getElementById('coPhone').classList.add('err');showToast('Phone must be exactly 10 digits');return}
+  if(!/^\d{10}$/.test(wa)){document.getElementById('coWA').classList.add('err');showToast('WhatsApp number must be 10 digits');return}
+  if(!/^\d{6}$/.test(pin)){document.getElementById('coPIN').classList.add('err');showToast('PIN code must be 6 digits');return}
+  currentCheckoutData={
+    name:document.getElementById('coName').value.trim(),
+    phone,wa,
+    email:document.getElementById('coEmail').value.trim(),
+    addr:document.getElementById('coAddr').value.trim(),
+    city:document.getElementById('coCity').value.trim(),
+    state:document.getElementById('coState').value,
+    pin,
+    notes:document.getElementById('coNotes').value.trim()
+  };
+  updateCheckoutSummary();goToStep(2);
+  showToast('Please complete UPI payment first');
+}
+function goToStep1(){goToStep(1)}
+function copyUPI(){
+  navigator.clipboard.writeText(UPI_ID).then(()=>showToast('UPI ID copied!')).catch(()=>{
+    const el=document.createElement('input');el.value=UPI_ID;document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);showToast('UPI ID copied!');
+  });
+}
+function openUPILink(){
+  const total=cartTotal();
+  const link=`upi://pay?pa=${UPI_ID}&pn=${UPI_NAME}&am=${total}&cu=INR&tn=Order_${currentOrderId}`;
+  window.open(link,'_blank');
+}
+function confirmPayment(){
+  const utr=document.getElementById('utrInput').value.trim();
+  if(!utr||utr.length<8){
+    document.getElementById('utrInput').classList.add('err');
+    showToast('Please enter your UTR / Transaction ID');return;
+  }
+  document.getElementById('utrInput').classList.remove('err');
+  const d=currentCheckoutData;
+  const total=cartTotal();
+  const itemList=cart.map((p,i)=>`${i+1}. ${p.name} (Qty: ${p.qty||1}) — ₹${(p.price*(p.qty||1)).toLocaleString('en-IN')}`).join('\n');
+  const ownerMsg=encodeURIComponent(
+`🛒 *NEW ORDER — Visagha Gourmet*
+
+Order ID: ${currentOrderId}
+Date: ${new Date().toLocaleString('en-IN')}
+
+━━━━━━━━━━━━━━━
+👤 CUSTOMER DETAILS
+Name: ${d.name}
+Phone: ${d.phone}
+WhatsApp: +91${d.wa}
+Email: ${d.email||'Not provided'}
+
+📦 DELIVERY ADDRESS
+${d.addr}
+${d.city}, ${d.state}
+PIN: ${d.pin}
+${d.notes?'\n📝 Notes: '+d.notes:''}
+
+━━━━━━━━━━━━━━━
+🛍️ ITEMS ORDERED
+${itemList}
+
+━━━━━━━━━━━━━━━
+💰 PAYMENT
+Total: ₹${total.toLocaleString('en-IN')}
+UTR/Transaction ID: ${utr}
+UPI ID: ${UPI_ID}
+
+✅ Please verify payment and confirm dispatch!`);
+  document.getElementById('successWANum').textContent='+91'+d.wa;
+  document.getElementById('successOrderId').textContent=currentOrderId;
+  document.getElementById('successWABtn').href=`https://wa.me/${WA_OWNER}?text=${ownerMsg}`;
+  goToStep(3);
+  setTimeout(()=>window.open(`https://wa.me/${WA_OWNER}?text=${ownerMsg}`,'_blank'),700);
+  setTimeout(()=>{cart=[];updateCart()},2000);
+}
+// Auto-remove err class on input
+['coName','coPhone','coWA','coEmail','coAddr','coCity','coPIN','utrInput'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el)el.addEventListener('input',()=>el.classList.remove('err'));
+});
+document.getElementById('coState').addEventListener('change',()=>document.getElementById('coState').classList.remove('err'));
+
+/* =========================================================
+   ADMIN PASSWORD
+========================================================= */
+let pwdFail=0,pwdLocked=false,pwdTimer=null;
+function openAdmin(){
+  pwdFail=0;
+  document.getElementById('pwdError').classList.remove('show');
+  document.getElementById('pwdAttempts').textContent='';
+  document.getElementById('pwdInput').value='';
+  document.getElementById('pwdSubmit').disabled=false;
+  document.getElementById('pwdOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>document.getElementById('pwdInput').focus(),300);
+}
+function closePwdGate(){document.getElementById('pwdOverlay').classList.remove('open');document.body.style.overflow=''}
+function togglePwdEye(){
+  const inp=document.getElementById('pwdInput'),icon=document.getElementById('pwdEyeIcon');
+  if(inp.type==='password'){inp.type='text';icon.className='fas fa-eye-slash';}
+  else{inp.type='password';icon.className='fas fa-eye';}
+}
+function checkPwd(){
+  if(pwdLocked)return;
+  const val=document.getElementById('pwdInput').value;
+  const errEl=document.getElementById('pwdError'),attEl=document.getElementById('pwdAttempts'),inp=document.getElementById('pwdInput');
+  if(val===ADMIN_PWD){
+    closePwdGate();pwdFail=0;
+    setTimeout(()=>{document.getElementById('adminOverlay').classList.add('open');document.body.style.overflow='hidden';renderManageList();renderCatFilter()},200);
+  } else {
+    pwdFail++;
+    inp.style.animation='none';setTimeout(()=>inp.style.animation='shake 0.4s ease',10);
+    if(pwdFail>=5){
+      pwdLocked=true;document.getElementById('pwdSubmit').disabled=true;
+      errEl.classList.add('show');document.getElementById('pwdErrMsg').textContent='Too many attempts! Locked for 30s.';
+      let secs=30;attEl.textContent=`Try again in ${secs}s`;
+      pwdTimer=setInterval(()=>{secs--;attEl.textContent=`Try again in ${secs}s`;if(secs<=0){clearInterval(pwdTimer);pwdLocked=false;pwdFail=0;document.getElementById('pwdSubmit').disabled=false;errEl.classList.remove('show');attEl.textContent='';inp.value='';inp.focus()}},1000);
+    } else {
+      errEl.classList.add('show');document.getElementById('pwdErrMsg').textContent='Incorrect password.';
+      attEl.textContent=`${pwdFail} failed attempt${pwdFail>1?'s':''}. ${5-pwdFail} remaining.`;
+      setTimeout(()=>errEl.classList.remove('show'),2500);
+    }
+    inp.select();
+  }
+}
+function closeAdmin(){document.getElementById('adminOverlay').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('adminOverlay').addEventListener('click',function(e){if(e.target===this)closeAdmin()});
+document.getElementById('aCat').addEventListener('change',function(){document.getElementById('customCatInput').style.display=this.value==='Custom'?'block':'none'});
+
+/* =========================================================
+   PHOTO UPLOAD — FIXED
+========================================================= */
+function handlePhotoFile(e){
+  const file=e.target.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    uploadedImgDataURL=ev.target.result;
+    showPhotoPreview(ev.target.result);
+  };
+  reader.readAsDataURL(file);
+}
+function showPhotoPreview(src){
+  document.getElementById('photoPreviewImg').src=src;
+  document.getElementById('photoDropzone').style.display='none';
+  document.getElementById('photoPreviewWrap').classList.add('show');
+  showToast('Photo uploaded! ✓');
+}
+function removePhoto(){
+  uploadedImgDataURL='';
+  document.getElementById('photoPreviewImg').src='';
+  document.getElementById('productPhotoInput').value='';
+  document.getElementById('aImg').value='';
+  document.getElementById('photoDropzone').style.display='flex';
+  document.getElementById('photoPreviewWrap').classList.remove('show');
+  showToast('Photo removed');
+}
+function previewFromFilename(val){
+  if(!val)return;
+  uploadedImgDataURL='';
+  showPhotoPreview(val);
+}
+function ev_dragOver(e){e.preventDefault();document.getElementById('photoDropzone').classList.add('drag-over')}
+function ev_dragLeave(e){document.getElementById('photoDropzone').classList.remove('drag-over')}
+function ev_drop(e){
+  e.preventDefault();
+  document.getElementById('photoDropzone').classList.remove('drag-over');
+  const file=e.dataTransfer.files[0];
+  if(file&&file.type.startsWith('image/')){const reader=new FileReader();reader.onload=ev=>showPhotoPreview(ev.target.result);reader.readAsDataURL(file);}
+  else showToast('Please drop an image file');
+}
+
+/* =========================================================
+   ADMIN PRODUCT FORM
+========================================================= */
+function addBen(){
+  const bl=document.getElementById('benList');
+  const div=document.createElement('div');div.className='ben-item';
+  div.innerHTML=`<input type="text" placeholder="Enter benefit"><button class="ben-rm" onclick="removeBen(this)"><i class="fas fa-times"></i></button>`;
+  bl.appendChild(div);
+}
+function removeBen(btn){const item=btn.closest('.ben-item'),bl=document.getElementById('benList');if(bl.children.length>1)item.remove()}
+function submitProduct(){
+  const name=document.getElementById('aName').value.trim();
+  const catSel=document.getElementById('aCat').value;
+  const cat=catSel==='Custom'?(document.getElementById('aCustomCat').value.trim()||'Custom'):catSel;
+  const tag=document.getElementById('aTag').value.trim();
+  const price=document.getElementById('aPrice').value;
+  const tl=document.getElementById('aTagline').value.trim();
+  const desc=document.getElementById('aDesc').value.trim();
+  const imgFile=document.getElementById('aImg').value.trim();
+  if(!name||!tag||!tl||!desc){showToast('Please fill all required fields!');return}
+  const bens=Array.from(document.querySelectorAll('#benList .ben-item input')).map(i=>i.value.trim()).filter(Boolean);
+  const nutr=[];
+  [[document.getElementById('nv1').value,document.getElementById('nl1').value],[document.getElementById('nv2').value,document.getElementById('nl2').value],[document.getElementById('nv3').value,document.getElementById('nl3').value]].forEach(([v,l])=>{if(v&&l)nutr.push({v,l})});
+  const prod={
+    id:'custom_'+Date.now(),name,cat,tag,price:price?Number(price):0,
+    img:imgFile||'',imgDataURL:uploadedImgDataURL||'',
+    fbImg:'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80',
+    tl,desc,
+    ben:bens.length?bens:['Nutritious millet-based product'],
+    nutr:nutr.length?nutr:[{v:'—',l:'Protein'},{v:'—',l:'Fiber'},{v:'—',l:'Kcal'}]
+  };
+  customProducts.push(prod);saveCP();renderCustomCats();
+  // Reset form
+  ['aName','aTag','aTagline','aDesc','aImg','nv1','nl1','nv2','nl2','nv3','nl3'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('aPrice').value='';
+  document.querySelectorAll('#benList .ben-item input').forEach(i=>i.value='');
+  removePhoto();
+  const sf=document.getElementById('addSuccess');sf.classList.add('show');setTimeout(()=>sf.classList.remove('show'),3000);
+  showToast(`"${name}" added!`);switchTab('manage');
+}
+let manageFilter='All';
+function renderCatFilter(){
+  const cats=['All','Nutribar Range','Functional Range',...new Set(customProducts.map(p=>p.cat).filter(c=>c!=='Nutribar Range'&&c!=='Functional Range'))];
+  document.getElementById('catFilter').innerHTML=cats.map(c=>`<button class="cf-btn ${manageFilter===c?'active':''}" onclick="manageFilter='${c}';renderCatFilter();renderManageList()">${c}</button>`).join('');
+}
+function renderManageList(search=''){
+  const list=document.getElementById('manageList');
+  const all=[...defaultProds.n,...defaultProds.f,...customProducts];
+  let filtered=all;
+  if(manageFilter!=='All')filtered=filtered.filter(p=>p.cat===manageFilter);
+  if(search)filtered=filtered.filter(p=>p.name.toLowerCase().includes(search.toLowerCase())||p.tag.toLowerCase().includes(search.toLowerCase()));
+  if(!filtered.length){list.innerHTML='<div class="admin-empty"><i class="fas fa-box-open"></i>No products found</div>';return}
+  const defaultIds=new Set([...defaultProds.n,...defaultProds.f].map(p=>p.id));
+  list.innerHTML=filtered.map(p=>`
+    <div class="admin-pitem">
+      <img class="api-img" src="${getImgSrc(p)}" alt="${p.name}" onerror="this.src='${p.fbImg||''}'">
+      <div class="api-info">
+        <div class="api-name">${p.name}</div>
+        <div class="api-cat">${p.cat} <span class="api-tag-badge">${p.tag}</span> <span class="api-price-badge">${fmtPrice(p)}</span></div>
+      </div>
+      <div class="api-actions">
+        ${!defaultIds.has(p.id)?`<button class="del-btn" onclick="deleteProduct('${p.id}')"><i class="fas fa-trash-alt"></i></button>`:'<span style="font-size:0.7rem;color:var(--tl);padding:0 0.4rem">Default</span>'}
+      </div>
+    </div>`).join('');
+}
+function deleteProduct(id){customProducts=customProducts.filter(p=>p.id!==id);saveCP();renderCustomCats();renderManageList();renderCatFilter();showToast('Product removed')}
+function switchTab(t){
+  document.querySelectorAll('.atab').forEach((b,i)=>b.classList.toggle('active',['add','manage'][i]===t));
+  document.getElementById('tabAdd').classList.toggle('active',t==='add');
+  document.getElementById('tabManage').classList.toggle('active',t==='manage');
+  if(t==='manage'){renderManageList();renderCatFilter()}
+}
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+function openMobNav(){document.getElementById('mobNav').classList.add('open');document.body.style.overflow='hidden'}
+function closeMobNav(){document.getElementById('mobNav').classList.remove('open');document.body.style.overflow=''}
+
+/* =========================================================
+   FOUNDER PAGE
+========================================================= */
+function openFounderPage(){document.getElementById('founderPage').classList.add('open');document.body.style.overflow='hidden';window.scrollTo(0,0)}
+function closeFounderPage(){document.getElementById('founderPage').classList.remove('open');document.body.style.overflow=''}
+
+/* =========================================================
+   TOAST
+========================================================= */
+function showToast(msg){
+  const t=document.getElementById('toast');
+  document.getElementById('toastMsg').textContent=msg;
+  t.classList.add('show');
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2800);
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+function observeRev(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
+  },{threshold:0.06,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.rev:not(.vis),.revl:not(.vis),.revr:not(.vis)').forEach(el=>obs.observe(el));
+}
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');if(href==='#')return;
+    e.preventDefault();
+    const t=document.querySelector(href);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+/* =========================================================
+   INIT
+========================================================= */
+buildMQ();buildCert();loadCP();
+renderG('nGrid',defaultProds.n);
+renderG('fGrid',defaultProds.f);
+renderCustomCats();
+observeRev();
+</script>
+</body>
+</html>
