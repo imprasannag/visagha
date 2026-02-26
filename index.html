@@ -22,7 +22,6 @@
     body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--td);overflow-x:hidden}
     img{max-width:100%}
 
-    /* ====== MARQUEE ====== */
     .marquee-bar{background:var(--dg);padding:0.5rem 0;overflow:hidden;position:relative;z-index:999}
     .marquee-track{display:flex;white-space:nowrap;animation:mScroll 48s linear infinite;width:max-content}
     .marquee-track:hover{animation-play-state:paused}
@@ -31,7 +30,6 @@
     .msep{color:var(--go);opacity:0.4;padding:0 0.2rem}
     @keyframes mScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    /* ====== HEADER ====== */
     header{position:sticky;top:0;width:100%;z-index:1000;background:rgba(250,246,238,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--bdr)}
     nav{max-width:1300px;margin:0 auto;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:0.75rem}
     .logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0}
@@ -45,8 +43,6 @@
     .nav-links a:hover{color:var(--mg)}
     .nav-links a:hover::after{width:100%}
     .nav-right{display:flex;gap:0.5rem;align-items:center;flex-shrink:0}
-
-    /* Desktop nav buttons */
     .admin-btn{background:var(--go);color:white;border:none;padding:0.5rem 0.9rem;border-radius:50px;cursor:pointer;font-size:0.81rem;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:0.4rem;box-shadow:0 4px 14px rgba(200,149,58,0.3);transition:all 0.3s ease;white-space:nowrap}
     .admin-btn:hover{background:#b07828;transform:translateY(-2px)}
     .cart-btn{position:relative;background:var(--mg);color:white;border:none;padding:0.5rem 1rem;border-radius:50px;cursor:pointer;font-size:0.84rem;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:0.4rem;box-shadow:0 4px 14px rgba(44,95,45,0.3);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);white-space:nowrap}
@@ -55,7 +51,6 @@
     @keyframes cPulse{0%,100%{box-shadow:0 0 0 0 rgba(200,149,58,0.5)}60%{box-shadow:0 0 0 6px rgba(200,149,58,0)}}
     .mob-menu{display:none;cursor:pointer;font-size:1.2rem;color:var(--mg);background:none;border:none;padding:0.35rem;line-height:1}
 
-    /* ====== MOBILE NAV ====== */
     .mob-nav-panel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(250,246,238,0.98);z-index:1500;flex-direction:column;padding:1.5rem;backdrop-filter:blur(20px)}
     .mob-nav-panel.open{display:flex;animation:fadeIn 0.2s ease}
     .mob-nav-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
@@ -72,7 +67,6 @@
     .mna-cart{background:var(--mg);color:white}
     .mob-nav-foot{font-size:0.72rem;color:var(--tl);text-align:center;margin-top:1rem}
 
-    /* ====== HERO ====== */
     .hero{min-height:88vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1300px;margin:0 auto;padding:4rem 2rem;gap:4rem}
     .hero-left{animation:sLeft 0.9s cubic-bezier(0.34,1.2,0.64,1) both}
     .hero-right{animation:sRight 0.9s cubic-bezier(0.34,1.2,0.64,1) 0.15s both}
@@ -104,7 +98,6 @@
     .fb2{bottom:8%;right:-5%;animation-delay:1.8s}
     @keyframes fBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
-    /* ====== TRUST STRIP ====== */
     .trust-strip{background:white;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:1.3rem 1.5rem}
     .trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem}
     .trust-item{display:flex;align-items:center;gap:0.65rem;padding:0.65rem 0.85rem;border-radius:12px;transition:all 0.3s ease;cursor:default}
@@ -114,7 +107,6 @@
     .trust-label strong{display:block;font-size:0.84rem;font-weight:700;color:var(--td)}
     .trust-label span{font-size:0.71rem;color:var(--tl)}
 
-    /* ====== ABOUT / FOUNDER ====== */
     .about-section{background:var(--dg);padding:5rem 2rem;position:relative;overflow:hidden}
     .about-section::before{content:'';position:absolute;top:-20%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(107,154,71,0.1) 0%,transparent 70%);border-radius:50%;pointer-events:none}
     .about-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:center;position:relative;z-index:1}
@@ -143,7 +135,6 @@
     .view-founder-btn{display:inline-flex;align-items:center;gap:0.4rem;background:linear-gradient(135deg,var(--go),var(--gol));color:white;border:none;padding:0.8rem 1.7rem;border-radius:50px;font-size:0.86rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;box-shadow:0 6px 22px rgba(200,149,58,0.38);transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);margin-top:1.6rem}
     .view-founder-btn:hover{transform:translateY(-3px) scale(1.04)}
 
-    /* ====== WHY MILLET ====== */
     .why-section{padding:5rem 2rem;background:var(--ww)}
     .why-inner{max-width:1300px;margin:0 auto}
     .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.8rem}
@@ -155,7 +146,6 @@
     .why-card h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--td);margin-bottom:0.4rem}
     .why-card p{font-size:0.8rem;color:var(--tl);line-height:1.7}
 
-    /* ====== PRODUCTS ====== */
     .products-section{max-width:1300px;margin:0 auto;padding:5rem 2rem}
     .sec-eye{text-align:center;margin-bottom:3rem}
     .sec-eye h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4vw,3.1rem);color:var(--dg);margin:0.5rem 0}
@@ -185,7 +175,6 @@
     .qcart{width:32px;height:32px;border-radius:50%;background:var(--mg);color:white;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.78rem;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1)}
     .qcart:hover{background:var(--dg);transform:scale(1.2) rotate(90deg)}
 
-    /* ====== TESTIMONIALS ====== */
     .testi-section{background:var(--cr);padding:5rem 2rem;border-top:1px solid var(--bdr)}
     .testi-inner{max-width:1200px;margin:0 auto}
     .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.8rem}
@@ -199,7 +188,6 @@
     .tname strong{display:block;font-size:0.81rem;font-weight:700;color:var(--td)}
     .tname span{font-size:0.71rem;color:var(--tl)}
 
-    /* ====== CERT MARQUEE ====== */
     .cert-section{background:var(--dg);padding:3rem 2rem}
     .cert-inner{max-width:1200px;margin:0 auto}
     .cert-heading{text-align:center;margin-bottom:1.6rem}
@@ -212,7 +200,6 @@
     .citem i{font-size:1rem;color:var(--gol)}
     @keyframes cScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    /* ====== ABOUT US ====== */
     .aboutus-section{padding:5rem 2rem;background:var(--ww)}
     .aboutus-inner{max-width:1300px;margin:0 auto}
     .au-top{text-align:center;margin-bottom:3.5rem}
@@ -244,7 +231,6 @@
     .au-stat-lbl{font-size:0.73rem;color:var(--tl);margin-top:0.2rem}
     .au-stat-div{width:1px;height:44px;background:var(--bdr);flex-shrink:0}
 
-    /* ====== CONTACT ====== */
     .contact-section{padding:5rem 2rem;background:var(--ww)}
     .contact-inner{max-width:1100px;margin:0 auto}
     .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.3rem;margin-top:2.8rem}
@@ -260,7 +246,6 @@
     .fssai-card h4,.fssai-card p{color:white}
     .fssai-num{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:700;letter-spacing:2px;color:var(--gol)}
 
-    /* ====== CART DRAWER ====== */
     .cart-drawer{position:fixed;right:-460px;top:0;width:460px;max-width:100vw;height:100vh;background:white;z-index:3000;box-shadow:-20px 0 70px rgba(28,61,30,0.14);transition:right 0.45s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column}
     .cart-drawer.open{right:0}
     .cart-ov{position:fixed;inset:0;background:rgba(0,0,0,0.42);z-index:2999;display:none}
@@ -299,16 +284,12 @@
     .cart-wa-btn{width:100%;background:rgba(37,211,102,0.09);border:1.5px solid #25D366;color:#1a9e50;padding:0.7rem;border-radius:12px;font-size:0.83rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.45rem;font-family:'DM Sans',sans-serif;transition:all 0.3s ease;margin-top:0.55rem}
     .cart-wa-btn:hover{background:#25D366;color:white}
 
-    /* ====================================================
-       CHECKOUT MODAL — COMPLETELY REDESIGNED
-    ======================================================= */
+    /* CHECKOUT MODAL */
     .checkout-overlay{position:fixed;inset:0;z-index:4500;background:rgba(10,22,11,0.85);backdrop-filter:blur(16px);display:none;align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto}
     .checkout-overlay.open{display:flex;animation:fadeIn 0.25s ease}
     .checkout-modal{background:white;border-radius:24px;width:100%;max-width:900px;box-shadow:0 40px 120px rgba(0,0,0,0.35);overflow:hidden;position:relative;margin:auto}
     .co-close{position:absolute;top:1rem;right:1rem;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.18);border:1.5px solid rgba(255,255,255,0.25);color:white;cursor:pointer;font-size:0.88rem;display:flex;align-items:center;justify-content:center;z-index:10;transition:all 0.3s}
     .co-close:hover{background:rgba(255,255,255,0.32);transform:rotate(90deg)}
-
-    /* Stepper */
     .co-stepper{background:var(--dg);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:center}
     .co-step{display:flex;align-items:center;gap:0.5rem}
     .co-step-num{width:32px;height:32px;min-width:32px;border-radius:50%;background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.45);display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0;transition:all 0.3s}
@@ -318,22 +299,15 @@
     .co-step.active .co-step-label,.co-step.done .co-step-label{color:rgba(255,255,255,0.85)}
     .co-step-line{flex:1;max-width:70px;height:2px;background:rgba(255,255,255,0.1);margin:0 0.6rem;border-radius:2px;transition:background 0.3s}
     .co-step-line.done{background:var(--sg)}
-
     .co-body{padding:2rem 2.5rem}
     .co-panel{display:none}
     .co-panel.active{display:block;animation:fadeIn 0.28s ease}
     .co-title{font-family:'Cormorant Garamond',serif;font-size:1.75rem;color:var(--dg);margin-bottom:0.28rem}
     .co-sub{color:var(--tl);font-size:0.83rem;margin-bottom:1.6rem}
-
-    /* Checkout layout */
     .co-layout{display:grid;grid-template-columns:1.35fr 1fr;gap:1.8rem;align-items:start}
-
-    /* ---- IMPROVED FORM SECTIONS ---- */
     .co-section{background:var(--cr);border-radius:14px;padding:1.2rem 1.4rem;border:1px solid var(--bdr);margin-bottom:1.1rem}
     .co-section-title{font-size:0.85rem;font-weight:700;color:var(--td);margin-bottom:1rem;display:flex;align-items:center;gap:0.4rem}
     .co-section-title i{color:var(--mg);font-size:0.9rem;width:16px;text-align:center}
-
-    /* The key fix: NO asterisk, use a "Required" pill badge */
     .co-field{margin-bottom:0.9rem}
     .co-field:last-child{margin-bottom:0}
     .co-field-label{font-size:0.73rem;font-weight:700;color:var(--tm);letter-spacing:0.4px;text-transform:uppercase;margin-bottom:0.35rem;display:flex;align-items:center;gap:0.35rem;flex-wrap:wrap}
@@ -347,8 +321,6 @@
     .field-hint-txt{font-size:0.68rem;color:var(--tl);margin-top:0.25rem;display:flex;align-items:center;gap:0.2rem}
     .field-hint-txt i{font-size:0.62rem;flex-shrink:0}
     .co-2col{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
-
-    /* Order summary box */
     .co-summary-box{background:var(--cr);border-radius:16px;padding:1.3rem;border:1px solid var(--bdr);position:sticky;top:1rem}
     .co-sum-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--dg);margin-bottom:0.9rem;display:flex;align-items:center;gap:0.38rem}
     .co-sum-item{display:flex;justify-content:space-between;align-items:flex-start;padding:0.45rem 0;border-bottom:1px solid var(--bdr);font-size:0.8rem;gap:0.5rem}
@@ -360,14 +332,11 @@
     .co-sum-total strong{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--dg)}
     .co-trust{margin-top:0.75rem;padding:0.65rem;background:rgba(44,95,45,0.05);border-radius:8px;font-size:0.7rem;color:var(--tl);display:flex;align-items:flex-start;gap:0.38rem}
     .co-trust i{color:var(--mg);margin-top:1px;flex-shrink:0}
-
-    /* Checkout buttons */
     .co-btn{width:100%;background:linear-gradient(135deg,var(--dg),var(--mg));color:white;border:none;padding:0.9rem;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-family:'DM Sans',sans-serif;transition:all 0.3s ease;box-shadow:0 6px 22px rgba(44,95,45,0.28);margin-top:1rem}
     .co-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(44,95,45,0.38)}
     .co-btn-back{width:100%;background:none;border:1.5px solid var(--bdr);color:var(--tl);padding:0.7rem;border-radius:12px;font-size:0.83rem;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:0.55rem;display:flex;align-items:center;justify-content:center;gap:0.38rem;transition:all 0.2s}
     .co-btn-back:hover{border-color:var(--sg);color:var(--mg)}
 
-    /* ---- PAYMENT STEP ---- */
     .pay-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:1.8rem;align-items:start}
     .pay-qr-box{text-align:center;background:var(--cr);border-radius:16px;padding:1.6rem 1.4rem;border:1px solid var(--bdr)}
     .pay-qr-label{font-size:0.7rem;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.9rem}
@@ -385,8 +354,6 @@
     .pay-app{display:flex;flex-direction:column;align-items:center;gap:0.25rem;padding:0.45rem 0.75rem;border-radius:9px;background:white;border:1px solid var(--bdr);font-size:0.64rem;font-weight:700;color:var(--tm);cursor:pointer;transition:all 0.2s}
     .pay-app:hover{transform:translateY(-2px);box-shadow:var(--s1)}
     .pay-app-icon{font-size:1.3rem}
-
-    /* UTR / Transaction section — key fix: clear label, no asterisk */
     .pay-right{display:flex;flex-direction:column;gap:1rem}
     .pay-steps-box{background:var(--cr);border-radius:14px;padding:1.1rem;border:1px solid var(--bdr)}
     .pay-steps-title{font-size:0.78rem;font-weight:700;color:var(--td);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.3rem}
@@ -396,20 +363,42 @@
     .pay-step p{font-size:0.79rem;color:var(--tm);line-height:1.5}
     .pay-step p strong{color:var(--td)}
 
-    /* UTR field — clear and prominent */
     .utr-field-wrap{background:#fffbf3;border:2px solid rgba(200,149,58,0.3);border-radius:14px;padding:1.1rem 1.2rem}
-    .utr-field-title{font-size:0.8rem;font-weight:800;color:var(--td);margin-bottom:0.65rem;display:flex;align-items:center;gap:0.4rem}
+    .utr-field-title{font-size:0.8rem;font-weight:800;color:var(--td);margin-bottom:0.65rem;display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap}
     .utr-field-title i{color:var(--go)}
-    .utr-field-title .req-tag{background:var(--go)}
     .utr-input{width:100%;padding:0.85rem 1rem;border:2px solid rgba(200,149,58,0.25);border-radius:10px;font-size:0.95rem;font-family:monospace;color:var(--td);background:white;outline:none;transition:border-color 0.2s,box-shadow 0.2s;letter-spacing:2px}
     .utr-input:focus{border-color:var(--go);box-shadow:0 0 0 4px rgba(200,149,58,0.12)}
     .utr-input.err{border-color:var(--red);box-shadow:0 0 0 4px rgba(231,76,60,0.1)}
     .utr-hint{font-size:0.7rem;color:var(--tl);margin-top:0.4rem;display:flex;align-items:flex-start;gap:0.3rem;line-height:1.5}
     .utr-hint i{color:var(--go);flex-shrink:0;margin-top:1px}
+
+    /* ===== SCREENSHOT UPLOAD STYLES ===== */
+    .ss-upload-wrap{background:#fffbf3;border:2px solid rgba(200,149,58,0.3);border-radius:14px;padding:1.1rem 1.2rem;margin-top:0.9rem;transition:border-color 0.3s,background 0.3s}
+    .ss-upload-wrap.uploaded{border-color:rgba(37,211,102,0.4);background:rgba(37,211,102,0.03)}
+    .ss-field-title{font-size:0.8rem;font-weight:800;color:var(--td);margin-bottom:0.65rem;display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap}
+    .ss-field-title i{color:var(--go)}
+    .ss-dropzone{width:100%;min-height:80px;border:2px dashed rgba(200,149,58,0.4);border-radius:10px;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.75rem;color:var(--tl);font-size:0.8rem;transition:all 0.2s;padding:0.8rem;position:relative}
+    .ss-dropzone:hover,.ss-dropzone.drag-over{border-color:var(--go);background:rgba(200,149,58,0.05);color:var(--go)}
+    .ss-dropzone i{font-size:1.6rem;color:var(--go);flex-shrink:0}
+    .ss-dz-txt span{display:block;font-weight:700;color:var(--td);font-size:0.82rem}
+    .ss-dz-txt small{font-size:0.67rem;color:var(--tl)}
+    .ss-preview-wrap{display:none;flex-direction:column;gap:0.5rem}
+    .ss-preview-wrap.show{display:flex}
+    .ss-preview-box{position:relative;border-radius:10px;overflow:hidden;border:2px solid rgba(37,211,102,0.4);background:#f5f5f5}
+    .ss-preview-img{width:100%;max-height:150px;object-fit:contain;display:block}
+    .ss-preview-bar{display:flex;gap:0.5rem}
+    .ss-pb-btn{flex:1;padding:0.42rem 0.6rem;border-radius:7px;border:1.5px solid var(--bdr);background:white;color:var(--tm);cursor:pointer;font-size:0.71rem;font-weight:600;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:0.25rem;transition:all 0.18s}
+    .ss-pb-btn:hover{border-color:var(--sg);color:var(--mg)}
+    .ss-pb-btn.del{border-color:rgba(231,76,60,0.28);color:var(--red)}
+    .ss-pb-btn.del:hover{background:rgba(231,76,60,0.07)}
+    .ss-ok-badge{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);color:#1a9e50;padding:0.22rem 0.65rem;border-radius:6px;font-size:0.7rem;font-weight:700}
+    .ss-hint{font-size:0.7rem;color:var(--tl);margin-top:0.45rem;display:flex;align-items:flex-start;gap:0.3rem;line-height:1.5}
+    .ss-hint i{color:var(--go);flex-shrink:0;margin-top:1px}
+    /* ===== END SCREENSHOT STYLES ===== */
+
     .pay-confirm-btn{width:100%;background:linear-gradient(135deg,#1a9e50,#25D366);color:white;border:none;padding:0.95rem;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-family:'DM Sans',sans-serif;transition:all 0.3s ease;box-shadow:0 6px 22px rgba(37,211,102,0.28)}
     .pay-confirm-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(37,211,102,0.38)}
 
-    /* ---- SUCCESS STEP ---- */
     .success-anim{text-align:center;padding:2.5rem 1.5rem}
     .success-icon{width:85px;height:85px;border-radius:50%;background:linear-gradient(135deg,#25D366,#1a9e50);display:flex;align-items:center;justify-content:center;font-size:2.3rem;color:white;margin:0 auto 1.3rem;box-shadow:0 12px 36px rgba(37,211,102,0.32);animation:successPop 0.5s cubic-bezier(0.34,1.56,0.64,1) both}
     @keyframes successPop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
@@ -421,15 +410,14 @@
     .whatsapp-sent-note i{color:#25D366;font-size:1.05rem;margin-top:2px;flex-shrink:0}
     .whatsapp-sent-note p{font-size:0.8rem;color:var(--tm);line-height:1.6}
     .success-actions{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
-    .suc-wa-btn,.suc-close-btn{border:none;padding:0.75rem 1.5rem;border-radius:50px;font-size:0.84rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:0.42rem;font-family:'DM Sans',sans-serif;transition:all 0.3s;text-decoration:none}
+    .suc-wa-btn,.suc-close-btn,.suc-ss-btn{border:none;padding:0.75rem 1.5rem;border-radius:50px;font-size:0.84rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:0.42rem;font-family:'DM Sans',sans-serif;transition:all 0.3s;text-decoration:none}
     .suc-wa-btn{background:#25D366;color:white}
     .suc-wa-btn:hover{background:#1ebe5d;transform:translateY(-2px)}
     .suc-close-btn{background:var(--mg);color:white}
     .suc-close-btn:hover{background:var(--dg);transform:translateY(-2px)}
+    .suc-ss-btn{background:linear-gradient(135deg,var(--go),var(--gol));color:white}
+    .suc-ss-btn:hover{transform:translateY(-2px)}
 
-    /* ====================================================
-       ADMIN PASSWORD GATE
-    ======================================================= */
     .pwd-overlay{position:fixed;inset:0;z-index:6000;background:rgba(14,30,15,0.92);backdrop-filter:blur(18px);display:none;align-items:center;justify-content:center;padding:1rem}
     .pwd-overlay.open{display:flex;animation:fadeIn 0.2s ease}
     .pwd-box{background:white;border-radius:24px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.4)}
@@ -452,9 +440,6 @@
     .pwd-cancel{width:100%;background:none;border:none;color:var(--tl);font-size:0.8rem;cursor:pointer;padding:0.65rem;font-family:'DM Sans',sans-serif;margin-top:0.45rem;transition:color 0.2s}
     .pwd-cancel:hover{color:var(--mg)}
 
-    /* ====================================================
-       ADMIN PANEL — PHOTO UPLOAD FULLY FIXED
-    ======================================================= */
     .admin-overlay{position:fixed;inset:0;z-index:5000;background:rgba(14,30,15,0.8);backdrop-filter:blur(12px);display:none;align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto}
     .admin-overlay.open{display:flex;animation:fadeIn 0.2s ease}
     .admin-panel{background:white;border-radius:24px;max-width:860px;width:100%;box-shadow:0 40px 100px rgba(0,0,0,0.3);margin:auto}
@@ -483,44 +468,29 @@
     .add-ben-btn{background:none;border:1.5px dashed var(--bdr);color:var(--tl);padding:0.55rem;border-radius:9px;cursor:pointer;font-size:0.78rem;font-family:'DM Sans',sans-serif;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:0.38rem;margin-top:0.45rem;width:100%}
     .add-ben-btn:hover{border-color:var(--sg);color:var(--mg);background:rgba(107,154,71,0.04)}
     .nutr-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem}
-
-    /* ---- PHOTO UPLOAD REDESIGN ---- */
     .photo-upload-section{margin-bottom:1.1rem}
     .photo-upload-section > label{font-size:0.76rem;font-weight:700;color:var(--tm);letter-spacing:0.4px;text-transform:uppercase;display:block;margin-bottom:0.5rem}
     .photo-input-hidden{display:none}
-
-    /* Drop zone (shown when no image) */
     .photo-dropzone{width:100%;height:140px;border:2px dashed var(--bdr);border-radius:12px;background:var(--cr);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.45rem;color:var(--tl);font-size:0.79rem;transition:all 0.2s;position:relative}
     .photo-dropzone:hover,.photo-dropzone.drag-over{border-color:var(--sg);background:rgba(107,154,71,0.04);color:var(--mg)}
     .photo-dropzone i{font-size:1.7rem}
     .photo-dropzone span{font-weight:600}
     .photo-dropzone .sub{font-size:0.68rem;color:var(--tl);text-align:center}
-
-    /* Preview state (shown after image selected) */
     .photo-preview-wrap{display:none;flex-direction:column;gap:0}
     .photo-preview-wrap.show{display:flex}
     .photo-preview-img-box{position:relative;border-radius:12px;overflow:hidden;border:1.5px solid var(--bdr)}
     .photo-preview-img{width:100%;height:140px;object-fit:cover;display:block}
-    /* Desktop: hover overlay */
     .photo-hover-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.48);display:flex;align-items:center;justify-content:center;gap:0.7rem;opacity:0;transition:opacity 0.2s}
     .photo-preview-img-box:hover .photo-hover-overlay{opacity:1}
     .photo-ov-btn{padding:0.4rem 0.85rem;border-radius:8px;border:none;font-size:0.73rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:0.28rem}
     .photo-ov-btn.change-btn{background:white;color:var(--dg)}
-    .photo-ov-btn.change-btn:hover{background:var(--cr)}
     .photo-ov-btn.remove-btn{background:var(--red);color:white}
-    .photo-ov-btn.remove-btn:hover{background:#c0392b}
-    /* Mobile: always-visible action bar */
     .photo-action-bar{display:flex;gap:0.5rem;padding:0.5rem 0 0}
     .photo-action-btn{flex:1;padding:0.5rem;border-radius:8px;border:1.5px solid var(--bdr);background:white;color:var(--tm);cursor:pointer;font-size:0.74rem;font-weight:600;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:0.28rem;transition:all 0.18s}
     .photo-action-btn:hover{border-color:var(--sg);color:var(--mg)}
     .photo-action-btn.del{border-color:rgba(231,76,60,0.28);color:var(--red)}
-    .photo-action-btn.del:hover{background:rgba(231,76,60,0.07);border-color:var(--red)}
-
-    /* On desktop: hide action bar (use hover overlay), on mobile: show it */
-    @media(min-width:768px){
-      .photo-action-bar{display:none}
-    }
-
+    .photo-action-btn.del:hover{background:rgba(231,76,60,0.07)}
+    @media(min-width:768px){.photo-action-bar{display:none}}
     .submit-btn{width:100%;background:linear-gradient(135deg,var(--mg),var(--sg));color:white;border:none;padding:0.9rem;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:0.45rem;transition:all 0.3s ease;box-shadow:0 6px 22px rgba(44,95,45,0.28);margin-top:0.45rem}
     .submit-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(44,95,45,0.38)}
     .admin-prod-list{display:flex;flex-direction:column;gap:0.7rem}
@@ -545,7 +515,6 @@
     .success-flash{background:rgba(44,95,45,0.07);border:1px solid rgba(44,95,45,0.18);color:var(--mg);padding:0.75rem 1rem;border-radius:10px;font-size:0.82rem;font-weight:600;display:none;align-items:center;gap:0.45rem;margin-bottom:0.9rem}
     .success-flash.show{display:flex}
 
-    /* ====== PRODUCT MODAL ====== */
     .modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(14,30,15,0.75);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:1rem}
     .modal-overlay.open{display:flex;animation:fadeIn 0.2s ease}
     .modal{background:white;border-radius:28px;max-width:900px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:var(--s3);position:relative}
@@ -578,7 +547,6 @@
     .mwa{background:#f0faf3;color:#1a9e50;border:1.5px solid rgba(37,211,102,0.28);padding:0.72rem;border-radius:11px;font-size:0.8rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.42rem;font-family:'DM Sans',sans-serif;text-decoration:none;transition:all 0.3s}
     .mwa:hover{background:#25D366;color:white;border-color:#25D366}
 
-    /* ====== FOUNDER PAGE ====== */
     .founder-page{display:none;position:fixed;inset:0;z-index:4000;background:var(--cr);overflow-y:auto}
     .founder-page.open{display:block;animation:fadeIn 0.3s ease}
     .fp-header{background:var(--dg);padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;gap:0.5rem}
@@ -613,11 +581,9 @@
     .fp-vision h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:white;margin-bottom:0.9rem}
     .fp-vision p{color:rgba(255,255,255,0.68);line-height:1.8;max-width:680px;margin:0 auto}
 
-    /* ====== TOAST ====== */
     .toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(120px);background:var(--dg);color:white;padding:0.78rem 1.5rem;border-radius:50px;font-size:0.83rem;font-weight:600;box-shadow:var(--s2);z-index:9999;display:flex;align-items:center;gap:0.4rem;transition:transform 0.45s cubic-bezier(0.34,1.56,0.64,1);white-space:nowrap;max-width:calc(100vw - 2rem)}
     .toast.show{transform:translateX(-50%) translateY(0)}
 
-    /* ====== FOOTER ====== */
     footer{background:var(--dg);color:white;padding:3rem 1.5rem 1.8rem;text-align:center}
     .foot-inner{max-width:1100px;margin:0 auto}
     .foot-logo{font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:0.2rem}
@@ -627,11 +593,9 @@
     .foot-links a:hover{color:white}
     .foot-bot{border-top:1px solid rgba(255,255,255,0.09);padding-top:1.3rem;margin-top:0.9rem;font-size:0.74rem;color:rgba(255,255,255,0.35)}
 
-    /* ====== ANIMATIONS ====== */
     @keyframes sLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
     @keyframes sRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
     @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    @keyframes mUp{from{opacity:0;transform:translateY(40px) scale(0.94)}to{opacity:1;transform:translateY(0) scale(1)}}
     @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
     .rev{opacity:0;transform:translateY(28px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
     .rev.vis{opacity:1;transform:translateY(0)}
@@ -640,121 +604,57 @@
     .revr{opacity:0;transform:translateX(28px);transition:all 0.7s cubic-bezier(0.4,0,0.2,1)}
     .revr.vis{opacity:1;transform:translateX(0)}
 
-    /* ====================================================
-       RESPONSIVE — COMPREHENSIVE MOBILE FIXES
-    ======================================================= */
-
-    /* Tablet: 901–1100 */
-    @media(max-width:1100px){
-      .hero{gap:2.5rem;padding:3rem 1.5rem}
-      .about-inner{gap:3rem}
-      .au-grid{gap:2rem}
-    }
-
-    /* ---- 900px breakpoint ---- */
+    @media(max-width:1100px){.hero{gap:2.5rem;padding:3rem 1.5rem}.about-inner{gap:3rem}.au-grid{gap:2rem}}
     @media(max-width:900px){
-      /* Header: hide desktop nav, show mobile menu */
-      .nav-links{display:none}
-      .mob-menu{display:flex;align-items:center;justify-content:center}
-      .logo-text{display:none}
-      nav{padding:0.7rem 1.2rem}
-      .logo-em{width:40px;height:40px;min-width:40px;font-size:1rem}
-
-      /* Keep admin + cart as icon-only circles */
+      .nav-links{display:none}.mob-menu{display:flex;align-items:center;justify-content:center}
+      .logo-text{display:none}.nav{padding:0.7rem 1.2rem}.logo-em{width:40px;height:40px;min-width:40px;font-size:1rem}
       .admin-btn span,.cart-btn span:not(.cart-count){display:none}
       .admin-btn,.cart-btn{width:42px;height:42px;min-width:42px;padding:0;justify-content:center;border-radius:50%;font-size:1rem}
-      .cart-btn{padding:0}
-      .cart-count{position:static;margin-left:0}
-
-      /* Hero: single column */
-      .hero{grid-template-columns:1fr;min-height:auto;padding:2.5rem 1.5rem;gap:0}
-      .hero-right{display:none}
-
-      /* Grids → 2 col */
+      .cart-btn{padding:0}.cart-count{position:static;margin-left:0}
+      .hero{grid-template-columns:1fr;min-height:auto;padding:2.5rem 1.5rem;gap:0}.hero-right{display:none}
       .trust-inner{grid-template-columns:1fr 1fr;gap:0.5rem}
-      .about-inner{grid-template-columns:1fr}
-      .about-img{display:none}
-      .why-grid{grid-template-columns:1fr 1fr}
-      .tgrid{grid-template-columns:1fr 1fr}
-      .au-grid{grid-template-columns:1fr}
-      .co-layout{grid-template-columns:1fr}
-      .pay-layout{grid-template-columns:1fr}
-      .mgrid{grid-template-columns:1fr}
-      .mimg{border-radius:28px 28px 0 0;height:230px;position:relative}
-      .fp-hero{grid-template-columns:1fr;gap:2rem}
-      .fp-photo-wrap{max-width:320px;margin:0 auto}
-      .milestones-grid{grid-template-columns:1fr 1fr}
-      .form-row{grid-template-columns:1fr}
-      .nutr-row{grid-template-columns:1fr 1fr}
-      .co-2col{grid-template-columns:1fr}
+      .about-inner{grid-template-columns:1fr}.about-img{display:none}
+      .why-grid{grid-template-columns:1fr 1fr}.tgrid{grid-template-columns:1fr 1fr}
+      .au-grid{grid-template-columns:1fr}.co-layout{grid-template-columns:1fr}.pay-layout{grid-template-columns:1fr}
+      .mgrid{grid-template-columns:1fr}.mimg{border-radius:28px 28px 0 0;height:230px;position:relative}
+      .fp-hero{grid-template-columns:1fr;gap:2rem}.fp-photo-wrap{max-width:320px;margin:0 auto}
+      .milestones-grid{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}
+      .nutr-row{grid-template-columns:1fr 1fr}.co-2col{grid-template-columns:1fr}
     }
-
-    /* ---- 700px breakpoint ---- */
     @media(max-width:700px){
-      .pgrid{grid-template-columns:1fr 1fr}
-      .trust-inner{grid-template-columns:1fr}
-      .tgrid{grid-template-columns:1fr}
-      .why-grid{grid-template-columns:1fr}
-      .cart-drawer{width:100vw;right:-100vw}
-      .au-values-grid{grid-template-columns:1fr 1fr}
-      .co-body{padding:1.4rem 1.2rem}
-      .admin-body{padding:1.4rem 1.2rem}
-      .admin-hdr{padding:1.4rem 1.5rem}
-      /* Always show photo action bar on mobile */
-      .photo-action-bar{display:flex !important}
-      .photo-hover-overlay{display:none}
+      .pgrid{grid-template-columns:1fr 1fr}.trust-inner{grid-template-columns:1fr}
+      .tgrid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}
+      .cart-drawer{width:100vw;right:-100vw}.au-values-grid{grid-template-columns:1fr 1fr}
+      .co-body{padding:1.4rem 1.2rem}.admin-body{padding:1.4rem 1.2rem}.admin-hdr{padding:1.4rem 1.5rem}
+      .photo-action-bar{display:flex !important}.photo-hover-overlay{display:none}
     }
-
-    /* ---- 540px breakpoint ---- */
     @media(max-width:540px){
-      nav{padding:0.6rem 0.9rem;gap:0.4rem}
-      .logo-em{width:38px;height:38px;min-width:38px;font-size:0.9rem}
-      .admin-btn,.cart-btn{width:40px;height:40px;min-width:40px;font-size:0.95rem}
-      .mob-menu{font-size:1.1rem}
-      .hero{padding:2rem 1.1rem}
-      .hero h1{font-size:clamp(2rem,8vw,3rem)}
-      .hero-sub{font-size:0.88rem}
-      .hero-actions{gap:0.7rem}
-      .btn-solid,.btn-outline{padding:0.7rem 1.2rem;font-size:0.82rem}
+      nav{padding:0.6rem 0.9rem;gap:0.4rem}.logo-em{width:38px;height:38px;min-width:38px;font-size:0.9rem}
+      .admin-btn,.cart-btn{width:40px;height:40px;min-width:40px;font-size:0.95rem}.mob-menu{font-size:1.1rem}
+      .hero{padding:2rem 1.1rem}.hero h1{font-size:clamp(2rem,8vw,3rem)}.hero-sub{font-size:0.88rem}
+      .hero-actions{gap:0.7rem}.btn-solid,.btn-outline{padding:0.7rem 1.2rem;font-size:0.82rem}
       .about-section,.why-section,.products-section,.testi-section,.cert-section,.aboutus-section,.contact-section{padding:3.5rem 1.2rem}
-      .trust-strip{padding:1rem 1.1rem}
-      .pgrid{grid-template-columns:1fr 1fr;gap:0.9rem}
-      .co-stepper{padding:1.1rem 0.9rem}
-      .co-step-label{display:none}
-      .co-step-line{max-width:35px;margin:0 0.35rem}
-      .co-step-num{width:28px;height:28px;min-width:28px;font-size:0.72rem}
-      .co-body{padding:1.2rem 1rem}
-      .co-title{font-size:1.5rem}
-      .admin-body{padding:1.2rem 1rem}
-      .admin-hdr{padding:1.2rem 1.2rem}
-      .admin-hdr h2{font-size:1.4rem}
-      .fp-body{padding:2.5rem 1.1rem}
-      .au-stats{padding:1.4rem 0.5rem}
-      .au-stat{padding:0.4rem 0.8rem;min-width:80px}
-      .au-stat-num{font-size:1.65rem}
+      .trust-strip{padding:1rem 1.1rem}.pgrid{grid-template-columns:1fr 1fr;gap:0.9rem}
+      .co-stepper{padding:1.1rem 0.9rem}.co-step-label{display:none}.co-step-line{max-width:35px;margin:0 0.35rem}
+      .co-step-num{width:28px;height:28px;min-width:28px;font-size:0.72rem}.co-body{padding:1.2rem 1rem}
+      .co-title{font-size:1.5rem}.admin-body{padding:1.2rem 1rem}.admin-hdr{padding:1.2rem 1.2rem}
+      .admin-hdr h2{font-size:1.4rem}.fp-body{padding:2.5rem 1.1rem}
+      .au-stats{padding:1.4rem 0.5rem}.au-stat{padding:0.4rem 0.8rem;min-width:80px}.au-stat-num{font-size:1.65rem}
       .au-values-grid{grid-template-columns:1fr}
     }
-
-    /* ---- 400px breakpoint ---- */
     @media(max-width:400px){
-      nav{padding:0.5rem 0.7rem;gap:0.3rem}
-      .logo-em{width:36px;height:36px;min-width:36px;font-size:0.85rem;border-radius:10px}
-      .admin-btn,.cart-btn{width:38px;height:38px;min-width:38px;font-size:0.88rem}
-      .mob-menu{font-size:1rem}
-      .co-step-label{display:none}
-      .pgrid{grid-template-columns:1fr}
-      .co-2col{grid-template-columns:1fr}
+      nav{padding:0.5rem 0.7rem;gap:0.3rem}.logo-em{width:36px;height:36px;min-width:36px;font-size:0.85rem;border-radius:10px}
+      .admin-btn,.cart-btn{width:38px;height:38px;min-width:38px;font-size:0.88rem}.mob-menu{font-size:1rem}
+      .co-step-label{display:none}.pgrid{grid-template-columns:1fr}.co-2col{grid-template-columns:1fr}
       .success-actions{flex-direction:column;align-items:stretch}
-      .suc-wa-btn,.suc-close-btn{justify-content:center}
+      .suc-wa-btn,.suc-close-btn,.suc-ss-btn{justify-content:center}
     }
   </style>
 </head>
 <body>
 
-<!-- ======== MARQUEE ======== -->
 <div class="marquee-bar"><div class="marquee-track" id="mqTrack"></div></div>
 
-<!-- ======== HEADER ======== -->
 <header>
   <nav>
     <a class="logo" href="#home">
@@ -783,7 +683,6 @@
   </nav>
 </header>
 
-<!-- ======== MOBILE NAV ======== -->
 <div class="mob-nav-panel" id="mobNav">
   <div class="mob-nav-top">
     <div class="mob-nav-logo">Visagha Gourmet</div>
@@ -803,7 +702,6 @@
   <div class="mob-nav-foot">© 2026 Visagha Gourmet Foods and Traders Pvt. Ltd.</div>
 </div>
 
-<!-- ======== HERO ======== -->
 <section class="hero" id="home">
   <div class="hero-left">
     <div class="eyebrow"><i class="fas fa-certificate"></i> FSSAI Certified · Science-Backed</div>
@@ -836,7 +734,6 @@
   </div>
 </section>
 
-<!-- ======== TRUST STRIP ======== -->
 <div class="trust-strip">
   <div class="trust-inner">
     <div class="trust-item rev"><div class="trust-icon"><i class="fas fa-flask"></i></div><div class="trust-label"><strong>Lab Tested</strong><span>Every batch quality-checked</span></div></div>
@@ -846,7 +743,6 @@
   </div>
 </div>
 
-<!-- ======== ABOUT / FOUNDER ======== -->
 <section class="about-section" id="about">
   <div class="about-inner">
     <div class="about-img revl">
@@ -884,7 +780,6 @@
   </div>
 </section>
 
-<!-- ======== WHY MILLET ======== -->
 <section class="why-section" id="why">
   <div class="why-inner">
     <div class="sec-eye rev">
@@ -904,7 +799,6 @@
   </div>
 </section>
 
-<!-- ======== PRODUCTS ======== -->
 <section class="products-section" id="products">
   <div class="sec-eye rev">
     <div class="eyebrow" style="display:inline-flex"><i class="fas fa-bowl-food"></i> Our Range</div>
@@ -923,7 +817,6 @@
   <div id="customCatWrap"></div>
 </section>
 
-<!-- ======== ABOUT US ======== -->
 <section class="aboutus-section" id="aboutus">
   <div class="aboutus-inner">
     <div class="au-top rev">
@@ -969,7 +862,6 @@
   </div>
 </section>
 
-<!-- ======== TESTIMONIALS ======== -->
 <section class="testi-section" id="testimonials">
   <div class="testi-inner">
     <div class="sec-eye rev">
@@ -985,7 +877,6 @@
   </div>
 </section>
 
-<!-- ======== CERT MARQUEE ======== -->
 <div class="cert-section">
   <div class="cert-inner">
     <div class="cert-heading"><h3>Our Commitments &amp; Credentials</h3><p>Every promise, backed by science and certification</p></div>
@@ -993,7 +884,6 @@
   </div>
 </div>
 
-<!-- ======== CONTACT ======== -->
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <div class="sec-eye rev">
@@ -1026,7 +916,7 @@
   </div>
 </footer>
 
-<!-- ======== FOUNDER PAGE ======== -->
+<!-- FOUNDER PAGE -->
 <div class="founder-page" id="founderPage">
   <div class="fp-header">
     <button class="fp-back" onclick="closeFounderPage()"><i class="fas fa-arrow-left"></i> Back</button>
@@ -1070,7 +960,7 @@
   </div>
 </div>
 
-<!-- ======== PRODUCT MODAL ======== -->
+<!-- PRODUCT MODAL -->
 <div class="modal-overlay" id="mOverlay" onclick="handleOvClick(event)">
   <div class="modal" id="mBox">
     <button class="mclose" onclick="closeModal()"><i class="fas fa-times"></i></button>
@@ -1096,7 +986,7 @@
   </div>
 </div>
 
-<!-- ======== CART DRAWER ======== -->
+<!-- CART DRAWER -->
 <div class="cart-ov" id="cartOv" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cartDrawer">
   <div class="cart-hdr">
@@ -1115,14 +1005,11 @@
   </div>
 </div>
 
-<!-- ============================================================
-     CHECKOUT MODAL — FULLY REDESIGNED FORM
-=============================================================== -->
+<!-- CHECKOUT MODAL -->
 <div class="checkout-overlay" id="checkoutOverlay">
   <div class="checkout-modal">
     <button class="co-close" onclick="closeCheckout()"><i class="fas fa-times"></i></button>
 
-    <!-- Stepper -->
     <div class="co-stepper">
       <div class="co-step active" id="step1indicator">
         <div class="co-step-num">1</div>
@@ -1142,84 +1029,55 @@
 
     <div class="co-body">
 
-      <!-- ===== STEP 1: CUSTOMER DETAILS ===== -->
+      <!-- STEP 1: CUSTOMER DETAILS -->
       <div class="co-panel active" id="coStep1">
         <div class="co-layout">
-
-          <!-- LEFT: FORM -->
           <div>
             <h2 class="co-title">Delivery Information</h2>
             <p class="co-sub">Fill in your details to proceed with your order 📦</p>
 
-            <!-- Personal Details -->
             <div class="co-section">
               <div class="co-section-title"><i class="fas fa-user"></i>Personal Details</div>
-
               <div class="co-2col">
                 <div class="co-field">
-                  <div class="co-field-label">
-                    <i class="fas fa-id-card"></i>Full Name
-                    <span class="req-tag">Required</span>
-                  </div>
+                  <div class="co-field-label"><i class="fas fa-id-card"></i>Full Name <span class="req-tag">Required</span></div>
                   <input type="text" class="co-input" id="coName" placeholder="Your complete full name" autocomplete="name">
                   <div class="field-hint-txt"><i class="fas fa-circle-info"></i> As per delivery label</div>
                 </div>
                 <div class="co-field">
-                  <div class="co-field-label">
-                    <i class="fas fa-envelope"></i>Email
-                    <span class="opt-tag">Optional</span>
-                  </div>
+                  <div class="co-field-label"><i class="fas fa-envelope"></i>Email <span class="opt-tag">Optional</span></div>
                   <input type="email" class="co-input" id="coEmail" placeholder="your@email.com" autocomplete="email">
                   <div class="field-hint-txt"><i class="fas fa-circle-info"></i> For order receipts</div>
                 </div>
               </div>
-
               <div class="co-2col">
                 <div class="co-field">
-                  <div class="co-field-label">
-                    <i class="fas fa-phone"></i>Phone Number
-                    <span class="req-tag">Required</span>
-                  </div>
+                  <div class="co-field-label"><i class="fas fa-phone"></i>Phone Number <span class="req-tag">Required</span></div>
                   <input type="tel" class="co-input" id="coPhone" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel">
                   <div class="field-hint-txt"><i class="fas fa-circle-info"></i> For delivery coordination</div>
                 </div>
                 <div class="co-field">
-                  <div class="co-field-label">
-                    <i class="fab fa-whatsapp"></i>WhatsApp Number
-                    <span class="req-tag">Required</span>
-                  </div>
+                  <div class="co-field-label"><i class="fab fa-whatsapp"></i>WhatsApp Number <span class="req-tag">Required</span></div>
                   <input type="tel" class="co-input" id="coWA" placeholder="10-digit WhatsApp number" maxlength="10">
                   <div class="field-hint-txt"><i class="fas fa-circle-info"></i> Order confirmations &amp; tracking</div>
                 </div>
               </div>
             </div>
 
-            <!-- Delivery Address -->
             <div class="co-section">
               <div class="co-section-title"><i class="fas fa-map-location-dot"></i>Delivery Address</div>
-
               <div class="co-field">
-                <div class="co-field-label">
-                  <i class="fas fa-location-dot"></i>Full Address
-                  <span class="req-tag">Required</span>
-                </div>
+                <div class="co-field-label"><i class="fas fa-location-dot"></i>Full Address <span class="req-tag">Required</span></div>
                 <textarea class="co-input" id="coAddr" rows="3" style="resize:vertical;min-height:72px;font-family:'DM Sans',sans-serif;line-height:1.5" placeholder="House/Flat No., Street name, Area, Landmark — be as detailed as possible"></textarea>
                 <div class="field-hint-txt"><i class="fas fa-circle-info"></i> Include all details for accurate delivery</div>
               </div>
-
               <div class="co-2col">
                 <div class="co-field">
-                  <div class="co-field-label">
-                    <i class="fas fa-city"></i>City / Town
-                    <span class="req-tag">Required</span>
-                  </div>
+                  <div class="co-field-label"><i class="fas fa-city"></i>City / Town <span class="req-tag">Required</span></div>
                   <input type="text" class="co-input" id="coCity" placeholder="E.g., Madurai or Chennai" autocomplete="address-level2">
                 </div>
                 <div class="co-field">
-                  <div class="co-field-label">
-                    <i class="fas fa-map"></i>State
-                    <span class="req-tag">Required</span>
-                  </div>
+                  <div class="co-field-label"><i class="fas fa-map"></i>State <span class="req-tag">Required</span></div>
                   <select class="co-input" id="coState" style="cursor:pointer">
                     <option value="">Select your state</option>
                     <option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option>
@@ -1235,17 +1093,12 @@
                   </select>
                 </div>
               </div>
-
               <div class="co-field" style="max-width:180px">
-                <div class="co-field-label">
-                  <i class="fas fa-mailbox"></i>PIN Code
-                  <span class="req-tag">Required</span>
-                </div>
+                <div class="co-field-label"><i class="fas fa-mailbox"></i>PIN Code <span class="req-tag">Required</span></div>
                 <input type="text" class="co-input" id="coPIN" placeholder="6-digit PIN" maxlength="6" autocomplete="postal-code">
               </div>
             </div>
 
-            <!-- Special Instructions -->
             <div class="co-section" style="margin-bottom:0">
               <div class="co-section-title"><i class="fas fa-clipboard-list"></i>Special Instructions <span style="font-size:0.7rem;color:var(--tl);font-weight:400;text-transform:none;margin-left:2px">(Optional)</span></div>
               <div class="co-field" style="margin-bottom:0">
@@ -1253,12 +1106,9 @@
               </div>
             </div>
 
-            <button class="co-btn" onclick="goToPayment()">
-              <i class="fas fa-arrow-right"></i>Continue to Payment
-            </button>
+            <button class="co-btn" onclick="goToPayment()"><i class="fas fa-arrow-right"></i>Continue to Payment</button>
           </div>
 
-          <!-- RIGHT: ORDER SUMMARY -->
           <div>
             <div class="co-summary-box" id="coSummaryBox">
               <div class="co-sum-title"><i class="fas fa-receipt" style="color:var(--mg)"></i>Order Summary</div>
@@ -1281,26 +1131,24 @@
         </div>
       </div>
 
-      <!-- ===== STEP 2: PAYMENT ===== -->
+      <!-- STEP 2: PAYMENT -->
       <div class="co-panel" id="coStep2">
         <h2 class="co-title">Complete Payment</h2>
-        <p class="co-sub">Scan QR or use UPI to pay securely 🔒</p>
+        <p class="co-sub">Scan QR or use UPI to pay, then upload your payment screenshot 🔒</p>
 
         <div class="pay-layout">
-          <!-- QR CODE BOX -->
+          <!-- QR BOX -->
           <div class="pay-qr-box">
             <div class="pay-qr-label">Scan &amp; Pay with any UPI app</div>
             <div class="pay-qr-img"><img id="payQRImg" src="" alt="UPI QR Code"></div>
             <div class="pay-amount-lbl">Amount to Pay</div>
             <div class="pay-amount-big" id="payAmountBig">₹0</div>
-
             <div class="pay-divider-txt">or enter UPI ID directly</div>
             <div class="pay-upi-id-box" onclick="copyUPI()">
               <i class="fas fa-copy"></i>
               dpthecrazycuber007-3@okicici
             </div>
             <div class="pay-upi-hint">Tap to copy UPI ID</div>
-
             <div class="pay-apps">
               <div class="pay-app" onclick="openUPILink()"><div class="pay-app-icon">🟢</div>GPay</div>
               <div class="pay-app" onclick="openUPILink()"><div class="pay-app-icon">🟣</div>PhonePe</div>
@@ -1311,17 +1159,16 @@
 
           <!-- VERIFICATION BOX -->
           <div class="pay-right">
-            <!-- How to pay steps -->
             <div class="pay-steps-box">
               <div class="pay-steps-title"><i class="fas fa-circle-info" style="color:var(--mg)"></i> How to complete payment:</div>
               <div class="pay-step"><div class="pay-step-num">1</div><p>Open <strong>GPay, PhonePe, Paytm</strong> or any UPI app</p></div>
               <div class="pay-step"><div class="pay-step-num">2</div><p>Scan QR code or enter UPI ID: <strong>dpthecrazycuber007-3@okicici</strong></p></div>
               <div class="pay-step"><div class="pay-step-num">3</div><p>Pay exact amount: <strong id="payStepAmt">₹0</strong></p></div>
-              <div class="pay-step"><div class="pay-step-num">4</div><p>After payment, copy the <strong>12-digit UTR / Transaction Reference ID</strong> from the success screen</p></div>
-              <div class="pay-step"><div class="pay-step-num">5</div><p>Paste it in the box below and click "Confirm Payment"</p></div>
+              <div class="pay-step"><div class="pay-step-num">4</div><p>Take a <strong>screenshot</strong> of the payment success screen</p></div>
+              <div class="pay-step"><div class="pay-step-num">5</div><p>Enter your <strong>UTR number</strong> and <strong>upload the screenshot</strong> below</p></div>
             </div>
 
-            <!-- UTR FIELD — KEY FIX: clear, prominent, no asterisk confusion -->
+            <!-- UTR FIELD -->
             <div class="utr-field-wrap">
               <div class="utr-field-title">
                 <i class="fas fa-receipt"></i>
@@ -1333,9 +1180,52 @@
                 maxlength="20">
               <div class="utr-hint">
                 <i class="fas fa-circle-info"></i>
-                Where to find it: Open your UPI app → Transaction History → tap the payment → copy the 12-digit UTR / Reference Number shown
+                Open your UPI app → Transaction History → tap the payment → copy the UTR / Reference Number
               </div>
             </div>
+
+            <!-- ===== SCREENSHOT UPLOAD ===== -->
+            <div class="ss-upload-wrap" id="ssUploadWrap">
+              <div class="ss-field-title">
+                <i class="fas fa-camera" style="color:var(--go)"></i>
+                Payment Screenshot
+                <span class="req-tag">Required</span>
+              </div>
+
+              <!-- Hidden file input -->
+              <input type="file" id="ssFileInput" accept="image/*" style="display:none" onchange="handleSSUpload(event)">
+
+              <!-- Drop zone -->
+              <div class="ss-dropzone" id="ssDropzone"
+                   onclick="document.getElementById('ssFileInput').click()"
+                   ondragover="ss_dragOver(event)"
+                   ondragleave="ss_dragLeave(event)"
+                   ondrop="ss_drop(event)">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <div class="ss-dz-txt">
+                  <span>Tap to upload payment screenshot</span>
+                  <small>Or drag &amp; drop · JPG, PNG · Max 10MB</small>
+                </div>
+              </div>
+
+              <!-- Preview -->
+              <div class="ss-preview-wrap" id="ssPreviewWrap">
+                <div class="ss-preview-box">
+                  <img class="ss-preview-img" id="ssPreviewImg" src="" alt="Payment screenshot">
+                </div>
+                <div class="ss-preview-bar">
+                  <button class="ss-pb-btn" onclick="document.getElementById('ssFileInput').click()"><i class="fas fa-sync-alt"></i> Change Photo</button>
+                  <button class="ss-pb-btn del" onclick="removeSSPhoto()"><i class="fas fa-trash"></i> Remove</button>
+                </div>
+                <div class="ss-ok-badge"><i class="fas fa-check-circle"></i> Screenshot uploaded</div>
+              </div>
+
+              <div class="ss-hint">
+                <i class="fas fa-circle-info"></i>
+                Upload a screenshot showing the payment amount, UTR number, and date. This helps us verify your payment instantly and process your order faster.
+              </div>
+            </div>
+            <!-- ===== END SCREENSHOT UPLOAD ===== -->
 
             <!-- Payment summary -->
             <div class="co-summary-box">
@@ -1358,33 +1248,34 @@
         </div>
       </div>
 
-      <!-- ===== STEP 3: SUCCESS ===== -->
+      <!-- STEP 3: SUCCESS -->
       <div class="co-panel" id="coStep3">
         <div class="success-anim">
           <div class="success-icon"><i class="fas fa-check"></i></div>
           <h2 class="success-title">Order Placed Successfully! 🎉</h2>
-          <p class="success-sub">Thank you! Your payment is being verified and your order details are being sent to our team via WhatsApp.</p>
+          <p class="success-sub">Thank you! Your payment details and screenshot are being verified. Order confirmation will be sent to your WhatsApp.</p>
           <div class="order-id-badge">Order ID: <strong id="successOrderId">VG00000000</strong></div>
           <div class="whatsapp-sent-note">
             <i class="fab fa-whatsapp"></i>
             <p>Confirmation being sent to WhatsApp:<br>📱 +91 <strong id="successWANum">9876543210</strong></p>
           </div>
           <p style="font-size:0.83rem;color:var(--tm);line-height:1.8;margin-bottom:1.3rem">
-            ✅ Our team will verify payment and confirm dispatch within <strong>1–2 business days</strong><br>
+            ✅ Our team will verify your payment screenshot and confirm dispatch within <strong>1–2 business days</strong><br>
             📦 Real-time delivery updates will be sent to your WhatsApp
           </p>
           <div class="success-actions">
+            <button class="suc-ss-btn" id="ssDownloadBtn" onclick="downloadScreenshot()"><i class="fas fa-image"></i> Save Screenshot</button>
             <a class="suc-wa-btn" id="successWABtn" href="#" target="_blank"><i class="fab fa-whatsapp"></i> View on WhatsApp</a>
             <button class="suc-close-btn" onclick="closeCheckout();closeCart()"><i class="fas fa-check"></i> Done</button>
           </div>
         </div>
       </div>
 
-    </div><!-- .co-body -->
-  </div><!-- .checkout-modal -->
-</div><!-- .checkout-overlay -->
+    </div>
+  </div>
+</div>
 
-<!-- ======== PASSWORD GATE ======== -->
+<!-- PASSWORD GATE -->
 <div class="pwd-overlay" id="pwdOverlay">
   <div class="pwd-box">
     <div class="pwd-top">
@@ -1406,7 +1297,7 @@
   </div>
 </div>
 
-<!-- ======== ADMIN PANEL ======== -->
+<!-- ADMIN PANEL -->
 <div class="admin-overlay" id="adminOverlay">
   <div class="admin-panel">
     <div class="admin-hdr">
@@ -1424,7 +1315,6 @@
 
       <div class="tab-panel active" id="tabAdd">
         <div class="success-flash" id="addSuccess"><i class="fas fa-check-circle"></i> Product added successfully!</div>
-
         <div class="form-row">
           <div class="form-group"><label>Product Name</label><input type="text" id="aName" placeholder="e.g. Millet Energy Bar"></div>
           <div class="form-group"><label>Category</label>
@@ -1445,17 +1335,9 @@
         <div class="form-group"><label>Short Tagline</label><input type="text" id="aTagline" placeholder="e.g. Guilt-free snacking, reimagined"></div>
         <div class="form-group"><label>Description</label><textarea id="aDesc" rows="3" placeholder="Full product description..."></textarea></div>
 
-        <!-- ========================================================
-             PHOTO UPLOAD — COMPLETELY REDESIGNED
-             Works on both desktop (hover overlay) and mobile (action bar)
-        ======================================================== -->
         <div class="photo-upload-section">
           <label>Product Photo</label>
-
-          <!-- Hidden file input -->
           <input type="file" class="photo-input-hidden" id="productPhotoInput" accept="image/*" onchange="handlePhotoFile(event)">
-
-          <!-- Drop zone: shown when no photo uploaded -->
           <div class="photo-dropzone" id="photoDropzone"
                onclick="document.getElementById('productPhotoInput').click()"
                ondragover="ev_dragOver(event)"
@@ -1465,25 +1347,19 @@
             <span>Click to upload a photo</span>
             <span class="sub">or drag &amp; drop · JPG, PNG, WEBP accepted</span>
           </div>
-
-          <!-- Preview: shown after photo selected -->
           <div class="photo-preview-wrap" id="photoPreviewWrap">
             <div class="photo-preview-img-box">
               <img class="photo-preview-img" id="photoPreviewImg" src="" alt="Product preview">
-              <!-- Desktop hover overlay -->
               <div class="photo-hover-overlay">
                 <button class="photo-ov-btn change-btn" onclick="document.getElementById('productPhotoInput').click()"><i class="fas fa-sync-alt"></i> Change</button>
                 <button class="photo-ov-btn remove-btn" onclick="removePhoto()"><i class="fas fa-trash"></i> Remove</button>
               </div>
             </div>
-            <!-- Mobile always-visible action bar -->
             <div class="photo-action-bar">
               <button class="photo-action-btn" onclick="document.getElementById('productPhotoInput').click()"><i class="fas fa-sync-alt"></i> Change Photo</button>
               <button class="photo-action-btn del" onclick="removePhoto()"><i class="fas fa-trash"></i> Remove</button>
             </div>
           </div>
-
-          <!-- Optional: paste filename -->
           <div class="form-group" style="margin-top:0.6rem;margin-bottom:0">
             <label style="font-size:0.68rem;text-transform:none;letter-spacing:0;color:var(--tl)">— or type/paste image filename —</label>
             <input type="text" id="aImg" placeholder="e.g. Millet Cookies.jpeg" oninput="previewFromFilename(this.value)">
@@ -1526,7 +1402,6 @@
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg">Done!</span></div>
 
 <script>
@@ -1541,6 +1416,67 @@ const ADMIN_PWD = 'Visagha@2026';
 let uploadedImgDataURL = '';
 let currentCheckoutData = {};
 let currentOrderId = '';
+
+/* =========================================================
+   PAYMENT SCREENSHOT — NEW FEATURE
+========================================================= */
+let paymentScreenshotDataURL = '';
+
+function handleSSUpload(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  if(!file.type.startsWith('image/')){showToast('Please select an image file');return}
+  if(file.size > 10*1024*1024){showToast('Image too large — please use a smaller screenshot');return}
+  const reader = new FileReader();
+  reader.onload = ev => {
+    paymentScreenshotDataURL = ev.target.result;
+    document.getElementById('ssPreviewImg').src = ev.target.result;
+    document.getElementById('ssDropzone').style.display = 'none';
+    document.getElementById('ssPreviewWrap').classList.add('show');
+    const wrap = document.getElementById('ssUploadWrap');
+    wrap.style.borderColor = 'rgba(37,211,102,0.5)';
+    wrap.style.background = 'rgba(37,211,102,0.04)';
+    showToast('Screenshot uploaded ✓');
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeSSPhoto(){
+  paymentScreenshotDataURL = '';
+  document.getElementById('ssPreviewImg').src = '';
+  document.getElementById('ssFileInput').value = '';
+  document.getElementById('ssDropzone').style.display = 'flex';
+  document.getElementById('ssPreviewWrap').classList.remove('show');
+  const wrap = document.getElementById('ssUploadWrap');
+  wrap.style.borderColor = '';
+  wrap.style.background = '';
+}
+
+function ss_dragOver(e){
+  e.preventDefault();
+  document.getElementById('ssDropzone').classList.add('drag-over');
+}
+function ss_dragLeave(e){
+  document.getElementById('ssDropzone').classList.remove('drag-over');
+}
+function ss_drop(e){
+  e.preventDefault();
+  document.getElementById('ssDropzone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if(file && file.type.startsWith('image/')){
+    handleSSUpload({target:{files:[file]}});
+  } else {
+    showToast('Please drop an image file');
+  }
+}
+
+function downloadScreenshot(){
+  if(!paymentScreenshotDataURL){showToast('No screenshot to download');return}
+  const a = document.createElement('a');
+  a.href = paymentScreenshotDataURL;
+  a.download = `payment_${currentOrderId}.jpg`;
+  a.click();
+}
 
 /* =========================================================
    MARQUEE + CERT
@@ -1575,18 +1511,18 @@ function buildCert(){
 const defaultProds = {
   n:[
     {id:'musli',name:'Millet Musli',cat:'Nutribar Range',tag:'Breakfast',price:249,img:'Millet Musli.jpeg',fbImg:'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=600&q=80',tl:"Start your mornings with ancient grain goodness",desc:'Our Millet Musli is a wholesome, crunchy breakfast crafted from finger millet, pearl millet, and foxtail millet, combined with roasted nuts, dried fruits, and natural honey. Zero refined sugars, zero artificial flavors.',ben:['Rich in dietary fiber for healthy digestion','High iron content supports energy levels','Complex carbs for sustained morning energy','Naturally gluten-sensitive friendly','Boosts immunity with zinc and B-vitamins'],nutr:[{v:'18g',l:'Protein/100g'},{v:'6g',l:'Fiber/100g'},{v:'340',l:'Kcal/100g'}]},
-    {id:'mixture',name:'Millet Mixture',cat:'Nutribar Range',tag:'Snack',price:189,img:'Millet Mixture.jpeg',fbImg:'https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=600&q=80',tl:"Guilt-free snacking, reimagined",desc:'A crispy, savory snack mix made from puffed millets, roasted legumes, and aromatic spices. Inspired by traditional Indian mixture but elevated with the nutritional power of millets.',ben:['High-protein snack for muscle nourishment','Low glycemic index — ideal for diabetics','Roasted, not fried — lower in calories','Rich in magnesium and phosphorus','Contains prebiotic fibers for gut health'],nutr:[{v:'14g',l:'Protein/100g'},{v:'5g',l:'Fiber/100g'},{v:'390',l:'Kcal/100g'}]},
-    {id:'abcmalt',name:'ABC Malt',cat:'Nutribar Range',tag:'Beverage',price:349,img:'Abc Malt.jpeg',fbImg:'https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=600&q=80',tl:"Apple, Beetroot & Carrot — nature's trio in a glass",desc:"ABC Malt combines the antioxidant power of Apple, Beetroot, and Carrot with millet malt. Supports detoxification, boosts hemoglobin, and provides sustained energy.",ben:['Beetroot boosts hemoglobin and stamina','Apple pectin supports heart health','Carrot beta-carotene for eye health','Millet base provides complex carbs','Natural detox and liver support'],nutr:[{v:'8g',l:'Protein/Serving'},{v:'4g',l:'Fiber/Serving'},{v:'180',l:'Kcal/Serving'}]},
-    {id:'nvmalt',name:'Nutri Vita Malt',cat:'Nutribar Range',tag:'Nutrition',price:449,img:'Nutri Vita Malt.jpeg',fbImg:'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&q=80',tl:"Complete nutrition in every cup",desc:'Our premium nutritional supplement drink for children, elderly, and anyone requiring enhanced nourishment. Formulated with 22+ essential nutrients.',ben:['22+ essential vitamins and minerals','Supports bone density with calcium & D3','Boosts cognitive function and memory','Ideal for growing children aged 3+','Post-illness recovery and strength building'],nutr:[{v:'22g',l:'Protein/Serving'},{v:'8g',l:'Fiber/Serving'},{v:'250',l:'Kcal/Serving'}]},
-    {id:'nutri',name:'Nutri Bar',cat:'Nutribar Range',tag:'Energy',price:149,img:'Nutri Bar.jpeg',fbImg:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',tl:"Pocket-sized millet power",desc:'A wholesome, on-the-go millet energy bar packed with roasted nuts, seeds, and natural sweeteners. Perfect for busy mornings, workouts, or afternoon slumps.',ben:['Compact energy boost on the go','Natural sweeteners only','Protein and fiber rich','No maida, no refined sugar','Great for athletes and students'],nutr:[{v:'10g',l:'Protein/Bar'},{v:'4g',l:'Fiber/Bar'},{v:'220',l:'Kcal/Bar'}]},
-    {id:'cookies',name:'Millet Cookies',cat:'Nutribar Range',tag:'Bakery',price:199,img:'Millet Cookies.jpeg',fbImg:'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80',tl:"Baked with love, loaded with nutrition",desc:'Crispy, buttery, and guilt-free — baked using finger millet and jowar flour with cold-pressed coconut oil, jaggery, and real vanilla. No maida, no refined sugar.',ben:['Zero maida — 100% millet flour base','Sweetened naturally with jaggery','Rich in calcium and iron','Cold-pressed oil — healthy fats',"Great for kids' tiffin boxes"],nutr:[{v:'8g',l:'Protein/100g'},{v:'3g',l:'Fiber/100g'},{v:'420',l:'Kcal/100g'}]}
+    {id:'mixture',name:'Millet Mixture',cat:'Nutribar Range',tag:'Snack',price:189,img:'Millet Mixture.jpeg',fbImg:'https://images.unsplash.com/photo-1599599810694-b5b37304c041?w=600&q=80',tl:"Guilt-free snacking, reimagined",desc:'A crispy, savory snack mix made from puffed millets, roasted legumes, and aromatic spices.',ben:['High-protein snack for muscle nourishment','Low glycemic index — ideal for diabetics','Roasted, not fried — lower in calories','Rich in magnesium and phosphorus','Contains prebiotic fibers for gut health'],nutr:[{v:'14g',l:'Protein/100g'},{v:'5g',l:'Fiber/100g'},{v:'390',l:'Kcal/100g'}]},
+    {id:'abcmalt',name:'ABC Malt',cat:'Nutribar Range',tag:'Beverage',price:349,img:'Abc Malt.jpeg',fbImg:'https://images.unsplash.com/photo-1600718374662-0483d2b9da44?w=600&q=80',tl:"Apple, Beetroot & Carrot — nature's trio in a glass",desc:"ABC Malt combines the antioxidant power of Apple, Beetroot, and Carrot with millet malt.",ben:['Beetroot boosts hemoglobin and stamina','Apple pectin supports heart health','Carrot beta-carotene for eye health','Millet base provides complex carbs','Natural detox and liver support'],nutr:[{v:'8g',l:'Protein/Serving'},{v:'4g',l:'Fiber/Serving'},{v:'180',l:'Kcal/Serving'}]},
+    {id:'nvmalt',name:'Nutri Vita Malt',cat:'Nutribar Range',tag:'Nutrition',price:449,img:'Nutri Vita Malt.jpeg',fbImg:'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&q=80',tl:"Complete nutrition in every cup",desc:'Our premium nutritional supplement drink for children, elderly, and anyone requiring enhanced nourishment.',ben:['22+ essential vitamins and minerals','Supports bone density with calcium & D3','Boosts cognitive function and memory','Ideal for growing children aged 3+','Post-illness recovery and strength building'],nutr:[{v:'22g',l:'Protein/Serving'},{v:'8g',l:'Fiber/Serving'},{v:'250',l:'Kcal/Serving'}]},
+    {id:'nutri',name:'Nutri Bar',cat:'Nutribar Range',tag:'Energy',price:149,img:'Nutri Bar.jpeg',fbImg:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80',tl:"Pocket-sized millet power",desc:'A wholesome, on-the-go millet energy bar packed with roasted nuts, seeds, and natural sweeteners.',ben:['Compact energy boost on the go','Natural sweeteners only','Protein and fiber rich','No maida, no refined sugar','Great for athletes and students'],nutr:[{v:'10g',l:'Protein/Bar'},{v:'4g',l:'Fiber/Bar'},{v:'220',l:'Kcal/Bar'}]},
+    {id:'cookies',name:'Millet Cookies',cat:'Nutribar Range',tag:'Bakery',price:199,img:'Millet Cookies.jpeg',fbImg:'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80',tl:"Baked with love, loaded with nutrition",desc:'Crispy, buttery, and guilt-free — baked using finger millet and jowar flour.',ben:['Zero maida — 100% millet flour base','Sweetened naturally with jaggery','Rich in calcium and iron','Cold-pressed oil — healthy fats',"Great for kids' tiffin boxes"],nutr:[{v:'8g',l:'Protein/100g'},{v:'3g',l:'Fiber/100g'},{v:'420',l:'Kcal/100g'}]}
   ],
   f:[
     {id:'chocpie',name:'Millet Choco Pie',cat:'Functional Range',tag:'Dessert',price:179,img:'Millet Choco Pie.jpeg',fbImg:'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80',tl:"Chocolate joy with a millet heart",desc:'Indulge responsibly — a soft millet sponge layered with dark chocolate and a creamy millet marshmallow center.',ben:['Dark chocolate antioxidants (flavonoids)','Millet base adds protein & fiber','Natural sweeteners — no refined sugar','Portion-controlled for mindful eating','Contains healthy fats from nuts'],nutr:[{v:'6g',l:'Protein/Piece'},{v:'2g',l:'Fiber/Piece'},{v:'140',l:'Kcal/Piece'}]},
-    {id:'noodles',name:'Multi Millet Noodles',cat:'Functional Range',tag:'Instant',price:129,img:'multi-millet-noodles.jpeg',fbImg:'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80',tl:"Instant noodles, extraordinary nutrition",desc:'5-millet blend — foxtail, little, kodo, barnyard, and pearl millet. Cooks in 3 minutes with a natural herb seasoning packet. No MSG, no artificial colors.',ben:['5-millet blend for diverse micronutrients','Natural herb seasoning — zero MSG','Cooks in 3 minutes — truly instant','Good protein source vs wheat noodles','Lower glycemic impact on blood sugar'],nutr:[{v:'11g',l:'Protein/Pack'},{v:'5g',l:'Fiber/Pack'},{v:'320',l:'Kcal/Pack'}]},
+    {id:'noodles',name:'Multi Millet Noodles',cat:'Functional Range',tag:'Instant',price:129,img:'multi-millet-noodles.jpeg',fbImg:'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80',tl:"Instant noodles, extraordinary nutrition",desc:'5-millet blend — foxtail, little, kodo, barnyard, and pearl millet. No MSG, no artificial colors.',ben:['5-millet blend for diverse micronutrients','Natural herb seasoning — zero MSG','Cooks in 3 minutes — truly instant','Good protein source vs wheat noodles','Lower glycemic impact on blood sugar'],nutr:[{v:'11g',l:'Protein/Pack'},{v:'5g',l:'Fiber/Pack'},{v:'320',l:'Kcal/Pack'}]},
     {id:'hcandy',name:'Millet Herbal Candy',cat:'Functional Range',tag:'Wellness',price:99,img:'Millet Herbal Candy.jpeg',fbImg:'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=600&q=80',tl:"Ancient herbs, sweet wellness",desc:'A fusion of traditional herbal wisdom — tulsi, ginger, turmeric, and cinnamon with millet syrup base.',ben:['Tulsi boosts immunity and reduces stress','Ginger aids digestion and nausea','Turmeric powerful anti-inflammatory','Cinnamon balances blood sugar','Natural throat soothing properties'],nutr:[{v:'1g',l:'Protein/Candy'},{v:'0.5g',l:'Fiber/Candy'},{v:'25',l:'Kcal/Candy'}]},
-    {id:'htea',name:'Herbal Infusion Tea',cat:'Functional Range',tag:'Beverage',price:299,img:'Herbal Infusion Tea.jpeg',fbImg:'https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=600&q=80',tl:"Sip your way to wellness",desc:'12-herb blend — hibiscus, lemongrass, chamomile, moringa, and ashwagandha. Caffeine-free, supports relaxation, detox, and immune wellness.',ben:['12-herb blend for comprehensive wellness','Caffeine-free — suitable anytime','Hibiscus lowers blood pressure naturally','Ashwagandha reduces cortisol & stress',"Moringa is nature's multivitamin leaf"],nutr:[{v:'0',l:'Caffeine'},{v:'2g',l:'Fiber/Cup'},{v:'5',l:'Kcal/Cup'}]},
-    {id:'idly',name:'Instant Idiyappam',cat:'Functional Range',tag:'Traditional',price:159,img:'Instant Idiyappam.jpeg',fbImg:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80',tl:"South India's favorite, made healthier",desc:"Authentic South Indian string hoppers from a millet-rice flour blend — lighter, more nutritious, and just as delicious. Ready in 5 minutes.",ben:['Millet blend adds iron and calcium','Easier to digest than pure rice flour','Naturally gluten-lite formula','Ready in 5 minutes — no fermenting','Low calorie, high carb for sustained energy'],nutr:[{v:'5g',l:'Protein/Serving'},{v:'3g',l:'Fiber/Serving'},{v:'220',l:'Kcal/Serving'}]},
+    {id:'htea',name:'Herbal Infusion Tea',cat:'Functional Range',tag:'Beverage',price:299,img:'Herbal Infusion Tea.jpeg',fbImg:'https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=600&q=80',tl:"Sip your way to wellness",desc:'12-herb blend — hibiscus, lemongrass, chamomile, moringa, and ashwagandha. Caffeine-free.',ben:['12-herb blend for comprehensive wellness','Caffeine-free — suitable anytime','Hibiscus lowers blood pressure naturally','Ashwagandha reduces cortisol & stress',"Moringa is nature's multivitamin leaf"],nutr:[{v:'0',l:'Caffeine'},{v:'2g',l:'Fiber/Cup'},{v:'5',l:'Kcal/Cup'}]},
+    {id:'idly',name:'Instant Idiyappam',cat:'Functional Range',tag:'Traditional',price:159,img:'Instant Idiyappam.jpeg',fbImg:'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80',tl:"South India's favorite, made healthier",desc:"Authentic South Indian string hoppers from a millet-rice flour blend. Ready in 5 minutes.",ben:['Millet blend adds iron and calcium','Easier to digest than pure rice flour','Naturally gluten-lite formula','Ready in 5 minutes — no fermenting','Low calorie, high carb for sustained energy'],nutr:[{v:'5g',l:'Protein/Serving'},{v:'3g',l:'Fiber/Serving'},{v:'220',l:'Kcal/Serving'}]},
     {id:'fcandy',name:'Millet Fruit Candy',cat:'Functional Range',tag:'Sweet',price:89,img:'Millet Fruit Candy.jpeg',fbImg:'https://images.unsplash.com/photo-1581512798671-a23f94248f5b?w=600&q=80',tl:"Real fruit sweetness, millet goodness",desc:'Made from real fruit concentrates — mango, amla, jamun, and guava — combined with a millet syrup base.',ben:['Real fruit concentrates — no artificial flavor','Amla provides 20x more Vitamin C than oranges','Jamun supports blood sugar regulation','Natural colors only — zero synthetic dyes','Great source of natural antioxidants'],nutr:[{v:'0.5g',l:'Protein/Candy'},{v:'0.5g',l:'Fiber/Candy'},{v:'30',l:'Kcal/Candy'}]}
   ]
 };
@@ -1729,6 +1665,8 @@ function startCheckout(){
   closeCart();
   currentOrderId='VG'+Date.now().toString().slice(-8).toUpperCase();
   document.getElementById('successOrderId').textContent=currentOrderId;
+  paymentScreenshotDataURL='';
+  removeSSPhoto();
   updateCheckoutSummary();
   goToStep(1);
   document.getElementById('checkoutOverlay').classList.add('open');
@@ -1798,9 +1736,10 @@ function goToPayment(){
     notes:document.getElementById('coNotes').value.trim()
   };
   updateCheckoutSummary();goToStep(2);
-  showToast('Please complete UPI payment first');
+  showToast('Please complete UPI payment and upload screenshot');
 }
 function goToStep1(){goToStep(1)}
+
 function copyUPI(){
   navigator.clipboard.writeText(UPI_ID).then(()=>showToast('UPI ID copied!')).catch(()=>{
     const el=document.createElement('input');el.value=UPI_ID;document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);showToast('UPI ID copied!');
@@ -1811,16 +1750,32 @@ function openUPILink(){
   const link=`upi://pay?pa=${UPI_ID}&pn=${UPI_NAME}&am=${total}&cu=INR&tn=Order_${currentOrderId}`;
   window.open(link,'_blank');
 }
+
 function confirmPayment(){
   const utr=document.getElementById('utrInput').value.trim();
-  if(!utr||utr.length<8){
+
+  // Validate UTR
+  if(!utr || utr.length < 8){
     document.getElementById('utrInput').classList.add('err');
-    showToast('Please enter your UTR / Transaction ID');return;
+    showToast('Please enter your UTR / Transaction ID');
+    document.getElementById('utrInput').scrollIntoView({behavior:'smooth',block:'center'});
+    return;
   }
   document.getElementById('utrInput').classList.remove('err');
+
+  // Validate screenshot — REQUIRED
+  if(!paymentScreenshotDataURL){
+    document.getElementById('ssUploadWrap').style.borderColor = 'rgba(231,76,60,0.6)';
+    document.getElementById('ssUploadWrap').style.background = 'rgba(231,76,60,0.04)';
+    showToast('Please upload your payment screenshot');
+    document.getElementById('ssUploadWrap').scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+
   const d=currentCheckoutData;
   const total=cartTotal();
   const itemList=cart.map((p,i)=>`${i+1}. ${p.name} (Qty: ${p.qty||1}) — ₹${(p.price*(p.qty||1)).toLocaleString('en-IN')}`).join('\n');
+
   const ownerMsg=encodeURIComponent(
 `🛒 *NEW ORDER — Visagha Gourmet*
 
@@ -1850,20 +1805,40 @@ Total: ₹${total.toLocaleString('en-IN')}
 UTR/Transaction ID: ${utr}
 UPI ID: ${UPI_ID}
 
-✅ Please verify payment and confirm dispatch!`);
+📸 Payment screenshot uploaded by customer (see attachment)
+
+✅ Verify the screenshot and confirm dispatch!`);
+
   document.getElementById('successWANum').textContent='+91'+d.wa;
   document.getElementById('successOrderId').textContent=currentOrderId;
   document.getElementById('successWABtn').href=`https://wa.me/${WA_OWNER}?text=${ownerMsg}`;
+
   goToStep(3);
-  setTimeout(()=>window.open(`https://wa.me/${WA_OWNER}?text=${ownerMsg}`,'_blank'),700);
+
+  // Auto-open WhatsApp for order message
+  setTimeout(()=>window.open(`https://wa.me/${WA_OWNER}?text=${ownerMsg}`,'_blank'), 700);
+
+  // Also auto-download the screenshot for the customer to keep as proof
+  setTimeout(()=>{
+    const ssBtn = document.getElementById('ssDownloadBtn');
+    if(ssBtn) ssBtn.style.display = 'flex';
+  }, 800);
+
   setTimeout(()=>{cart=[];updateCart()},2000);
 }
+
 // Auto-remove err class on input
 ['coName','coPhone','coWA','coEmail','coAddr','coCity','coPIN','utrInput'].forEach(id=>{
   const el=document.getElementById(id);
   if(el)el.addEventListener('input',()=>el.classList.remove('err'));
 });
 document.getElementById('coState').addEventListener('change',()=>document.getElementById('coState').classList.remove('err'));
+
+// Reset screenshot error highlight on upload
+document.getElementById('ssFileInput').addEventListener('change',()=>{
+  document.getElementById('ssUploadWrap').style.borderColor = '';
+  document.getElementById('ssUploadWrap').style.background = '';
+});
 
 /* =========================================================
    ADMIN PASSWORD
@@ -1913,7 +1888,7 @@ document.getElementById('adminOverlay').addEventListener('click',function(e){if(
 document.getElementById('aCat').addEventListener('change',function(){document.getElementById('customCatInput').style.display=this.value==='Custom'?'block':'none'});
 
 /* =========================================================
-   PHOTO UPLOAD — FIXED
+   ADMIN PHOTO UPLOAD
 ========================================================= */
 function handlePhotoFile(e){
   const file=e.target.files[0];if(!file)return;
@@ -1986,7 +1961,6 @@ function submitProduct(){
     nutr:nutr.length?nutr:[{v:'—',l:'Protein'},{v:'—',l:'Fiber'},{v:'—',l:'Kcal'}]
   };
   customProducts.push(prod);saveCP();renderCustomCats();
-  // Reset form
   ['aName','aTag','aTagline','aDesc','aImg','nv1','nl1','nv2','nl2','nv3','nl3'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('aPrice').value='';
   document.querySelectorAll('#benList .ben-item input').forEach(i=>i.value='');
